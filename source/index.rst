@@ -16,16 +16,3 @@ Contents:
    Lab exercise 3, UR <texts/lab3.md>
 
 
-Prerequisites
--------------
-
-    
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
