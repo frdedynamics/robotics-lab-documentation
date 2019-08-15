@@ -23,18 +23,21 @@ Our robots:
 
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/bror.jpg         | .. figure:: _static/robots/ur5e.jpg     | .. figure:: _static/robots/dolores.jpg             |
+|   :width: 30%				      |   :width: 30%				|   :width: 30%					     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
 |   UR5, CB2.1, with a Robotiq 2F-85 gripper, |   UR5e, with a Robotiq Hand-E gripper,  |   KUKA LBR iiwa R820, with a Schunk Co-Act gripper,|
 |   named Bror.                               |   named Knut.                           |   named Dolores.                                   |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/robotino.jpg     | .. figure:: _static/robots/fable.jpg    | .. figure:: _static/robots/anthony.jpg             |
+|   :width: 30%				      |   :width: 30%				|   :width: 30%					     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
 |   Festo Robotino,                           |   Fable,                                |   Robot made at the lab,                           |
 |   named Robotino.                           |   named Fable.                          |   named Anthony.                                   |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/crawler.jpg      | .. figure:: _static/robots/alphabot.jpg | .. figure:: _static/robots/helper.jpg              |
+|   :width: 30%				      |   :width: 30%				|   :width: 30% 				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
 |   Robot made at the lab, inspired from      |   Alphabot,                             |   Little Helper.                                   |
