@@ -12,11 +12,12 @@ Stuff for you to do:
 
 .. toctree::
    :maxdepth: 1
-    
+
    Universal Robots Academy <texts/UR_exercises.md>
    Lab exercise 1, UR <texts/lab1.md>
    Lab exercise 2, UR <texts/lab2.md>
    Lab exercise 3, UR <texts/lab3.md>
+   Lab exercise 6, Kalman Filter <texts/lab_Kalman.md>
 
 
 Our robots:
