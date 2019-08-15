@@ -26,22 +26,24 @@ Our robots:
 |   :figwidth: 33%			      |   :figwidth: 33%			|   :figwidth: 33%				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   UR5, CB2.1, with a |br| 	              |   UR5e, with a |br| Robotiq Hand-E      |   KUKA LBR iiwa R820, |br| with a Schunk Co-Act|br||
-|   Robotiq 2F-85 gripper, named Bror.        |   gripper, named Knut.                  |   gripper, named Dolores.                          |
+|   UR5, CB2.1, with a |br|	              |   UR5e, with a |br|  			|   KUKA LBR iiwa R820, |br| 			     |
+|   Robotiq 2F-85 gripper, |br|               |   Robotiq Hand-E gripper, |br|          |   with a Schunk Co-Act gripper, |br|               |
+|   named Bror.				      |	  named Knut.				|   named Dolores.				     |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/robotino.jpg     | .. figure:: _static/robots/fable.jpg    | .. figure:: _static/robots/anthony.jpg             |
 |   :figwidth: 33%			      |   :figwidth: 33%			|   :figwidth: 33%				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   Festo Robotino,|br|                       |   Fable,|br|                            |   Robot made at the lab,|br|                       |
+|   Festo Robotino, |br|                      |   Fable, |br|                           |   Robot made at the lab, |br|                      |
 |   named Robotino.                           |   named Fable.                          |   named Anthony.                                   |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/crawler.jpg      | .. figure:: _static/robots/alphabot.jpg | .. figure:: _static/robots/helper.jpg              |
 |   :figwidth: 33%			      |   :figwidth: 33%			|   :figwidth: 33% 				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   Robot made at the lab,|br|                |   Alphabot,|br|                         |   Little Helper.                                   |
-|   inspired by RWU_, named Crawler.          |   named Alphabot.                       |  		                                     |
+|   Robot made at the lab, |br|               |   Alphabot,|br|                         |   Little Helper.                                   |
+|   inspired by RWU_, |br|                    |   named Alphabot.                       |  		                                     |
+|   named Crawler.			      |						|						     |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 
 .. _RWU: http://www.tokic.com/www/tokicm/publikationen/papers/flairs09.pdf
