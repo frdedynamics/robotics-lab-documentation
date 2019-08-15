@@ -17,7 +17,7 @@ Stuff for you to do:
    Lab exercise 1, UR <texts/lab1.md>
    Lab exercise 2, UR <texts/lab2.md>
    Lab exercise 3, UR <texts/lab3.md>
-   Lab exercise 6, Kalman Filter <texts/lab_Kalman.md>
+   Lab exercise 6, Kalman Filter <texts/lab_Kalman.rst>
 
 
 Our robots:
@@ -42,7 +42,7 @@ Our robots:
 |   :figwidth: 50%			      |   :figwidth: 50%			|   :figwidth: 50% 				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   Robot made at the lab, |br|               |   Alphabot,|br|                         |   Little Helper.                                   |
+|   Robot made at the lab, |br|               |   Alphabot, |br|                        |   Little Helper.                                   |
 |   inspired by RWU_, |br|                    |   named Alphabot.                       |  		                                     |
 |   named Crawler.			      |						|						     |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
