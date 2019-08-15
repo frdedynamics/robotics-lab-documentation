@@ -23,26 +23,32 @@ Our robots:
 
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/bror.jpg         | .. figure:: _static/robots/ur5e.jpg     | .. figure:: _static/robots/dolores.jpg             |
+|   :figwidth: 50%			      |   :figwidth: 50%			|   :figwidth: 50%				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   UR5, CB2.1, with a   	              |   UR5e, with a    			|   KUKA LBR iiwa R820,   			     |
-|   Robotiq 2F-85 gripper,                    |   Robotiq Hand-E gripper,               |   with a Schunk Co-Act gripper,                    |
+|   UR5, CB2.1, with a |br|	              |   UR5e, with a |br|  			|   KUKA LBR iiwa R820, |br| 			     |
+|   Robotiq 2F-85 gripper, |br|               |   Robotiq Hand-E gripper, |br|          |   with a Schunk Co-Act gripper, |br|               |
 |   named Bror.				      |	  named Knut.				|   named Dolores.				     |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/robotino.jpg     | .. figure:: _static/robots/fable.jpg    | .. figure:: _static/robots/anthony.jpg             |
+|   :figwidth: 50%			      |   :figwidth: 50%			|   :figwidth: 50%				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   Festo Robotino,                           |   Fable,                                |   Robot made at the lab,                           |
+|   Festo Robotino, |br|                      |   Fable, |br|                           |   Robot made at the lab, |br|                      |
 |   named Robotino.                           |   named Fable.                          |   named Anthony.                                   |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 | .. figure:: _static/robots/crawler.jpg      | .. figure:: _static/robots/alphabot.jpg | .. figure:: _static/robots/helper.jpg              |
+|   :figwidth: 50%			      |   :figwidth: 50%			|   :figwidth: 50% 				     |
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |   :alt: map to buried treasure                     |
 |                                             |                                         |                                                    |
-|   Robot made at the lab,                    |   Alphabot,                             |   Little Helper.                                   |
-|   inspired by RWU_,                         |   named Alphabot.                       |  		                                     |
+|   Robot made at the lab, |br|               |   Alphabot,|br|                         |   Little Helper.                                   |
+|   inspired by RWU_, |br|                    |   named Alphabot.                       |  		                                     |
 |   named Crawler.			      |						|						     |
 +---------------------------------------------+-----------------------------------------+----------------------------------------------------+
 
 .. _RWU: http://www.tokic.com/www/tokicm/publikationen/papers/flairs09.pdf
 .. _Øyrane: https://www.google.com/maps/place/HVL+Robotics+Lab/@61.4590375,5.8326453,17z/data=!3m1!4b1!4m5!3m4!1s0x4616333d5f3d88b5:0x2025abbba16257dd!8m2!3d61.459035!4d5.8348393
 
+.. |br| raw:: html
+
+  <br/>
