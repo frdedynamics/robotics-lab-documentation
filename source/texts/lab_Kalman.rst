@@ -1,5 +1,5 @@
 ****************************
-Kalman Filter
+Orientation Estimation
 ****************************
 
 Introduction
@@ -17,15 +17,15 @@ For instance, how do we get the orientation information from our mobile phones? 
 
 There are different techniques to obtain position/orientation of the phone using angular velocity and the linear acceleration. In this tutorial, you will learn how to implement **four** different orientation calculation techniques using MATLAB and `IMU <https://www.spartonnavex.com/imu/>`_. Those techniques are:
 
-#. Integration_of_angular_velocity_ *(only gyroscope)*
-#. Inclination_sensing_ *(only accelerometer)*
-#. Complementary_filter_ *(accelerometer + gyroscope)*
-#. Kalman_filter_ *(accelerometer + gyroscope)*
+#. `Integration of angular velocity`_ *(only gyroscope)*
+#. `Inclination sensing`_ *(only accelerometer)*
+#. `Complementary filter`_ *(accelerometer + gyroscope)*
+#. `Kalman filter`_ *(accelerometer + gyroscope)*
 
 .. note::
   You will find the explanations of all those techniques in the following sections. The values which has *hat* on top means that they are estimated values.
 
-.. _Integration_of_angular_velocity:
+.. _`Integration of angular velocity`:
 
 Integration of Angular Velocity
 =======================================
@@ -43,6 +43,8 @@ By this definition, the orientation angles are calculated as:
     yaw \rightarrow \psi &= \int_{t_0}^{t} G_z dt\\
 
 where :math:`G_x`, :math:`G_y` and :math:`G_z` are the angular velocities read by the IMU about x,y and z axes respectively in body fixed frame. To find the orientations with respect to world frame, you need this rotation matrix:
+
+.. _`rotation matrix`:
 
 .. math::
 
@@ -76,10 +78,10 @@ and,
   .. figure:: ../_static/images/accumulationError.png
             :align: center
 
-  Although Integration_of_angular_velocity_ looks a clean-cut for short period of time, it is not the best solution for longer periods.
+  Although `Integration of angular velocity`_ looks a clean-cut for short period of time, it is not the best solution for longer periods.
 
 
-.. _Inclination_sensing:
+.. _`Inclination  sensing`:
 
 Inclination Sensing
 =======================
@@ -122,7 +124,7 @@ Therefore,
 .. warning::
   As you see, we calculated only pitch and roll angles but not yaw. The reason for that, any motion about z-axis doesn't give any variation in accelerometer readings. It is not possible detect the rotations around z-axis using *only accelerometer*.
 
-.. _Complementary_filter:
+.. _`Complementary filter`:
 
 Complementary Filter
 =======================
@@ -131,55 +133,83 @@ Idea behind complementary filter is to take slow moving signals from acceleromet
 .. figure:: ../_static/images/complementary.jpg
           :align: center
 
-To implement Complementary_filter_, first a constant :math:`\alpha` angle is chosen as a cut-off value for the filters. The larger :math:`\alpha`, the more the accelerometer measurements are ‘trusted’. As :math:`\alpha` goes to zero, we base our estimate mainly on the gyroscope measurements. A good starting point is :math:`\alpha` = 0.1.
+To implement `Complementary filter`_, first a constant :math:`\alpha` angle is chosen as a cut-off value for the filters. The larger :math:`\alpha`, the more the accelerometer measurements are ‘trusted’. As :math:`\alpha` goes to zero, we base our estimate mainly on the gyroscope measurements. A good starting point is :math:`\alpha` = 0.1.
 
 .. math::
 
   \hat{\phi} = \alpha \cdot \hat\phi_{Acc} + (1-\alpha) \cdot (\hat\phi_{prev}+ \dot\phi_{Gyro} \cdot \Delta t)\\
   \hat{\theta} = \alpha \cdot \hat\theta_{Acc} + (1-\alpha) \cdot (\hat\theta_{prev}+ \dot\theta_{Gyro} \cdot \Delta t)\\
 
-.. _Kalman_filter:
+.. _`Kalman filter`:
 
 Kalman Filter
 =======================
-Kalman filter is one of the most common estimation algorithms. It produces estimates of cannot-measured states of a system based on the past estimations and current measurements. In another words, it is an estimator (and observer). Using the system model, it reduces the estimation error in every iteration. As well, the Kalman filter provides a prediction of the future system state.
+Kalman filter is one of the most common estimation algorithms. It produces estimates of imponderable states of a system based on the past estimations and current measurements. In another words, it is an estimator (and observer). Using the system model, it reduces the estimation error in every iteration. In our case, we can measure angular velocity and linear acceleration but we cannot measure orientation. In this case orientation is an imponderable state. Though, it is possible to calculate the orientation using the systems mathematical model.
 
-Kalman filter consists of two parts;
-**Prediction** and **Correction**.
+.. note::
 
-In prediction step, the system model is used in calculation. A linear and time-invariant system can be expressed as:
+  As you know, every linear time-invariant (LTI) system can be modelled as:
 
-.. math::
+  .. math::
 
-  \begin{split}
-    \vec{x}_{t+1} &= \textbf{A} \cdot \vec{x}_t + \textbf{B} \cdot \vec{u}_t + \vec{w}_t\\
-    \vec{y}_{t+1} &= \textbf{C} \cdot \vec{x}_{t+1} + \vec{v}_{t+1}
-  \end{split}
+    \begin{split}
+      \vec{x}_{t+1} &= \textbf{A} \cdot \vec{x}_t + \textbf{B} \cdot \vec{u}_t + \vec{w}_t\\
+      \vec{y}_{t+1} &= \textbf{C} \cdot \vec{x}_{t+1} + \vec{v}_{t+1}
+    \end{split}
 
-Where :math:`\vec{x}_{t}` is the system’s state vector at time t and \vec{u}_t is the input vector at time t.
+  Where :math:`\vec{x}_{t}` is the `system state`_ vector, :math:`\vec{u}_t` is the `input vector`_  and :math:`\vec{y}_t` is the `measurement vector`_ at time t.
 
-A : system matrix (relates the current states to the next states)
+  A : system matrix (relates the current states to the next states)
 
-B : input bmatrix (relates inputs to the next states)
+  B : input bmatrix (relates inputs to the next states)
 
-C : output matrix (system states to the measured states)
+  C : output matrix (system states to the measured states)
 
-:math:`(\vec{w}_t)` : process noise
+  :math:`(\vec{w}_t)` : process noise
 
-:math:`(\vec{v}_t)` : measurement noise – both assumed to be zero-mean Gaussian noise.
+  :math:`(\vec{v}_t)` : measurement noise – both assumed to be zero-mean Gaussian noise.
 
-We then define our state vector, input vector, and measurement vector:
+.. _`system state`:
+
+We choose our system states as:
 
 .. math::
 
   \vec{x}_t = \begin{bmatrix} \hat{\phi}_t \\ b_{\hat{\phi}_t} \\ \hat{\theta}_t \\ b_{\hat{\theta}_t} \end{bmatrix}
 
+Where :math:`b_{\phi_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\phi}` and :math:`b_{\theta_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\theta}`.
+
+.. _`input vector`:
+
+Our inputs:
+
+.. math::
+
   \vec{u}_t = \begin{bmatrix} \dot{\phi}_{G_t} \\ \dot{\theta}_{G_t} \end{bmatrix}\\
-  \vec{z}_t = \begin{bmatrix} \hat{\phi}_{Acc_t} \\ \hat{\theta}_{Acc_t} \end{bmatrix}
 
-Where :math:`b_{\phi_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\phi}`.
+Where :math:`\dot{\phi}_{G_t}` and :math:`\dot{\theta}_{G_t}` are the gyroscope values for roll and pitch respectively.
 
-After defining all the parameters, now we can start building up the Kalman filter.
+.. _`measurement vector`:
+
+Our measurements:
+
+.. math::
+
+  \vec{y}_t = \begin{bmatrix} \hat{\phi}_{Acc_t} \\ \hat{\theta}_{Acc_t} \end{bmatrix}
+
+
+Implementation of Kalman filter
+--------------------------------
+Kalman Filter is based on modelling the process noise. As well, the Kalman filter provides a prediction of the future system state by prediction. Therefore Kalman filter consists of two parts;
+**Prediction** and **Correction**. TODO: WHY THE FIGURES ARE SO AWKWARD HERE?
+
+.. figure:: ../_static/images/KalmanEqns1.png
+  :align: right
+
+.. figure:: ../_static/images/KalmanEqns2.png
+  :align: center
+
+After defining all the parameters, now we can start building up the Kalman filter. In prediction step, the system model is used in calculation of error covariance matrix **P**.
 
 **Prediction**
 
@@ -188,11 +218,13 @@ After defining all the parameters, now we can start building up the Kalman filte
   \vec{x}_{t+1} = \textbf{A} \cdot \vec{x}_t + \textbf{B} \cdot \vec{u}_t\\
   \textbf{P} = \textbf{A} \cdot \textbf{P} \cdot \textbf{A}^T + \textbf{Q}
 
+Then, this error covariance matrix is used in updating the Kalman gain **K**. (In some resources, you can see this step is named as **Update** for this reason.)
+
 **Correction**
 
 .. math::
 
-  \widetilde{y}_{t+1} = \vec{z}_{t+1} - \textbf{C} \cdot \vec{x}_{t+1}\\
+  \widetilde{y}_{t+1} = \vec{y}_{t+1} - \textbf{C} \cdot \vec{x}_{t+1}\\
   \textbf{S} = \textbf{C} \cdot \textbf{P} \cdot \textbf{C}^T + \textbf{R}\\
   \textbf{K} = \textbf{P} \cdot \textbf{C}^T \cdot \textbf{S}^{-1}\\
   \vec{x}_{t+1} = \vec{x}_{t+1} + \textbf{K} \cdot \widetilde{y}_{t+1}\\
@@ -213,19 +245,45 @@ Where,
 
   Lower variance in measurement noise (R -> 0) makes the Kalman gain **K** closer to 1 and our estimates will be more based on the measurements.
 
+  .. math::
+
+    \lim_{\textbf{R} \to 0} \textbf{K} = \frac{\textbf{P}^- \cdot \textbf{C}^T}{\textbf{C} \cdot \textbf{P}^- \cdot \textbf{C}^T + (\textbf{R}=0)} \rightarrow \textbf{K} = \textbf{C}^{-1}
+
+  Substitute into the estimation equation:
+
+  .. math::
+
+    \hat{x} ^+ &= \hat{x} ^{-} + \textbf{K} \cdot (y ^{-} - \textbf{C} \cdot \hat{x} ^- )\\
+             &= \hat{x} ^{-} + \textbf{C}^{-1} \cdot (y ^{-} - \textbf{C} \cdot \hat{x} ^- )\\
+             &= \hat{x} ^{-} + \textbf{C}^{-1} \cdot y ^{-} - \textbf{C}^{-1} \cdot \textbf{C} \cdot \hat{x} ^{-}\\
+             &= \textbf{C}^{-1} \cdot y ^{-}
+
+  :math:`C^{-1}` is equal to 1 in our case. Therefore the estimated value is only depend on the measured value, not prior estimates.
+
+  .. math::
+
+    \hat{x} ^+ &= y ^{-}\\
+
 .. note::
 
   If in the first case the prior estimate covariance is zero (P -> 0), then only prior estimates contribute to our current estimation.
 
+  .. math::
 
+    \lim_{\textbf{P} ^{-} \to 0} \textbf{K} = \frac{(\textbf{P}^- = 0) \cdot \textbf{C}^T}{\textbf{C} \cdot (\textbf{P}^- = 0) \cdot \textbf{C}^T + \textbf{R}} \rightarrow \textbf{K} = \frac{0}{\textbf{R}} = 0
 
+  Substitute into the estimation equation:
 
+  .. math::
 
+    \hat{x} ^+ &= \hat{x} ^{-} + \textbf{K} \cdot (y ^{-} - \textbf{C} \cdot \hat{x} ^- )\\
+               &= \hat{x} ^{-} + \textbf{0} \cdot (y ^{-} - \textbf{C} \cdot \hat{x} ^- )
 
+  Therefore the estimated value is only depend on the prior estimates, not measurements.
 
+    .. math::
 
-
-
+      \hat{x} ^+ &= \hat{x} ^{-}\\
 
 .. warning::
  The Kalman filter is only applicable in casual, linear and time-invariant systems. If the system model is not satisfy these three conditions, then another type of filter/estimator/observer or a different variation of Kalman filter should be implemented.
@@ -233,13 +291,58 @@ Where,
 
 Experimental Process
 ==============================================
+To implement those four orientation estimation techniques, we will use MATLAB and a smartphone.
+
+**On your smartphone**
+
+#. In Google Store, install **Sensor Fusion App** TODO: find a log file generator app for IOS.
+#. Select the first item *Select Sensor* and check if your accelerometer works fine. During a steady mode of your phone while its screen facing upwards, only the z-axis of the accelerometer should give 9.8 :math:`m/s^2` and other axes should be 0.
+#. Check if your gyroscope works fine. During a steady mode of your phone all axes should be 0. If there is a little fraction, it is the bias on your gyroscope data.
+#. In the main screen, select the second item *Log Data*.
+#. Check *Accelerometer* and *Gyroscope* and uncheck other sensors. We will not need them for this tutorial.
+#. Check the *Log* option on the upper right corner so that the app can create a log file.
+#. As soon as you hit the *Start* button, the log file is started to be written on. It is always better to start measurement from a steady state. Too long data will incrase the processing time in your code.
+#. When you are done, hit *Stop* button.
+#. Send the **sensorLog_date&hour.txt** file to your computer.
+
+**On your computer**
+
+#. Follow the `link <https://1drv.ms/u/s!Au2fyLreLQhQhpI-iEv3ZTGYpJzjEA?e=aGdPOU/>`_. There are 3 files. read_log_script.m is a script which reads your log data and extracts the accelerometer and gyroscope values into corresponding variables. Edit your log data file name in the :math:`10^{th}` line.
+
+    .. literalinclude:: ../_static/scripts/read_log_script.m
+       :language: matlab
+       :lines: 10
+
+#. In our main file, we first call our script.
+
+    .. literalinclude:: ../_static/scripts/KalmanManual.m
+       :language: matlab
+       :lines: 7
+
+#. You are going to use `rotation matrix`_ equations in the first section:
+
+    .. literalinclude:: ../_static/scripts/KalmanManual.m
+       :language: matlab
+       :lines: 32-42
+
+#. You are going to use the geometrical approach in `Inclination sensing`_ section:
+
+     .. literalinclude:: ../_static/scripts/KalmanManual.m
+        :language: matlab
+        :lines: 46-47
+
+#. You are going to use your estimated :math:`\phi` and :math:`\theta` values in which you have calculated in the previous steps. :
+
+     .. literalinclude:: ../_static/scripts/KalmanManual.m
+        :language: matlab
+        :lines: 56-69
 
 
-.. literalinclude:: ../_static/scripts/KalmanManual.m
-   :language: matlab
-   :linenos:
-   :caption: Example 1. our code.
+#. You are going to fill the missing equations in `Kalman filter`_.
 
+     .. literalinclude:: ../_static/scripts/KalmanManual.m
+        :language: matlab
+        :lines: 85-115
 
 
 Conclusion and Further Readings
@@ -247,7 +350,9 @@ Conclusion and Further Readings
 
 We have seen some filtering algorithms applied on IMU in order to get some orientation data. The most important lesson in this tutorial is to realize that the sensor systems are not completely reliable if you are reading the raw data. As it is mentioned at the beginning, other localization solutions such as using GPS data or camera systems are also requires after-processing as we did on IMU in the tutorial. Today, some of the expensive sensor systems have their own filtering circuits inside the sensor.
 
-See :cite:`Strunk1979` for an introduction :cite:`Corke2011`> to stylish blah, blah...
+TODO: Fix references.
+
+See for an introduction :cite:`Corke2011`>
 
 .. [Peter Corke Ch.6] Detailed mathematical explanation of Kalman filter.
 

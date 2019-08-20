@@ -25,19 +25,7 @@ dt = 0.01;
 % gyroscope.
 number_of_data = min(length(gyro_ts.Data),length(acc_ts.Data));
 
-%% 1) Accelerometer only
-% This method is also known as tilt calculation. We make this calculation
-% based on the gravity vector and its components on each accelerometer
-% axes. This technique is only applicable where the linear acceleration of
-% the body is very low.
-phi_hat_acc   = atan2(Ay, sqrt(Ax .^ 2 + Az .^ 2));
-theta_hat_acc = atan2(-Ax, sqrt(Ay .^ 2 + Az .^ 2));
-
-%% 2) Gyroscope only
-% This method is based on integration the velocity to find the position as
-% we all do in highschool. It works okay for short time frames. However, in
-% longer period there will be accumulation during the integration process -
-% which is also known as drift error.
+%% 1) Integration of Angular Velocity
 phi_hat_gyr   = zeros(1, length(gyro_ts));
 theta_hat_gyr = zeros(1, length(gyro_ts));
 
@@ -46,22 +34,21 @@ for i = 2:number_of_data
    q = Gy(i);
    r = Gz(i);
    
-   phi_hat   = phi_hat_gyr(i - 1);
-   theta_hat = theta_hat_gyr(i - 1);
+   phi_prev   = phi_hat_gyr(i - 1);
+   theta_prev = theta_hat_gyr(i - 1);
     
-   phi_hat_gyr(i)   = phi_hat   + dt * (p + sin(phi_hat) * tan(theta_hat) * q + cos(phi_hat) * tan(theta_hat) * r);
-   theta_hat_gyr(i) = theta_hat + dt * (cos(phi_hat) * q - sin(phi_hat) * r);
+   phi_hat_gyr(i)   = ...;
+   theta_hat_gyr(i) = ...;
 end
 
+
+%% 2) Inclination Sensing
+phi_hat_acc   = ...;
+theta_hat_acc = ...;
 %% 3) Complimentary Filter
-% Complementary filter is a combination of a low-pass and a high-pass
-% filter. Idea behind complementary filter is to take slow moving signals from
-% accelerometer and fast moving signals from a gyroscope and combine them.
-% Accelerometer gives a good indicator of orientation in static conditions.
-% Gyroscope gives a good indicator of tilt in dynamic conditions.
 
 % alpha value is related the cut-off frequency of the filters.
-alpha = 0.1;
+alpha = ...;
 
 phi_hat_complimentary   = zeros(1, length(gyro_ts));
 theta_hat_complimentary = zeros(1, length(gyro_ts));
@@ -71,20 +58,17 @@ for i=2:number_of_data
     q = Gy(i);
     r = Gz(i);
    
-    phi_hat   = phi_hat_complimentary(i - 1);
-    theta_hat = theta_hat_complimentary(i - 1);
+    phi_prev   = phi_hat_complimentary(i - 1);
+    theta_prev = theta_hat_complimentary(i - 1);
     
-    phi_hat_gyr_comp   = phi_hat   + dt * (p + sin(phi_hat) * tan(theta_hat) * q + cos(phi_hat) * tan(theta_hat) * r);
-    theta_hat_gyr_comp = theta_hat + dt * (cos(phi_hat) * q - sin(phi_hat) * r);
        
-    phi_hat_complimentary(i)   = (1 - alpha) * phi_hat_gyr_comp   + alpha * phi_hat_acc(i);
-    theta_hat_complimentary(i) = (1 - alpha) * theta_hat_gyr_comp + alpha * theta_hat_acc(i);    
+    % Complementary filter equations
+    % Hint: Use the gyro and acc values which you found in Section 1-2.
+    phi_hat_complimentary(i)   = ...;
+    theta_hat_complimentary(i) = ...;
 end
 
 %% 4) Kalman Filter
-% Kalman filter is an estimater (and observer). Using the system model, it
-% reduces the estimation error in every iteration. It consists two parts;
-% prediction and correction.
 A = [1 -dt 0 0; 0 1 0 0; 0 0 1 -dt; 0 0 0 1];
 B = [dt 0 0 0; 0 0 dt 0]';
 C = [1 0 0 0; 0 0 1 0];
@@ -104,23 +88,24 @@ for i=2:number_of_data
     q = Gy(i);
     r = Gz(i);
    
-    phi_hat   = phi_hat_kalman(i - 1);
-    theta_hat = theta_hat_kalman(i - 1);
+    phi_prev   = phi_hat_kalman(i - 1) + bias_phi_kalman(i-1);
+    theta_prev = theta_hat_kalman(i - 1) + bias_theta_kalman(i-1);
     
-    phi_dot   = p + sin(phi_hat) * tan(theta_hat) * q + cos(phi_hat) * tan(theta_hat) * r;
-    theta_dot = cos(phi_hat) * q - sin(phi_hat) * r;
+    % Rotated gyroscope values: - hint: the same as you found in Section 1.
+    phi_dot   = ...;
+    theta_dot = ...;
           
     % Predict
-    state_estimate = A * state_estimate + B * [phi_dot, theta_dot]';
-    P = A * P * A' + Q;
+    state_estimate = A * ...;
+    P = A * ...;
     
     % Update (Correct)
     measurement = [phi_hat_acc(i) theta_hat_acc(i)]';
     y_tilde = measurement - C * state_estimate;
     S = R + C * P * C';
-    K = P * C' * (S^-1);
+    K = ...;
     state_estimate = state_estimate + K * y_tilde;
-    P = (eye(4) - K * C) * P;
+    P = ...;
     
     phi_hat_kalman(i)    = state_estimate(1);
     bias_phi_kalman(i)   = state_estimate(2);
