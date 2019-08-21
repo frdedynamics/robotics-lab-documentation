@@ -35,6 +35,7 @@ Our robots:
 
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/bror.jpg         | .. figure:: _static/robots/ur5e.jpg     |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
 |   UR5, CB2.1, with a |br|	              |   UR5e, with a |br|  			|
@@ -42,6 +43,7 @@ Our robots:
 |   named Bror.				      |	  named Knut.				|
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/dolores.jpg      | .. figure:: _static/robots/robotino.jpg |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
 |   KUKA LBR iiwa R820, |br| 	              |   Festo Robotino, |br|  		|
@@ -49,12 +51,14 @@ Our robots:
 |   named Dolores.			      |	  					|
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/fable.jpg        | .. figure:: _static/robots/anthony.jpg  |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
 |   Fable, |br|                       	      |   Robot made at the lab, |br|           |
 |   named Fable.                              |   named Anthony.                        |
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/crawler.jpg      | .. figure:: _static/robots/alphabot.jpg |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
 |   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
 |   Robot made at the lab, |br|               |   Alphabot, |br|                        |
@@ -62,6 +66,7 @@ Our robots:
 |   named Crawler.			      |						|
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/helper.jpg       | 				        |
+|   :figwidth: 50%			      |   					|
 |   :alt: map to buried treasure              |   			                |
 |                                             |                                         |
 |   Little Helper.               	      |      		                        |
