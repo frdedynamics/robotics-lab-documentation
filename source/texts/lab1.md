@@ -47,6 +47,8 @@ Finally! A challenge. A series of demands are listed below, make a program to fu
 1. What is MoveJ, MoveL and MoveP? Describe the difference, and when to use what.
 1. What was your fastest race time?
 
+![Race course](../_static/lab/lab_layout_course1.png)
+
 
 
 
