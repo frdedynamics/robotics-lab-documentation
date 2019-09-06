@@ -48,15 +48,23 @@ Most likely, you don`t need installation instructions from here.
 
 .. _`W10 with Windows Subsystem for Linux (WSL) from Microsoft Store`:
 
-W10 with Windows Subsystem for Linux (WSL) from Microsoft Store
+W10 with Windows Subsystem for Linux (WSL) from Microsoft Store (Ubuntu 16.04)
 ==============================================================================
-Best of both worlds? Definetly not. It gives you an Ubuntu terminal. 
 
-Recommended for W10 users who want to try ROS and maybe suffer thru a lecture in terminal hell. There is no desktop or IDE, just terminals.
+.. role:: strike
+
+Best of both worlds? :strike:`Definetly not. It gives you an Ubuntu terminal. Recommended for W10 users who want to try ROS and maybe suffer thru a lecture in terminal hell. There is no desktop or IDE, just terminals.`
+
+Update summer 2019: Believe the hype, WSL is great! It`s like a VM, but it`s not, still, expect real connections to robots to be slow and file read/write to be slow (at least until WSL 2, late 2019). Furthermore, and this is really great, Visual Studio Code has a couple of very useful features for ROS and WSL, so you get a good IDE. 
 
 How to WSL:
 
-#. Get it from Microsoft Store
+#. Follow Microsoft `instructions <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_
+#. Install `VS code with remote WSL <https://code.visualstudio.com/docs/remote/wsl>`_
+
+VS code has some nice plugins for ROS and tools like linters.
+
+Recommended for W10 users that don`t need real time connection to real robots (you could always borrow a PC with ubuntu when you need that).
 
 .. _`MacOS with Parallels VM`:
 
