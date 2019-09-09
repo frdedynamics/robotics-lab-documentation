@@ -14,7 +14,7 @@
 ## Before the lab
 1. Complete the [Universal Robots Academy](./UR_exercises.md) ***<-- this is very important!***
 1. If first time then contact lab-assistant/phd-fellow/teacher. Expect thorough follow up.
-1. Travel to the [HVL Robotics Lab](https://www.google.com/maps/place/HVL+Robotics+Lab/@61.4590375,5.8326453,17z/data=!3m1!4b1!4m5!3m4!1s0x4616333d5f3d88b5:0x2025abbba16257dd!8m2!3d61.459035!4d5.8348393) 
+1. Travel to the [HVL Robotics Lab](https://www.google.com/maps/place/HVL+Robotics+Lab/@61.4590375,5.8326453,17z/data=!3m1!4b1!4m5!3m4!1s0x4616333d5f3d88b5:0x2025abbba16257dd!8m2!3d61.459035!4d5.8348393)
 1. Read and sign the lab rules.
 1. Have all the fun with robots! If stuck then ask for help.
 
@@ -27,7 +27,7 @@ Signed attendance will suffice as approved lab exercise.
 1. Repeat Universal Robots Academy Task 4. Creating a program, but this time on a real robot.
     1. Make a triangle using MoveJ, then using MoveL, and finally using MoveP.
     1. Pick up a real box, place it somewhere else.
-1. Repeat Universal Robots Academy Task 10. Feature coordinates, but this time on a real robot and you decide the real/imaginary box.
+1. Repeat Universal Robots Academy Task 10. You may find it in the *PRO Track* section of the Universal Robots Academy - not in the *Core* section. The task is named feature coordinates. This time you will compute the task on a real robot and you decide the real/imaginary box.
 
 ## Race pace
 Finally! A challenge. A series of demands are listed below, make a program to fufill them. Make your program both as fast and smooth as possible. This is a contest!
@@ -40,7 +40,7 @@ Finally! A challenge. A series of demands are listed below, make a program to fu
 1. Place object in box A
 
 ## Questions
-1. What is this thing UR calls "Feature"? 
+1. What is this thing UR calls "Feature"?
     1. Which ones did you use?
     1. Where were their respectice origo?
     1. What is their use?
@@ -48,8 +48,3 @@ Finally! A challenge. A series of demands are listed below, make a program to fu
 1. What was your fastest race time?
 
 ![Race course](../_static/lab/lab_layout_course1.png)
-
-
-
-
-
