@@ -4,3 +4,4 @@ devel/
 doc/
 _build/
 *.bat
+.vscode
