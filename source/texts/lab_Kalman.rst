@@ -201,7 +201,7 @@ Our measurements:
 Implementation of Kalman filter
 --------------------------------
 Kalman Filter is based on modelling the process noise. As well, the Kalman filter provides a prediction of the future system state by prediction. Therefore Kalman filter consists of two parts;
-**Prediction** and **Correction**. TODO: WHY THE FIGURES ARE SO AWKWARD HERE?
+**Prediction** and **Correction**.
 
 .. figure:: ../_static/images/KalmanEqns1.png
   :align: right
@@ -295,7 +295,7 @@ To implement those four orientation estimation techniques, we will use MATLAB an
 
 **On your smartphone**
 
-#. In Google Store, install **Sensor Fusion App** TODO: find a log file generator app for IOS.
+#. In Google Store, install **Sensor Fusion App** (IOS phones can follow the Follow the `link <https://1drv.ms/u/s!Au2fyLreLQhQhpI-iEv3ZTGYpJzjEA?e=aGdPOU/>`_ and use the *sensorLog_2pitch.txt* instead. They don't need to follow these steps.)
 #. Select the first item *Select Sensor* and check if your accelerometer works fine. During a steady mode of your phone while its screen facing upwards, only the z-axis of the accelerometer should give 9.8 :math:`m/s^2` and other axes should be 0.
 #. Check if your gyroscope works fine. During a steady mode of your phone all axes should be 0. If there is a little fraction, it is the bias on your gyroscope data.
 #. In the main screen, select the second item *Log Data*.
