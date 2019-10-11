@@ -4,7 +4,7 @@ Lab 3
 
 .. warning::
     Before connecting IO, turn the robot off and disconnect the power.
-    Wait a minute for any charge to disapate. Or risk the unfortunate
+    Wait a minute for any charge to dissipate. Or risk the unfortunate
     fate of being human toast.
 
 .. warning::
