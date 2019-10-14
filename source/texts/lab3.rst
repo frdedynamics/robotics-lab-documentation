@@ -105,12 +105,15 @@ Consider the following suggestion as a starting point:
 
 #. Move to a waypoint above the stack.
 #. Close gripper.
-#. Lower relative to the waypoint above until force greater than 3N.
+#. Lower slowly relative to the waypoint above until force greater than 3N.
 #. Relative move up 1 cm.
 #. Open gripper.
 #. Pick box.
 
 Also, have a look at stack/de-stack options on the UR5e.
+
+Tip: `my_variable = get_actual_tcp_pose()` and add 0.01 meters to the
+Z index `[2]`, then MoveL to this variable position.
 
 
 _`Make a program to open the machine door`
