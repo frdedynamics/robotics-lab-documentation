@@ -63,14 +63,14 @@ Our robots:
 |                                             |                                         |
 |   Robot made at the lab, |br|               |   Alphabot, |br|                        |
 |   inspired by RWU_, |br|                    |   named Alphabot.                       |
-|   named Crawler.			      |						|
+|   named Dagobert.			      |						|
 +---------------------------------------------+-----------------------------------------+
-| .. figure:: _static/robots/helper.jpg       | 				        |
-|   :figwidth: 50%			      |   					|
-|   :alt: map to buried treasure              |   			                |
+| .. figure:: _static/robots/helper.jpg       | .. figure:: _static/robots/burger.jpg   |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
+|   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
-|   Little Helper.               	      |      		                        |
-|                      			      |    		                        |
+|   Little Helper.               	      |   Turtlebot Burger |br|		        |
+|                      			      |   named Hugo.	                        |
 |   			      		      |						|
 +---------------------------------------------+-----------------------------------------+
 
