@@ -61,10 +61,13 @@ How to WSL:
 
 #. Follow Microsoft `instructions <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_
 #. Install `VS code with remote WSL <https://code.visualstudio.com/docs/remote/wsl>`_
+#. Install an X server, e.g. VcXsrv Windows X Server and finally add the following line to your ~/.bashrc: `export DISPLAY=:0`
+
+Can't ping your W10 machine from a different machine? Check your windows firewall and private/public network settings.
 
 VS code has some nice plugins for ROS and tools like linters.
 
-Recommended for W10 users that don`t need real time connection to real robots (you could always borrow a PC with ubuntu when you need that).
+Recommended for W10 users that don't need real time connection to real robots (you could always borrow a PC with ubuntu when you need that).
 
 .. _`MacOS with Parallels VM`:
 
