@@ -15,7 +15,7 @@ Stuff for you to do:
 
    Universal Robots Academy <texts/UR_exercises.md>
    Lab exercise 1, UR <texts/lab1.md>
-   Lab exercise 2, UR <texts/lab2.md>
+   Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
    Lab exercise 6, Kalman Filter <texts/lab_Kalman.rst>
 
@@ -63,14 +63,14 @@ Our robots:
 |                                             |                                         |
 |   Robot made at the lab, |br|               |   Alphabot, |br|                        |
 |   inspired by RWU_, |br|                    |   named Alphabot.                       |
-|   named Crawler.			      |						|
+|   named Dagobert.			      |						|
 +---------------------------------------------+-----------------------------------------+
-| .. figure:: _static/robots/helper.jpg       | 				        |
-|   :figwidth: 50%			      |   					|
-|   :alt: map to buried treasure              |   			                |
+| .. figure:: _static/robots/helper.jpg       | .. figure:: _static/robots/burger.jpg   |
+|   :figwidth: 50%			      |   :figwidth: 50%			|
+|   :alt: map to buried treasure              |   :alt: map to buried treasure          |
 |                                             |                                         |
-|   Little Helper.               	      |      		                        |
-|                      			      |    		                        |
+|   Little Helper.               	      |   Turtlebot Burger |br|		        |
+|                      			      |   named Hugo.	                        |
 |   			      		      |						|
 +---------------------------------------------+-----------------------------------------+
 
