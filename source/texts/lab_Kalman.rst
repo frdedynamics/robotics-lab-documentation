@@ -38,9 +38,9 @@ By this definition, the orientation angles are calculated as:
 
 .. math::
 
-    roll \rightarrow \phi &= \int_{t_0}^{t} G_x dt\\
-    pitch \rightarrow \theta &= \int_{t_0}^{t} G_y dt\\
-    yaw \rightarrow \psi &= \int_{t_0}^{t} G_z dt\\
+    roll \rightarrow \phi &= \int_{t_0}^{t} G_x \Delta t\\
+    pitch \rightarrow \theta &= \int_{t_0}^{t} G_y \Delta t\\
+    yaw \rightarrow \psi &= \int_{t_0}^{t} G_z \Delta t\\
 
 where :math:`G_x`, :math:`G_y` and :math:`G_z` are the angular velocities read by the IMU about x,y and z axes respectively in body fixed frame. To find the orientations with respect to world frame, you need this rotation matrix:
 
@@ -69,8 +69,8 @@ where :math:`G_x`, :math:`G_y` and :math:`G_z` are the angular velocities read b
 and,
 
 .. math::
-  \hat\phi = \phi_{prev} + \dot\phi\\
-  \hat\theta = \theta_{prev} + \dot\theta
+  \hat\phi = \phi_{prev} + \dot\phi \Delta t\\
+  \hat\theta = \theta_{prev} + \dot\theta \Delta t
 
 .. warning::
   In theory, this method of orientation calculation works perfect. However the computers on which we are working are doing discrete calculations. On the other hand, we measure the angular velocity in real world, moving the phone in our hands. When you integrate a continuous signal in a discrete environment, you have an accumulation problem (i.e. drift error).
@@ -153,21 +153,28 @@ Kalman filter is one of the most common estimation algorithms. It produces estim
   .. math::
 
     \begin{split}
-      \vec{x}_{t+1} &= \textbf{A} \cdot \vec{x}_t + \textbf{B} \cdot \vec{u}_t + \vec{w}_t\\
-      \vec{y}_{t+1} &= \textbf{C} \cdot \vec{x}_{t+1} + \vec{v}_{t+1}
+      \vec{\hat{x}}_{t+1} &= \textbf{A} \cdot \vec{\hat x}_t + \textbf{B} \cdot \vec{u}_t + \vec{w}_t \label{eqn:state1}\\
+      \vec{\hat{y}}_{t} &= \textbf{C} \cdot \vec{\hat x}_{t} + \vec{v}_{t} \label{eqn:state2}\\
+      \vec{\tilde{y}}_{t} &= \vec{y}_{t} - \vec{\hat{y}}_{t} \label{eqn:state3}
     \end{split}
 
-  Where :math:`\vec{x}_{t}` is the `system state`_ vector, :math:`\vec{u}_t` is the `input vector`_  and :math:`\vec{y}_t` is the `measurement vector`_ at time t.
-
-  A : system matrix (relates the current states to the next states)
-
-  B : input bmatrix (relates inputs to the next states)
-
-  C : output matrix (system states to the measured states)
-
-  :math:`(\vec{w}_t)` : process noise
-
-  :math:`(\vec{v}_t)` : measurement noise – both assumed to be zero-mean Gaussian noise.
+  Where :math:`\vec{\hat x}_{t}` is the estimated \textbf{system state vector}, :math:`\vec{u}_t` is the \textbf{input vector}  and :math:`\vec{y}_t` is the \textbf{measurement vector} at time t.
+    
+      :math:`\textbf{A}` : system matrix (relates the current states to the next states)
+    
+      :math:`\textbf{B}` : input matrix (relates inputs to the next states)
+    
+      :math:`\textbf{C}` : output matrix (system states to the measured states)
+    
+      :math:`\vec{w}_t` : process noise
+    
+      :math:`\vec{v}_t` : measurement noise 
+      
+      :math:`\vec{\hat{x}}_{t+1}` : estimated state vector for the next time step.
+      
+      :math:`\vec{\hat{y}}_{t}` : estimated measurement vector (observation vector)
+      
+      :math:`\vec{\tilde{y}}_{t}` : error between the actual measurement and the estimated
 
 .. _`system state`:
 
@@ -175,9 +182,9 @@ We choose our system states as:
 
 .. math::
 
-  \vec{x}_t = \begin{bmatrix} \hat{\phi}_t \\ b_{\hat{\phi}_t} \\ \hat{\theta}_t \\ b_{\hat{\theta}_t} \end{bmatrix}
+  \vec{\hat x}_t = \begin{bmatrix} \hat{\phi}_t \\ \hat{\dot{\phi}}_{b_t} \\ \hat{\theta}_t \\ \hat{\dot{\theta}}_{b_t} \end{bmatrix}
 
-Where :math:`b_{\phi_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\phi}` and :math:`b_{\theta_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\theta}`.
+Where :math:`\hat{\dot{\phi}}_{b_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\phi}` and :math:`\hat{\dot{\theta}}_{b_t}` is the gyro bias at time t associated with our estimate :math:`\hat{\theta}`.
 
 .. _`input vector`:
 
@@ -187,7 +194,7 @@ Our inputs:
 
   \vec{u}_t = \begin{bmatrix} \dot{\phi}_{G_t} \\ \dot{\theta}_{G_t} \end{bmatrix}\\
 
-Where :math:`\dot{\phi}_{G_t}` and :math:`\dot{\theta}_{G_t}` are the gyroscope values for roll and pitch respectively.
+Where :math:`\dot{\phi}_{t}` and :math:`\dot{\theta}_{t}` are the gyroscope values for roll and pitch respectively.
 
 .. _`measurement vector`:
 
@@ -215,7 +222,7 @@ After defining all the parameters, now we can start building up the Kalman filte
 
 .. math::
 
-  \vec{x}_{t+1} = \textbf{A} \cdot \vec{x}_t + \textbf{B} \cdot \vec{u}_t\\
+  \vec{\hat x}_{t+1} = \textbf{A} \cdot \vec{\hat x}_t + \textbf{B} \cdot \vec{u}_t\\
   \textbf{P} = \textbf{A} \cdot \textbf{P} \cdot \textbf{A}^T + \textbf{Q}
 
 Then, this error covariance matrix is used in updating the Kalman gain **K**. (In some resources, you can see this step is named as **Update** for this reason.)
@@ -224,10 +231,10 @@ Then, this error covariance matrix is used in updating the Kalman gain **K**. (I
 
 .. math::
 
-  \widetilde{y}_{t+1} = \vec{y}_{t+1} - \textbf{C} \cdot \vec{x}_{t+1}\\
+  \widetilde{y}_{t} = \vec{y}_{t} - \textbf{C} \cdot \vec{\hat x}_{t+1}\\
   \textbf{S} = \textbf{C} \cdot \textbf{P} \cdot \textbf{C}^T + \textbf{R}\\
   \textbf{K} = \textbf{P} \cdot \textbf{C}^T \cdot \textbf{S}^{-1}\\
-  \vec{x}_{t+1} = \vec{x}_{t+1} + \textbf{K} \cdot \widetilde{y}_{t+1}\\
+  \vec{\hat x}_{t+1} = \vec{\hat x}_{t+1} + \textbf{K} \cdot \widetilde{y}_{t}\\
   \textbf{P} = (\textbf{I} - \textbf{K} \cdot \textbf{C}) \cdot \textbf{P}
 
 
@@ -350,10 +357,6 @@ Conclusion and Further Readings
 
 We have seen some filtering algorithms applied on IMU in order to get some orientation data. The most important lesson in this tutorial is to realize that the sensor systems are not completely reliable if you are reading the raw data. As it is mentioned at the beginning, other localization solutions such as using GPS data or camera systems are also requires after-processing as we did on IMU in the tutorial. Today, some of the expensive sensor systems have their own filtering circuits inside the sensor.
 
-TODO: Fix references.
-
-See for an introduction :cite:`Corke2011`>
-
-.. [Peter Corke Ch.6] Detailed mathematical explanation of Kalman filter.
+`Further reading here <http://philsal.co.uk/projects/imu-attitude-estimation>`__
 
 .. bibliography:: ../references.bib
