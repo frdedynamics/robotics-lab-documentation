@@ -18,6 +18,7 @@ Stuff for you to do:
    Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
    Lab exercise 6, Kalman Filter <texts/lab_Kalman.rst>
+   ROS <texts/ROS1.rst>
 
 
 Stuff for you to do to your PC:
