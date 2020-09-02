@@ -17,6 +17,7 @@ Stuff for you to do:
    Lab exercise 1, UR <texts/lab1.md>
    Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
+   Lab exercise 4, UR <texts/lab4_ROS.rst>
    Lab exercise 6, Kalman Filter <texts/lab_Kalman.rst>
    ROS <texts/ROS1.rst>
 
