@@ -61,7 +61,10 @@ simulated worlds using your keyboard.
 
 See `simulation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-1-simulation/>`_.
 
-Take special note of ``roslaunch turtlebot3_gazebo turtlebot3_world.launch``
+Take special note of 
+
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
 which can be used to replace the real robot and world for testing in later cases.
 
 
