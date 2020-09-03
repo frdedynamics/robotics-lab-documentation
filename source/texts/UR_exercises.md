@@ -1,6 +1,8 @@
 Universal Robots Academy
 ****************************
 
+# Universal Robots Academy
+
 1. Goto <https://www.universal-robots.com/academy/>
 1. Make an account (free) and complete all the core and pro exercises before your first lab
 
