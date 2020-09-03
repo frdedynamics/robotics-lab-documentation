@@ -48,6 +48,7 @@ Tasks
 
 _`[ROS 1] Setup, PC Setup, Remote PC`
 ==============================================
+
 Follow the `pc setup tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/>`_ to set 
 up your PC ("Remote PC"). The real turtlebots themselves should be ready to go. 
 
