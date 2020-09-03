@@ -76,7 +76,7 @@ bringup the turtlebot and show it in RViz.
 
 _`[ROS 1] Basic Operation`
 ==============================================
-Follow the `basic opertaion tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/#ros-1-basic-operation/>`_ to 
+Follow the `basic operation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/#ros-1-basic-operation/>`_ to 
 bringup the turtlebot. If you don't have a turtlebot, then skip all the [TurtleBot] parts and rather
 launch a simulated robot and world.
 
