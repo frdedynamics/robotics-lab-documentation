@@ -40,7 +40,7 @@ Signed attendance will suffice as approved lab exercise.
 
 ## Race pace
 
-Finally! A challenge. A series of demands are listed below, make a program to fufill them. Make your program both as fast and smooth as possible. This is a contest!
+Finally! A challenge. A series of demands are listed below, make a program to fulfill them. Make your program both as fast and smooth as possible. This is a contest!
 
 1. Build the course in the picture below.
 1. Place the object in box C.
@@ -53,7 +53,7 @@ Finally! A challenge. A series of demands are listed below, make a program to fu
 
 1. What is this thing UR calls "Feature"?
     1. Which ones did you use?
-    1. Where were their respectice origo?
+    1. Where were their respective origo?
     1. What is their use?
 
 1. What is MoveJ, MoveL and MoveP? Describe the difference, and when to use what.
