@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+
+<robot name="myrobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name='chassis'>
+    <pose>0 0 0.1 0 0 0</pose>
+
+    <visual name='chassis_visual'>
+      <origin xyz="0 0 0" rpy=" 0 0 0"/>
+      <geometry>
+        <box size=".4 .2 .1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="left_wheel_hinge" type="continuous" >
+    <origin xyz="0.1 0.15 0" rpy="0 0 0"/>
+    <child link="left_wheel"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="right_wheel_hinge" type="continuous">
+    <origin xyz="0.1 -0.15 0" rpy="0 0 0"/>
+    <child link="right_wheel"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>
