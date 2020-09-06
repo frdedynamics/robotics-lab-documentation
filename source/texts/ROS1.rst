@@ -295,7 +295,7 @@ We can add some items by just adding items as we included the *sun* and the *gro
 Also you can change the position and orientation of any object which you have added with the :code:`<pose>x y z roll pitch yaw</pose>` tag.
 
 URDF
------
+~~~~
 Unified Robot Description Format. It is used to describe the robot model. It contains links, joints and basic material information of each part of the robot. `Here <http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch>`_ is the R2D2 model written in URDF!
 
 All the elements that you can use in an URDF file are `these. <http://wiki.ros.org/urdf/XML/robot>`_ A simple URDF file looks like this. Let's first understand it line by line.
@@ -334,7 +334,7 @@ Xacro: beginners_tutorials/urdf/mybot/mybot.xacro :code:`git clone -b base https
 
 
 Adding Sensors to the Gazebo Model (part 2)
----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will add a laser scanner and some obstacles on our 2 wheel robot. It is going to look like this:
 
 .. figure:: ../_static/images/mybotSensor.png
