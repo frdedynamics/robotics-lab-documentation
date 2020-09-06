@@ -1,3 +1,6 @@
+Lab 1
+****************************
+
 # Lab 1
 
 ## Theme
@@ -32,6 +35,7 @@ Signed attendance will suffice as approved lab exercise.
 1. Repeat Universal Robots Academy Task 4. Creating a program, but this time on a real robot.
     1. Make a triangle using MoveJ, then using MoveL, and finally using MoveP.
     1. Pick up a real box, place it somewhere else.
+
 1. Repeat Universal Robots Academy Task 10. You may find it in the *PRO Track* section of the Universal Robots Academy - not in the *Core* section. The task is named feature coordinates. This time you will compute the task on a real robot and you decide the real/imaginary box.
 
 ## Race pace
@@ -51,6 +55,7 @@ Finally! A challenge. A series of demands are listed below, make a program to fu
     1. Which ones did you use?
     1. Where were their respectice origo?
     1. What is their use?
+
 1. What is MoveJ, MoveL and MoveP? Describe the difference, and when to use what.
 1. What was your fastest race time?
 
