@@ -240,50 +240,103 @@ Simulating Robots in ROS
 ==========================
 In the ROS environment, there are 2 main simulation tools. `Rviz <http://wiki.ros.org/rviz>`_ and `Gazebo <http://gazebosim.org/tutorials?tut=ros_overview>`_. Even though they both are simulation tools, they diverge when it comes to usage. Rviz is more *visualization* purposes such that map creation, transfer function visualization, point cloud, image visualization etc. Gazebo, on the other hand, is used for physical testing. Despite the fact that it is possible to test sensor readings on Rviz as well, it is not possible to test collisions in Rviz; you need Gazebo (or another physics engine embedded simulation tools.
 
+.. figure:: ../_static/images/mybot.png
+          :align: center
+
+          Source: moorerobots.com
+
 .. note::
    Gazebo is a standalone simulation tool with its own physics engine. It does not require ROS to run.
 
-Rviz tutorial
-~~~~~~~~~~~~~~
-`Here. <http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf>`_
 
-Gazebo tutorial
-~~~~~~~~~~~~~~~~
-`Here. <https://www.youtube.com/watch?v=8ckSl4MbZLg&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG>`_
-Outline:
+Rviz Introduction
+~~~~~~~~~~~~~~~~~~
+The original tutorial is `here <http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf>`_. Let's modify this to understand Rviz elements a bit more. First start the node with two turtles with the following command: :code:`roslaunch turtle_tf turtle_tf_demo.launch`.
 
-* What is a model (URDF intro)
-* Very simple 2 wheel rectangular shape turtlebot-like mobile robot
-* Visualize it of Rviz (see the links and the chains etc)
-* Import it into Gazebo and see exactly the same as Rviz
-* Add 1-2 box-shape obstacle to the world (to visualize the interaction with the physical world so that the students get the difference in between Rviz and Gazebo)
+Start Rviz: :code:`rosrun rviz rviz`.
+
+As you see, there is no element on the left toolbar. First add the :code:`/world` frame. Also add the TF element.
+
+Click on the terminal again, use your arrow keys to move your turtle and observe the TF poses on Rviz.
+
+
+Gazebo Introduction
+~~~~~~~~~~~~~~~~~~~~
+Gazebo is the most used simulator in ROS. It has integrated physics rules like gravity, colision, light distribution with reflection and refraction properties, mass and inertia etc. Now, we will see how to set the Gazebo for a very basic usage.
+
+.. warning::
+   Before moving on, I would like you all to have the same folder organization as shown in the figure. This is important for you to follow the rest of the tutorial easily. Although such an organization is not necessarry for ROS system particularly, this is the accepted/official way of organizing ROS packages.
+
+   .. figure:: ../_static/images/folders.png
+          :align: center
+
+
+First, let's create an empty world under the /world folder.
+
+.. literalinclude:: ../_static/scripts/empty_world.world
+      :language: xml
+      :caption: empty_world.world
+
+Secondly, create a launch file under /launch folder to run Gazebo and import our empty world.
+
+.. literalinclude:: ../_static/scripts/my_world_gazebo.launch
+      :language: xml
+      :caption: my_world_gazebo.launch
+
+We can add some items by just adding items as we included the *sun* and the *ground plane* into our world file. There are many ready-to-use models in the official `gazebo-models repository <https://github.com/osrf/gazebo_models>`_. Now, choose a model and as in the following code.
+
+.. code-block:: xml
+
+   <!-- Add an object -->
+	<include>
+	  <uri>model://postbox</uri>
+	</include>
+
+Also you can change the position and orientation of any object which you have added with the :code:`<pose>x y z roll pitch yaw</pose>` tag.
 
 URDF
------
+~~~~
 Unified Robot Description Format. It is used to describe the robot model. It contains links, joints and basic material information of each part of the robot. `Here <http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch>`_ is the R2D2 model written in URDF!
 
-A simple URDF file looks like this. Let's first understand it line by line.
+All the elements that you can use in an URDF file are `these. <http://wiki.ros.org/urdf/XML/robot>`_ A simple URDF file looks like this. Let's first understand it line by line.
 
  .. literalinclude:: ../_static/scripts/simplexacro.xacro
        :language: xml
 
-We are going to create a simple 2 wheel turtlebot-like car. It is going to be like this:
+URDF in RViz
+-------------
 
-.. figure:: ../_static/images/mybotAlone.png
-          :align: center
+ .. literalinclude:: ../_static/scripts/my_robot.xacro
+       :language: xml
+       :caption: beginners_tutorials/urdf/my_robot.xacro
 
-And we will visualize it both in Rviz and Gazebo simulation environments.
 
-.. figure:: ../_static/images/mybot.png
-          :align: center
+ .. literalinclude:: ../_static/scripts/my_robot_rviz.launch
+       :language: xml
+       :caption: beginners_tutorials/launch/my_robot_rviz.launch
+
+
+URDF in Gazebo
+----------------
+
+URDF files are able to be used in Gazebo by including mass, inertia, joint efforts, joint limits etc properties of the links and joint. In fact, Gazebo simulator does not use the URDF files directly. The file format in which Gazebo uses is SDF (Simulation Description Format). The main reason is that the URDF files are lacking many features and have not been updated to deal with the evolving needs of robotics. URDF can only specify the kinematic and dynamic properties of a single robot in isolation. URDF can not specify the pose of the robot itself within a world. It is also not a universal description format since it cannot specify joint loops (parallel linkages), and it lacks friction and other properties. Additionally, it cannot specify things that are not robots, such as lights, heightmaps, etc.
+
+However, at this moment, there is no need to frustrate with a new file format than URDF yet it is nice to know this fact. For more detailed information, you can `read this <http://gazebosim.org/tutorials?tut=ros_urdf>`_.
+
+Xacro: beginners_tutorials/urdf/mybot/mybot.xacro :code:`git clone -b base https://github.com/richardw05/mybot_ws.git`
+
+ .. literalinclude:: ../_static/scripts/my_robot_gazebo.launch
+       :language: xml
+       :caption: beginners_tutorials/launch/my_robot_gazebo.launch
+
+*This tutorial is based on the* `Moore Robots <http://www.moorerobots.com/blog>`_ *tutorials. They provide a series of robot modelling/simulation/navigation tutorial. It can be a bit confusing for the beginners but I believe that they are very useful for those who would like to use ROS in their term projects.* `Here <https://www.youtube.com/watch?v=8ckSl4MbZLg&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG>`_ * is the youtube tutorial of Moore robots.*
+
 
 
 Adding Sensors to the Gazebo Model (part 2)
----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We will add a laser scanner and some obstacles on our 2 wheel robot. It is going to look like this:
 
 .. figure:: ../_static/images/mybotSensor.png
         :align: center
 
-        
-Source codes are available `here. <https://github.com/richardw05/mybot_ws/tree/master>`_
