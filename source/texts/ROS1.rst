@@ -343,7 +343,7 @@ Adding scanner and some obstacles on our 2 wheel robot. It is going to look like
 This part is going to be a homework. The tutorial is `here <https://www.youtube.com/watch?v=EZ3MYf24c6Y&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG&index=2&ab_channel=RichardWang>`_.
 
 ROS with Matlab
-~~~~~~~~~~~~~~~~~
+=================
 We have seen that ROS is a very powefull tool which allows us to use many predefined packages including various robots' packages, various algorithms, sensor drivers etc. On the other hand, we have another powerful in our hands for which mostly we use signal processing, modelling, in control process. It would be cool if we used them together. 
 
 Recently Matlab included **ROS** under its Robotics Toolbox which enables the ROS environment accessible via Matlab. Now, we are going to set our Matlab to control turtlesim which we started from our ROS.
@@ -360,7 +360,7 @@ Since we successfully ran the ros master, we can create the first publisher. The
 #. Via Matlab Script
 
 Via Simulink
-----------------
+~~~~~~~~~~~~~~
 This is the most intuitive and the easiest way of creating a ROS publisher using Matlab. Using Simulink, please create the following model.
 
 .. figure:: ../_static/images/ros_simulink.png
@@ -385,7 +385,7 @@ This is the most intuitive and the easiest way of creating a ROS publisher using
 * Set the simulink publisher link to :code:`/mobile_base/commands/velocity`.
 
 Via Matlab Script
--------------------
+~~~~~~~~~~~~~~~~~~
 .. note::
    You can write this code directly on the Command Window also.
 
