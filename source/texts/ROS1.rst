@@ -335,10 +335,12 @@ Xacro: beginners_tutorials/urdf/mybot/mybot.xacro :code:`git clone -b base https
 
 Adding Sensors to the Gazebo Model (part 2)
 ---------------------------------------------
-We will add a laser scanner and some obstacles on our 2 wheel robot. It is going to look like this:
+Adding scanner and some obstacles on our 2 wheel robot. It is going to look like this:
 
 .. figure:: ../_static/images/mybotSensor.png
         :align: center
+
+This part is going to be a homework. The tutorial is `here <https://www.youtube.com/watch?v=EZ3MYf24c6Y&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG&index=2&ab_channel=RichardWang>`_.
 
 ROS with Matlab
 ~~~~~~~~~~~~~~~~~
