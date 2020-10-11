@@ -108,15 +108,17 @@ Here the :math:`\theta` and :math:`\phi` angles is found by the following formul
 
 .. math::
 
-    tan(\theta) = a_x / \tilde a_z = a_x / \sqrt (a_y^2 + a_z^2)\\
-    tan(\phi) = a_y / \tilde a_z = a_y / \sqrt (a_x^2 + a_z^2)
+    tan(\phi) = - a_y / \tilde a_z = - a_y / \sqrt (a_x^2 + a_z^2)\\
+    tan(\theta) = a_x / \tilde a_z = a_x / \sqrt (a_y^2 + a_z^2)
+    
 
 Therefore,
 
 .. math::
 
-    \hat\theta = arctan(\frac{A_x}{\sqrt{A_y^2 + A_z^2}})\\
-    \hat\phi = arctan(\frac{A_y}{\sqrt{A_x^2 + A_z^2}})
+    \hat\phi = arctan(\frac{-A_y}{\sqrt{A_x^2 + A_z^2}})\\
+    \hat\theta = arctan(\frac{A_x}{\sqrt{A_y^2 + A_z^2}})
+    
 
 .. seealso::
   In order to find the rotation angles, we may either use rotation matrices or we can approach geometrically. You have already seen how to calculate rotation matrices in your earlier lessons. You can try calculating :math:`\theta` and :math:`\phi` using rotation matrices by yourself and finding out the same results as here. You can check the reference :cite:`tuck2007tilt`.
