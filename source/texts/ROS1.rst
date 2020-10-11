@@ -2,8 +2,6 @@
 Robot Operating System
 ****************************
 
-**test**
-
 So, if you like we can focus on Turtlebot simulation. Something like:
 
 #. What is ROS? Rosmaster, node, topic, message, subscriber, publisher, etc.
@@ -13,7 +11,7 @@ So, if you like we can focus on Turtlebot simulation. Something like:
 
 What is ROS?
 =============
-* **ROS**: "(Robot Operating System) is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers." `ros.org <https://www.ros.org>`_
+* **ROS**: "(Robot Operating System) is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers." `Follow this link for ros.org <https://www.ros.org>`_
 
   * Meta operating system
   * Fundamental components
@@ -42,7 +40,7 @@ Installation
 .. note::
    Only the first option is recommended but for those who don't want to install Ubuntu can use other alternatives.
 
-* For Ubuntu users please follow the official guide `here <http://wiki.ros.org/ROS/Installation>`_
+* For Ubuntu users please follow `the official guide <http://wiki.ros.org/ROS/Installation>`_
 * For Windows users please follow the link to install `WSL <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`_, `Visual Studio Code <https://code.visualstudio.com/download>`_ and for simplicity you can install `Visual Studio Code Remote - WSL Extension <https://code.visualstudio.com/docs/remote/wsl>`_.
 * For browser-based ROS environment `ROSDS <https://auth.theconstructsim.com/auth/login/?next=/oidc/authorize/%3Fscope%3Dopenid%2Bprofile%2Bemail%26state%3D0U3HkB5WbPlLVhwsR10eFHXeWlbgStpy%26redirect_uri%3Dhttps%253A%252F%252Frds.theconstructsim.com%252Foidc%252Fcallback%252F%26response_type%3Dcode%26client_id%3D983516>`_.
 
@@ -253,7 +251,7 @@ In the ROS environment, there are 2 main simulation tools. `Rviz <http://wiki.ro
 
 Rviz Introduction
 ~~~~~~~~~~~~~~~~~~
-The original tutorial is `here <http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf>`_. Let's modify this to understand Rviz elements a bit more. First start the node with two turtles with the following command: :code:`roslaunch turtle_tf turtle_tf_demo.launch`.
+The `original tutorial <http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf>`_ is linked. Let's modify this to understand Rviz elements a bit more. First start the node with two turtles with the following command: :code:`roslaunch turtle_tf turtle_tf_demo.launch`.
 
 Start Rviz: :code:`rosrun rviz rviz`.
 
@@ -298,7 +296,7 @@ Also you can change the position and orientation of any object which you have ad
 
 URDF
 -----
-Unified Robot Description Format. It is used to describe the robot model. It contains links, joints and basic material information of each part of the robot. `Here <http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch>`_ is the R2D2 model written in URDF!
+Unified Robot Description Format. It is used to describe the robot model. It contains links, joints and basic material information of each part of the robot. You can follow the `list of parts <http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch>`_ is the R2D2 model written in URDF!
 
 All the elements that you can use in an URDF file are `these. <http://wiki.ros.org/urdf/XML/robot>`_ A simple URDF file looks like this. Let's first understand it line by line.
 
@@ -331,7 +329,7 @@ Xacro: beginners_tutorials/urdf/mybot/mybot.xacro :code:`git clone -b base https
        :language: xml
        :caption: beginners_tutorials/launch/my_robot_gazebo.launch
 
-*This tutorial is based on the* `Moore Robots <http://www.moorerobots.com/blog>`_ *tutorials. They provide a series of robot modelling/simulation/navigation tutorial. It can be a bit confusing for the beginners but I believe that they are very useful for those who would like to use ROS in their term projects.* `Here <https://www.youtube.com/watch?v=8ckSl4MbZLg&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG>`_ * is the youtube tutorial of Moore robots.*
+This tutorial is based on the `Moore Robots <http://www.moorerobots.com/blog>`_ tutorials. They provide a series of robot modelling/simulation/navigation tutorial. It can be a bit confusing for the beginners but I believe that they are very useful for those who would like to use ROS in their term projects. Here is the `youtube tutorial of Moore robots <https://www.youtube.com/watch?v=8ckSl4MbZLg&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG>`_.
 
 
 
@@ -342,7 +340,7 @@ Adding scanner and some obstacles on our 2 wheel robot. It is going to look like
 .. figure:: ../_static/images/mybotSensor.png
         :align: center
 
-This part is going to be a homework. The tutorial is `here <https://www.youtube.com/watch?v=EZ3MYf24c6Y&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG&index=2&ab_channel=RichardWang>`_.
+This part is going to be a homework. The tutorial is `in this link <https://www.youtube.com/watch?v=EZ3MYf24c6Y&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG&index=2&ab_channel=RichardWang>`_.
 
 ROS with Matlab
 =================
