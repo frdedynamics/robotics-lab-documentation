@@ -155,7 +155,7 @@ Kalman filter is one of the most common estimation algorithms. It produces estim
   .. math::
 
     \begin{split}
-      \vec{\hat{x}}_{t+1} &= \textbf{A} \cdot \vec{\hat x}_t + \textbf{B} \cdot \vec{u}_t + \vec{w}_t \label{eqn:state1}\\
+      \vec{\hat{x}}_{t} &= \textbf{A} \cdot \vec{\hat x}_{t-1} + \textbf{B} \cdot \vec{u}_t + \vec{w}_t \label{eqn:state1}\\
       \vec{\hat{y}}_{t} &= \textbf{C} \cdot \vec{\hat x}_{t} + \vec{v}_{t} \label{eqn:state2}\\
       \vec{\tilde{y}}_{t} &= \vec{y}_{t} - \vec{\hat{y}}_{t} \label{eqn:state3}
     \end{split}
@@ -172,7 +172,7 @@ Kalman filter is one of the most common estimation algorithms. It produces estim
     
       :math:`\vec{v}_t` : measurement noise 
       
-      :math:`\vec{\hat{x}}_{t+1}` : estimated state vector for the next time step.
+      :math:`\vec{\hat{x}}_{t}` : estimated state vector.
       
       :math:`\vec{\hat{y}}_{t}` : estimated measurement vector (observation vector)
       
@@ -212,11 +212,9 @@ Implementation of Kalman filter
 Kalman Filter is based on modelling the process noise. As well, the Kalman filter provides a prediction of the future system state by prediction. Therefore Kalman filter consists of two parts;
 **Prediction** and **Correction**.
 
-.. figure:: ../_static/images/KalmanEqns1.png
+.. figure:: ../_static/images/KalmanEqns.png
   :align: right
 
-.. figure:: ../_static/images/KalmanEqns2.png
-  :align: center
 
 After defining all the parameters, now we can start building up the Kalman filter. In prediction step, the system model is used in calculation of error covariance matrix **P**.
 
@@ -224,7 +222,7 @@ After defining all the parameters, now we can start building up the Kalman filte
 
 .. math::
 
-  \vec{\hat x}_{t+1} = \textbf{A} \cdot \vec{\hat x}_t + \textbf{B} \cdot \vec{u}_t\\
+  \vec{\hat x}_{t} = \textbf{A} \cdot \vec{\hat x}_{t-1} + \textbf{B} \cdot \vec{u}_t\\
   \textbf{P} = \textbf{A} \cdot \textbf{P} \cdot \textbf{A}^T + \textbf{Q}
 
 Then, this error covariance matrix is used in updating the Kalman gain **K**. (In some resources, you can see this step is named as **Update** for this reason.)
@@ -236,7 +234,7 @@ Then, this error covariance matrix is used in updating the Kalman gain **K**. (I
   \widetilde{y}_{t} = \vec{y}_{t} - \textbf{C} \cdot \vec{\hat x}_{t+1}\\
   \textbf{S} = \textbf{C} \cdot \textbf{P} \cdot \textbf{C}^T + \textbf{R}\\
   \textbf{K} = \textbf{P} \cdot \textbf{C}^T \cdot \textbf{S}^{-1}\\
-  \vec{\hat x}_{t+1} = \vec{\hat x}_{t+1} + \textbf{K} \cdot \widetilde{y}_{t}\\
+  \vec{\hat x}_{t} = \vec{\hat x}_{t} + \textbf{K} \cdot \widetilde{y}_{t}\\
   \textbf{P} = (\textbf{I} - \textbf{K} \cdot \textbf{C}) \cdot \textbf{P}
 
 
