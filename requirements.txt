@@ -1,4 +1,4 @@
 gitpython
 recommonmark
 sphinx_rtd_theme
-sphinxcontrib-bibtex=1.0.0
+sphinxcontrib-bibtex==1.0.0
