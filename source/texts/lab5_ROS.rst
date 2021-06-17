@@ -56,7 +56,7 @@ Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous l
 
 _`[ROS 1] Navigation`
 ==============================================
-See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-1-navigation/>`_.
+See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#run-navigation-nodes/>`_.
 
 
 _`[ROS 1] Optional, Even more simulation`
