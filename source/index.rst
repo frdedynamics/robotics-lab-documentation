@@ -13,8 +13,8 @@ Stuff for you to do:
 .. toctree::
    :maxdepth: 1
 
-   Universal Robots Academy <texts/UR_exercises.md>
-   Lab exercise 1, UR <texts/lab1.md>
+   Universal Robots Academy <texts/UR_exercises.rst>
+   Lab exercise 1, UR <texts/lab1.rst>
    Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
    Lab exercise 4, ROS Turtlebot Tutorial 1 <texts/lab4_ROS.rst>
