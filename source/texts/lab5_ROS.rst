@@ -43,12 +43,11 @@ Tasks
 ==============================================
 #. `[ROS 1] SLAM`_
 #. `[ROS 1] Navigation`_
-#. `[ROS 1] Optional, Even more simulation`_
 
 
 _`[ROS 1] SLAM`
 ==============================================
-Follow the `SLAM tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3//slam/#ros-1-slam/>`_ to
+Follow the `SLAM tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/>`_ to
 do some SLAM'in.
 
 Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous lab?
@@ -56,13 +55,8 @@ Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous l
 
 _`[ROS 1] Navigation`
 ==============================================
-See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/#run-navigation-nodes/>`_.
+See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/nav_simulation/>`_.
 
-
-_`[ROS 1] Optional, Even more simulation`
-==============================================
-Follow the `simulation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/#ros-1-simulation/>`_ 
-up to and including 11.2.1.6.
 
 
 Questions

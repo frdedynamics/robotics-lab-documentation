@@ -42,10 +42,11 @@ Tasks
 
 Infinite ball pick and place
 ==============================================
-Insert picture.
+.. figure:: ../_static/lab/lab2_pic.png
+    :figwidth: 55% 
 
-Initial conditions: Right (1.) ball dispenser has 4 balls,
-left (2.) ball dispenser has 0 balls.
+Initial conditions: Left (1) ball dispenser has 4 balls,
+right (2) ball dispenser has 0 balls.
 
 In this task you will program the robot to move one ping-pong ball at a time
 
@@ -68,7 +69,8 @@ The program flow is the following
 The dispensers will be moved around when you're done.
 Therefore, make features for each dispenser and define waypoint like
 "approach dispenser 1" relative to dispenser 1's feature with an
-origo that makes sense.
+origo that makes sense. For more accuracy, consider using a reference 
+when defining a feature.
 
 Test that balls are picked for ever.
 Move dispensers, update their features, test that stuff still work.
