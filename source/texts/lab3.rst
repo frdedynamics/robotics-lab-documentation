@@ -44,7 +44,7 @@ Before the lab
     * "9. Program Flow"
     * "10. Feature Coordinates"
 
-#. Try to get together in a group of 2-4 people.
+#. Try to get together in a group of 2-4 people, plz.
 
 #. Top tip for preparing: Use the `offline simulator from UR <https://www.universal-robots.com/download/?option=41508&fbclid=IwAR1yU32_hPdsL40SljlNJBEC9J9uIRgfqNrnM8_6hQLOALupTzte9jB3-ss#section41493>`_.
    For the ambitious; do all your programming in the simulator,
