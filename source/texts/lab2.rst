@@ -18,7 +18,7 @@ Equipment
 
 Before the lab
 ==============================================
-#. Complete the `Universal Robots Academy <./UR_exercises.rst>`_ ***<-- this is very important!***
+#. Complete the `Universal Robots Academy <./UR_exercises.html>`_ ***<-- this is very important!***
 
     * "3. Setting up a tool"
     * "7. Safety settings"
