@@ -1,0 +1,37 @@
+L4- Gazebo RViz TF URDF
+=======================
+
+Create Gazebo launch file - empty world and custom world with a built-in
+robot
+
+Create RViz launch file - Show TF there
+
+Create custom differential robot or 2 dof manipulator with gripper using
+template URDF
+
+Introduce joint_state_publisher
+
+TODO: Modify launch files such that you include your custom robot
+instead of a built in robot.
+
+Rviz
+----
+
+TF
+--
+
+Gazebo
+------
+
+URDF
+----
+
+Run real Turtlebots
+-------------------
+
+Run Custom Robot
+----------------
+
+.. raw:: latex
+
+   \pagebreak

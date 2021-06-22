@@ -11,7 +11,7 @@ Our location, Øyrane_ 12, 6800 Førde, 2. floor (under Reodorklubben).
 Stuff for you to do:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    Universal Robots Academy <texts/UR_exercises.rst>
    Lab exercise 1, UR <texts/lab1.rst>
@@ -19,8 +19,8 @@ Stuff for you to do:
    Lab exercise 3, UR <texts/lab3.md>
    Lab exercise 4, ROS Turtlebot Tutorial 1 <texts/lab4_ROS.rst>
    Lab exercise 5, ROS Turtlebot Tutorial 2 <texts/lab5_ROS.rst>
-   Lab exercise 6, Kalman Filter <texts/lab_Kalman.rst>
-   ROS <texts/ROS1.rst>
+   
+   ROS test-1 <texts/Sphinx.md>
 
 
 Stuff for you to do to your PC:
@@ -32,6 +32,7 @@ Stuff for you to do to your PC:
    Install MatLab <texts/your_pc/install_matlab.rst>
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
+   Extra, Kalman Filter <texts/lab_Kalman.rst>
 
 
 Our robots:
