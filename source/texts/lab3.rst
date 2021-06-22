@@ -20,7 +20,8 @@ Theme
 #. External E-stop
 #. Digital IO for program flow
 #. Relative waypoints
-#. Using the force()
+#. Built-in functions
+#. Templates
 #. Machine tending
 
 Equipment
@@ -105,12 +106,16 @@ Consider the following suggestion as a starting point:
 
 #. Move to a waypoint above the stack.
 #. Close gripper.
-#. Lower slowly relative to the waypoint above until force greater than 3N.
+#. Lower slowly relative to the waypoint above, until box is detected.
 #. Relative move up 1 cm.
 #. Open gripper.
 #. Pick box.
 
+The direction option can be used to detect an object and perform an action.
 Also, have a look at stack/de-stack options on the UR5e.
+
+It is also possible to detect the force applied to the gripper on contact,
+with pre-built functions. Have a look at them!
 
 Tip: `my_variable = get_actual_tcp_pose()` and add 0.01 meters to the
 Z index `[2]`, then MoveL to this variable position.
