@@ -17,19 +17,23 @@ Stuff for you to do:
    Lab exercise 1, UR <texts/lab1.rst>
    Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
-   Lab exercise 4, ROS Introduction <texts/ros0.rst>
+   ROS Introduction <texts/ros0.rst>
+   Lab exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
+   
    
 
 Stuff for you to do to your PC:
 
-.. toctree::
-   :maxdepth: 1
+..
+   .. toctree::
+      :maxdepth: 1
 
-   Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
-   Install MatLab <texts/your_pc/install_matlab.rst>
-   Install ROS <texts/your_pc/install_ros.rst>
-   Install IDE`s <texts/your_pc/install_ide.rst>
-   Extra, Kalman Filter <texts/lab_Kalman.rst>
+      Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
+      Install MatLab <texts/your_pc/install_matlab.rst>
+      Install ROS <texts/your_pc/install_ros.rst>
+      Install IDE`s <texts/your_pc/install_ide.rst>
+      Extra, Kalman Filter <texts/lab_Kalman.rst>
+   
 
 
 Our robots:

@@ -14,7 +14,7 @@ Theme
 #. Turtlebot tutorials
 #. ROS
 #. Turtlebot
-#. Bringup
+#. Bringups
 #. Get familiar
 
 Equipment

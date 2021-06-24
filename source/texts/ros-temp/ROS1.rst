@@ -9,31 +9,6 @@ So, if you like we can focus on Turtlebot simulation. Something like:
 #. But the simulation doesn't have any physical properties, we use Gazebo for that - Show them how to implement turtlebot. Or to provide a simple 2 wheel robot URDF as in the tutorial which I shared formerly so that they know what is URDF and how robots are modeled in a very simple way.
 #. Even though you can code everything in Python/C++ as ROS node, sometimes you don't want to deal with every single details of everything and would like to use some other powerful tools like MATLAB. - Here is how you control your ROS side turtlebot with a publisher from MATLAB.
 
-What is ROS?
-=============
-* **ROS**: "(Robot Operating System) is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers." `Follow this link for ros.org <https://www.ros.org>`_
-
-  * Meta operating system
-  * Fundamental components
-
-.. figure:: ../_static/images/rosComponents.png
-          :align: center
-
-          Source: `ROS Robot Programming <https://www.pishrobot.com/wp-content/uploads/2018/02/ROS-robot-programming-book-by-turtlebo3-developers-EN.pdf>`_
-
-* ROS versions
-
-  .. figure:: ../_static/images/rosVersions.jpg
-          :align: center
-
-          Source: `ROS Versions <https://twitter.com/_theconstruct_/status/1168418352802516992>`_
-
-
-  * Most useful resources
-
-    * `ros.org <http://wiki.ros.org/>`_ and `ROS Tutorials <http://wiki.ros.org/ROS/Tutorials>`_
-    * `ROS Robot Programming <https://www.pishrobot.com/wp-content/uploads/2018/02/ROS-robot-programming-book-by-turtlebo3-developers-EN.pdf>`_
-    * `theconstructsim.com <https://www.theconstructsim.com/ros-for-beginners-how-to-learn-ros/>`_
 
 Installation
 =============
