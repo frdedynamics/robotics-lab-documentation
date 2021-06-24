@@ -19,6 +19,7 @@ Stuff for you to do:
    Lab exercise 3, UR <texts/lab3.md>
    ROS Introduction <texts/ros0.rst>
    Lab exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
+   Navigating in ROS <texts/ros2.rst>
    
    
 
