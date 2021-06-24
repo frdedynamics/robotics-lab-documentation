@@ -50,15 +50,15 @@ Signed attendance will suffice as approved lab exercise.
 
 Tasks
 ==============================================
-#. `[ROS 1] Setup, PC Setup, Remote PC`_
-#. `[ROS 1] Simulation`_
-#. `[ROS 1] Turtlebot Control`_
+#. `Setup, PC Setup, Remote PC`_
+#. `Simulation`_
+#. `Turtlebot Control`_
 #. `Questions`_
 
 
 
 
-_`[ROS 1] Setup, PC Setup, Remote PC`
+_`Setup, PC Setup, Remote PC`
 ==============================================
 
 .. note::
@@ -81,7 +81,7 @@ _`[ROS 1] Setup, PC Setup, Remote PC`
       rospack profile
 
 
-_`[ROS 1] Simulation`
+_`Simulation`
 ==============================================
 This lab is done with simulation. Using a real robot is later.
 
@@ -122,7 +122,7 @@ Turtlebot with Gazebo
    You can check the difference by checking which ROS nodes are running by ``rosrun rqt_graph rqt_graph`` or just listing available ROS nodes by ``rosnode list``. There will be no Gazebo related ROS node with ``gazebo`` terminal command but a node named **/gazebo** with ``rosrun gazebo_ros gazebo`` ROS command.
 
 
-_`[ROS 1] Turtlebot Control`
+_`Turtlebot Control`
 ==============================================
 When you launch the Gazebo simulated robot, there are several nodes started and those nodes publish/subscribe topics. 
 
@@ -147,7 +147,7 @@ Normally, you can control wheel joints by publishing ``/joint_states`` topic in 
 #. Check the available nodes: ``rosrun rqt_graph rqt_graph``
 #. Chech the message in ``/cmd_vel`` with the command ``rostopic echo /cmd_vel``
 #. Get info about the topic ``rostopic info /cmd_vel``
-#. See what features have the **rosmsg info geometry_msgs/Twist``
+#. See what features have the ``rosmsg info geometry_msgs/Twist``
 #. Kill the teleoperation launcher with Ctrl+C.
 #. Control the robot velocity by publishing ``/cmd_vel`` via terminal (Use Tab auto completion): 
 
@@ -162,8 +162,51 @@ Normally, you can control wheel joints by publishing ``/joint_states`` topic in 
       y: 0.0
       z: 2.0" 
 
+Only TB:
+--------
+
+In Gazebo:
+
+::
+
+   roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+   roslaunch turtlebot3_teleop turtlebot3_teleop_key
+
+Only OM with JointPositionController:
+-------------------------------------
+
+::
+
+   roslaunch open_manipulator_with_tb3_gazebo empty_world.launch
+   rostopic pub /om_with_tb/joint1_position/command std_msgs/Float64 "data: 0.5"
+
+Only OM with Moveit:
+--------------------
+
+::
+
+   roslaunch open_manipulator_gazebo open_manipulator_gazebo.launch
+   roslaunch open_manipulator_controller open_manipulator_controller.launch use_platform:=false use_moveit:=true
+
+TB+OM with Moveit:
+------------------
+
+.. admonition:: Exercise
+   Can you control both Turtlebot and the Open Manipulator? Start here: 
+
+   ::
+
+      roslaunch open_manipulator_with_tb3_gazebo empty_world.launch
    
-_`[ROS 1] Turtlebot Retrieve Sensor Data`
+
+
+..
+   TODO: Moveit together: 
+   ``roslaunch open_manipulator_with_tb3_waffle_pi_moveit demo_gizem`` but controller is not loaded somehow.
+
+
+   
+_`Turtlebot Retrieve Sensor Data`
 ==============================================
 Most of the time there are various sensors on the robot where we get information about the robot state (battery percentage, speed, acceleration, encoder readings etc.) or about the environment (magnetization, obstacle distance, etc). For all these, we equip robots with necessary sensors.
 

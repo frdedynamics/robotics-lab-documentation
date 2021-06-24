@@ -16,7 +16,7 @@ Apart from these two files, the folders are up to you (a.k.a. the developer). Ho
 Basically, a **/src** folder for source codes (nodes), a **/launch** folder for launch files (written in xml with .launch extension), an **/include** folder for header files, a **/config** or **/cfg** folder for configuration parameters (mostly .yaml files), a **/worlds** for Gazebo world files (for .world extension) if the package is aimed to use a simulated robot, a **/urdf** folder where robot models (written in xml, .urdf, .xacro, .sdf extensions), and finally a **/models** folder to keep any custom models drawn in some CAD programs (mostly .stl files in this folder). Except for these, depending on the package purpose, there can be some other folders as well.
 
 .. seealso::
-   Complete the ROS tutorials on creating a new package in the `following link <http://wiki.ros.org/catkin/Tutorials/CreatingPackage>`_.
+   Complete the `ROS tutorials on creating a new package <http://wiki.ros.org/catkin/Tutorials/CreatingPackage>`_.
 
 Create Publisher and Subscriber
 ================================
@@ -158,7 +158,7 @@ Services and Parameters
 -------------------------
 Services are another way that nodes can communicate with each other. Services allow nodes to send a request and receive a response.
 
-   .. figure:: ../_static/images/params-and-services.png
+   .. figure:: ../_static/images/ros/params-and-services.png
           :align: center
 
 .. note::

@@ -1,12 +1,7 @@
-********************************
-Lab 5 ROS Turtlebot Tutorial 2
-********************************
-
-.. warning::
-    Batteries are dangerous.
-
-.. note::
-    You can do this lab virtually #COVID-19. Hopefully you did the previous lab.
+***************************************
+L5- Apply on Real Turtlebot
+***************************************
+So far we have done everything on the PC but how to use a *real* robot and apply all the knowledge on it?
 
 Theme
 ==============================================
@@ -41,11 +36,15 @@ Signed attendance will suffice as approved lab exercise.
 
 Tasks
 ==============================================
-#. `[ROS 1] SLAM`_
-#. `[ROS 1] Navigation`_
+#. `SLAM`_
+#. `Navigation`_
+
+.. warning::
+    Batteries are dangerous.
 
 
-_`[ROS 1] SLAM`
+
+_`SLAM`
 ==============================================
 Follow the `SLAM tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/>`_ to
 do some SLAM'in.
@@ -53,10 +52,9 @@ do some SLAM'in.
 Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous lab?
 
 
-_`[ROS 1] Navigation`
+_`Navigation`
 ==============================================
 See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/nav_simulation/>`_.
-
 
 
 Questions
@@ -67,4 +65,3 @@ Questions
 #. Which flavour of OS and ROS did you use?
 #. What is a key difference between RViz and Gazebo?
 #. Did you remember to have fun?
-

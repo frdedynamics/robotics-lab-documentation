@@ -172,14 +172,3 @@ Copy this piece of code into a new script which you created under the work direc
 **On ExampleHelperSimulinkRobotROS:**
 
 * Chance the :code:`/turtle1/cmd_vel` into :code:`/mobile_base/commands/velocity`.
-
-
-
-Run real Turtlebots
--------------------
-Lab4_ROS.rst
-
-Run Custom Robot
-----------------
-
-DONT FORGET MATLAB

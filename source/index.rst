@@ -14,15 +14,15 @@ Stuff for you to do:
    :maxdepth: 2
 
    Universal Robots Academy <texts/UR_exercises.rst>
-   Lab exercise 1, UR <texts/lab1.rst>
-   Lab exercise 2, UR <texts/lab2.rst>
-   Lab exercise 3, UR <texts/lab3.md>
+   [LAB] Exercise 1, UR <texts/lab1.rst>
+   [LAB] Exercise 2, UR <texts/lab2.rst>
+   [LAB] Exercise 3, UR <texts/lab3.md>
    ROS Introduction <texts/ros0.rst>
-   Lab exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
+   [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
    Navigating in ROS <texts/ros2.rst>
    First Package Nodes Launchers Parameters <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
-   Temp ROS <texts/ROS1.rst>
+   [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
    
    
 
