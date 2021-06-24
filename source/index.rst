@@ -23,21 +23,22 @@ Stuff for you to do:
    First Package Nodes Launchers Parameters <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
    [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
+   Additionals <texts/additionals.rst>
    
    
 
 Stuff for you to do to your PC:
 
-..
-   .. toctree::
-      :maxdepth: 1
 
-      Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
-      Install MatLab <texts/your_pc/install_matlab.rst>
-      Install ROS <texts/your_pc/install_ros.rst>
-      Install IDE`s <texts/your_pc/install_ide.rst>
-      Extra, Kalman Filter <texts/lab_Kalman.rst>
-   
+.. toctree::
+   :maxdepth: 1
+
+   Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
+   Install MatLab <texts/your_pc/install_matlab.rst>
+   Install ROS <texts/your_pc/install_ros.rst>
+   Install IDE`s <texts/your_pc/install_ide.rst>
+   Extra, Kalman Filter <texts/lab_Kalman.rst>
+      
 
 
 Our robots:

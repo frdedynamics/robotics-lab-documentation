@@ -49,10 +49,7 @@ or
 
 /catkin_ws
 ==========
-
-   |catkin is the official build system of ROS and the successor to the original ROS build system, 
-   |rosbuild. catkin combines CMake macros and Python scripts to provide some functionality on 
-   |top of CMake's normal workflow.
+*catkin is the official build system of ROS and the successor to the original ROS build system, rosbuild. catkin combines CMake macros and Python scripts to provide some functionality on top of CMake's normal workflow.*                                                      
 
 catkin_ws is a directory, located directly under the ``/home`` directory (in general), which has the source codes of your ROS packages. It is created as in `this tutorial <http://wiki.ros.org/catkin/Tutorials/create_a_workspace>`_ but you don't need to create one if you are using the VM copy provided in the beginning.
 
