@@ -43,16 +43,7 @@ Now we are ready to create our first publisher of our first package. We will use
 
 * `Writing a Simple Publisher and Subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_
 
-We are ready to play around now. Let's control the turtlesim with our own publisher. Here is the code for you. Don't celebrate it immediately for that you have the source code, there are some empty lines for you!
 
- .. literalinclude:: ../_static/scripts/turtlebotPublisher.py
-       :language: Python
-
-**Hint:** To find out which topic name you should publish your message, use :code:`rostopic list`.
-
-
-.. seealso::
-   Can you make your turtlesim to draw a square by using your own publisher?
 
 
 Simulating Robots in ROS

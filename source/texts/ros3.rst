@@ -94,6 +94,23 @@ Understanding ROS Topics
 -------------------------
 Please see the comprehensive `ROS topics tutorials on the official guide <http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics>`_.
 
+Practical
+----------
+We are ready to play around now. Let's control the turtlesim with our own publisher. 
+
+Let's first start a GUI form of a turtlebot (well, it is turtlesim) using the following command: ``rosrun turtlesim turtlesim_node``
+
+To control the turtle, here is the code for you. Don't celebrate it immediately for that you have the source code, there are some empty lines for you!
+
+ .. literalinclude:: ../_static/scripts/turtlebotPublisher.py
+       :language: Python
+
+**Hint:** To find out which topic name you should publish your message, use :code:`rostopic list`.
+
+
+.. seealso::
+   Can you make your turtlesim to draw a square by using your own publisher?
+
 
 Create Launcher
 =================
@@ -149,7 +166,7 @@ Services are another way that nodes can communicate with each other. Services al
 
 Parameters, on the other hand, are very useful to store and manipulate data in the ROS server. They can be set in a launch file manually or they can be loaded (again in a launch file) by simply calling a script file mostly with .yaml extension.
 
-Let's first start a GUI form of a turtlebot (well, it is turtlesim) using the following command: ``rosrun turtlesim turtlesim_node``
+Let's first start the turtlesim again: ``rosrun turtlesim turtlesim_node``
 
 A single turtle on a console window appeared. Try to solve the steps below by yourself:
 
@@ -177,16 +194,13 @@ A single turtle on a console window appeared. Try to solve the steps below by yo
 
    Nothing change when you set the parameter? Well, the value 255 is *loaded* into parameter server but it *has not been changed*. For that you need to clear the set values: ``rosservice call /clear``
 
-Action server
---------------
+Extra
+=======
+ROS world is big. There are lots of things to touch uppon but we aimed to give a target-based and condense information so that you can use in your course project. Custom message types, action-clients, various ROS commands are waiting to be explored by enthusiasts. Please check the `official ROS tutorials <http://wiki.ros.org/ROS/Tutorials>`_.
 
-.. raw:: latex
 
-   \pagebreak
-
-   Questions
-==============================================
-
+Questions
+============
 
 #. What is a launch file? How to run?
 #. What is a node? How to run?

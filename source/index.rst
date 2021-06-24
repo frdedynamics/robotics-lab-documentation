@@ -21,6 +21,8 @@ Stuff for you to do:
    Lab exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
    Navigating in ROS <texts/ros2.rst>
    First Package Nodes Launchers Parameters <texts/ros3.rst>
+   Gazebo Rviz URDF TF <texts/ros4.rst>
+   Temp ROS <texts/ROS1.rst>
    
    
 
