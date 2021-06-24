@@ -17,11 +17,8 @@ Stuff for you to do:
    Lab exercise 1, UR <texts/lab1.rst>
    Lab exercise 2, UR <texts/lab2.rst>
    Lab exercise 3, UR <texts/lab3.md>
-   Lab exercise 4, ROS Turtlebot Tutorial 1 <texts/lab4_ROS.rst>
-   Lab exercise 5, ROS Turtlebot Tutorial 2 <texts/lab5_ROS.rst>
+   Lab exercise 4, ROS Introduction <texts/ros0.rst>
    
-   ROS test-1 <texts/Sphinx.md>
-
 
 Stuff for you to do to your PC:
 
