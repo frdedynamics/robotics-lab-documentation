@@ -151,11 +151,31 @@ Parameters, on the other hand, are very useful to store and manipulate data in t
 
 Let's first start a GUI form of a turtlebot (well, it is turtlesim) using the following command: ``rosrun turtlesim turtlesim_node``
 
-A single turtle on a console window appeared. Follow the steps below:
+A single turtle on a console window appeared. Try to solve the steps below by yourself:
 
-#. See which nodes are running
+#. See which nodes are running 
+#. See which topics are available
+#. See wich parameters are loaded
+#. Get the value of ``/turtlesim/background_r``
+#. Set the value 255 of ``/turtlesim/background_r``
 
 
+
+.. admonition:: Solution
+   :class: dropdown
+
+    ::
+
+      rosrun rqt_graph rqt_graph # or rosnode list
+      rostopic list
+      rosparam list
+      rosparam get /turtlesim/background_r
+      rosparam set /turtlesim/background_r 255
+
+.. admonition:: Troubleshoot
+   :class: dropdown
+
+   Nothing change when you set the parameter? Well, the value 255 is *loaded* into parameter server but it *has not been changed*. For that you need to clear the set values: ``rosservice call /clear``
 
 Action server
 --------------
@@ -170,3 +190,4 @@ Action server
 
 #. What is a launch file? How to run?
 #. What is a node? How to run?
+#. What is a parameter in parameter server?
