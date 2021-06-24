@@ -111,3 +111,7 @@ catkin_ws contain 3 main folders:
 * There are two /src. One is directly under the /catkin_ws, and the other(s) is in each package where the source codes of **nodes** are located.
 * In ROS the nodes are written in either Python or C++. In our case, we will stick to Python. 
 
+A mid-size ROS package has generally these folders:
+
+   .. figure:: ../_static/images/folders.png
+          :align: center

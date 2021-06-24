@@ -87,6 +87,7 @@ This lab is done with simulation. Using a real robot is later.
 
 See `simulation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-1-simulation/>`_.
 
+
 Simulations in ROS are done by both `RViz <http://wiki.ros.org/rviz>`_ and `Gazebo <http://gazebosim.org/>`_. These are not interchangable. Rviz is a ROS package for visualization purposes. On the other hand, Gazebo is a simulation environment with physical properties with gravity, lights/shadows, collisions, mass etc. Gazebo simulations can be considered as *real* robot since it requires `Gazebo ROS control <http://gazebosim.org/tutorials/?tut=ros_control>`_.
 
 Turtlebot with RViz
@@ -160,6 +161,29 @@ Normally, you can control wheel joints by publishing ``/joint_states`` topic in 
       x: 0.0
       y: 0.0
       z: 2.0" 
+
+   
+_`[ROS 1] Turtlebot Retrieve Sensor Data`
+==============================================
+Most of the time there are various sensors on the robot where we get information about the robot state (battery percentage, speed, acceleration, encoder readings etc.) or about the environment (magnetization, obstacle distance, etc). For all these, we equip robots with necessary sensors.
+
+On the real TurtleBot Waffle Pi and on the Gazebo simulated version, there are inertial measurement unit, encoder, camera and LIDAR where we can collect some data. 
+
+Let's visualize the surrounding of the turtlebot.
+
+.. figure:: ../_static/images/ros/turtlebot-gazebo-camera.png
+          :align: center
+
+          Turtlebot Gazebo retrieve camera data
+
+
+
+#. Start the Gazebo robot in a different environment this time: ``roslaunch turtlebot3_gazebo turtlebot3_world.launch``
+#. Start the Rviz to visualize sensor data: ``roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch``
+   #. Observe the red laser dots.
+   #. Activate camera (select the checkmark)
+#. Start teleoperation and navigate: ``roslaunch turtlebot3_teleop turtlebot3_teleop_key``
+#. Observe active nodes and topics.
 
 
 _`Questions`
