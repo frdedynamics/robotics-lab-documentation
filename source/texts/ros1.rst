@@ -53,7 +53,7 @@ Tasks
 #. `[ROS 1] Setup, PC Setup, Remote PC`_
 #. `[ROS 1] Simulation`_
 #. `[ROS 1] Turtlebot Control`_
-#. `[ROS 1] Basic Operation: With Simulated Robot`_
+#. `Questions`_
 
 
 
@@ -162,7 +162,7 @@ Normally, you can control wheel joints by publishing ``/joint_states`` topic in 
       z: 2.0" 
 
 
-Questions
+_`Questions`
 ==============================================
 
 #. What is the Turtlebot3 Waffle Pi?
