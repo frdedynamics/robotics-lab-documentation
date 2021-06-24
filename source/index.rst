@@ -20,6 +20,7 @@ Stuff for you to do:
    ROS Introduction <texts/ros0.rst>
    Lab exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
    Navigating in ROS <texts/ros2.rst>
+   First Package Nodes Launchers Parameters <texts/ros3.rst>
    
    
 
