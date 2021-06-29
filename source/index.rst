@@ -8,48 +8,76 @@ Welcome to HVL Robotics Førde's documentation!
 
 Our location, Øyrane_ 12, 6800 Førde, 2. floor (under Reodorklubben).
 
-Stuff for you to do:
+..
+   The TOC before a big refraction. Keep it for a while.
+   .. toctree::
+      :maxdepth: 2
+
+      Universal Robots Academy <texts/UR_exercises.rst>
+      [LAB] Exercise 1, UR <texts/lab1.rst>
+      [LAB] Exercise 2, UR <texts/lab2.rst>
+      [LAB] Exercise 3, UR <texts/lab3.md>
+      ROS Introduction <texts/ros0.rst>
+      [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
+      Navigating in ROS <texts/ros2.rst>
+      First Package Nodes Launchers Parameters <texts/ros3.rst>
+      Gazebo Rviz URDF TF <texts/ros4.rst>
+      [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
+      Additionals <texts/additionals.rst>
+
+Syllabus (LAB and ROS related part):
+--------------------------------------
 
 .. toctree::
    :maxdepth: 2
 
-   Universal Robots Academy <texts/UR_exercises.rst>
-   [LAB] Exercise 1, UR <texts/lab1.rst>
-   [LAB] Exercise 2, UR <texts/lab2.rst>
-   [LAB] Exercise 3, UR <texts/lab3.md>
-   ROS Introduction <texts/ros0.rst>
-   [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
-   Navigating in ROS <texts/ros2.rst>
-   First Package Nodes Launchers Parameters <texts/ros3.rst>
-   Gazebo Rviz URDF TF <texts/ros4.rst>
-   [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
-   Additionals <texts/additionals.rst>
-   
-   
+   ELE306 <texts/ele306-syllabus.rst>
+   DAT160 <texts/dat160-syllabus.rst>
 
-Stuff for you to do to your PC:
 
+LAB Exercises:
+--------------------------------------
 
 .. toctree::
    :maxdepth: 1
 
+   [LAB] Exercise 1, UR <texts/lab1.rst>
+   [LAB] Exercise 2, UR <texts/lab2.rst>
+   [LAB] Exercise 3, UR <texts/lab3.md>
+   [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
+   [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>   
+
+Important Resources:
+--------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   Universal Robots Academy <texts/UR_exercises.rst>
+   ROS Introduction <texts/ros0.rst>
+   Navigating in ROS <texts/ros2.rst>
+   First Package Nodes Launchers Parameters <texts/ros3.rst>
+   Gazebo Rviz URDF TF <texts/ros4.rst>
+   Additionals <texts/additionals.rst>
+   
+
+Installation related:
+--------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm.rst>
    Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
    Install MatLab <texts/your_pc/install_matlab.rst>
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
    Extra, Kalman Filter <texts/lab_Kalman.rst>
-
-ROS Syllabus:
-
-.. toctree::
-   :maxdepth: 1
-
-   ELE306 <texts/ele306-syllabus.rst>
-   DAT160 <texts/dat160-syllabus.rst>
       
 
 
 Our robots:
+--------------------------------------
 
 +---------------------------------------------+-----------------------------------------+
 | .. figure:: _static/robots/bror.jpg         | .. figure:: _static/robots/ur5e.jpg     |
