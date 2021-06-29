@@ -1,5 +1,5 @@
 **********************************************
-L3- First Package Nodes Launchers Parameters
+First Package Nodes Launchers Parameters
 **********************************************
 
 Let's start hands on activities!

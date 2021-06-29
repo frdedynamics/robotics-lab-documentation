@@ -1,5 +1,5 @@
 ***************************************
-L1- Getting Started with Turtlebots
+Getting Started with Turtlebots
 ***************************************
 
 Before diving into the core of ROS, let's see and practice on capabilities of ROS. We are going to simulate a *Turtlebot Waffle Pi* with and without the *Open Manipulator* on. Turtlebot Waffle Pi is a generic differential robot with 2 actuated wheels and one passive ball joint. It is the same model which you are supposed to use in your project.

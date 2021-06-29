@@ -1,5 +1,5 @@
 ***************************************
-L5- Apply on Real Turtlebot
+Apply on Real Turtlebot
 ***************************************
 So far we have done everything on the PC but how to use a *real* robot and apply all the knowledge on it?
 
@@ -40,7 +40,6 @@ Tasks (Lab5)
 
 .. warning::
     Batteries are dangerous.
-
 
 
 _`SLAM`

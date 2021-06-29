@@ -59,6 +59,7 @@ Important Resources:
    First Package Nodes Launchers Parameters <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
    Additionals <texts/additionals.rst>
+   (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
    
 
 Installation related:
@@ -72,7 +73,6 @@ Installation related:
    Install MatLab <texts/your_pc/install_matlab.rst>
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
-   Extra, Kalman Filter <texts/lab_Kalman.rst>
       
 
 

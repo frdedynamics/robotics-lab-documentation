@@ -1,5 +1,5 @@
 ************************
-L2- File System in ROS
+File System in ROS
 ************************
 
 As briefly explained before, ROS is a meta-operating system running on a main Linux OS. Linux has a different file system management than Windows. Therefore, things might be confusing or not intuitive in the beginning. With lots of terminal commands and strage folder names like /root /home /var /proc /opt etc, Linux may look like even scary! However, there is a beautifully designed system underneath.
