@@ -19,7 +19,7 @@ In this lecture, we are going see how to visualize, control, simulate such a rob
 
 
 
-Theme
+Theme (Lab4)
 ==============================================
 
 #. Turtlebot tutorials
@@ -28,12 +28,12 @@ Theme
 #. Bringups
 #. Get familiar
 
-Equipment
+Equipment (Lab4)
 ==============================================
 #. PC with ROS installed
 #. Turtelbot tutorials from `robotis.com <https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/>`_
 
-Before the lab
+Before the lab (Lab4)
 ==============================================
 #. Install ROS.
 
@@ -42,13 +42,13 @@ Before the lab
 #. To use a real turtlebot, find your way to the HVL Robotics lab.
 
 
-Report
+Report (Lab4)
 ==============================================
 There is no need to hand in a report after this lab.
 
 Signed attendance will suffice as approved lab exercise.
 
-Tasks
+Tasks (Lab4)
 ==============================================
 #. `Setup, PC Setup, Remote PC`_
 #. `Simulation`_
@@ -229,7 +229,7 @@ Let's visualize the surrounding of the turtlebot.
 #. Observe active nodes and topics.
 
 
-_`Questions`
+_`Questions` (Lab4)
 ==============================================
 
 #. What is the Turtlebot3 Waffle Pi?

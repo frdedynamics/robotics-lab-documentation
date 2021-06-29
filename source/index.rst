@@ -38,6 +38,14 @@ Stuff for you to do to your PC:
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
    Extra, Kalman Filter <texts/lab_Kalman.rst>
+
+ROS Syllabus:
+
+.. toctree::
+   :maxdepth: 1
+
+   ELE306 <texts/ele306-syllabus.rst>
+   DAT160 <texts/dat160-syllabus.rst>
       
 
 

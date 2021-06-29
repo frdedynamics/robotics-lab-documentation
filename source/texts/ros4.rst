@@ -39,6 +39,9 @@ Secondly, create a launch file under /launch folder to run Gazebo and import our
       :language: xml
       :caption: my_world_gazebo.launch
 
+Adding Gazebo Models
+---------------------------------------------
+
 We can add some items by just adding items as we included the *sun* and the *ground plane* into our world file. There are many ready-to-use models in the official `gazebo-models repository <https://github.com/osrf/gazebo_models>`_. Now, choose a model and as in the following code.
 
 .. code-block:: xml
@@ -49,6 +52,12 @@ We can add some items by just adding items as we included the *sun* and the *gro
 	</include>
 
 Also you can change the position and orientation of any object which you have added with the :code:`<pose>x y z roll pitch yaw</pose>` tag.
+
+.. note::
+   The ``<uri/>`` tag searches the model names in the website `http://models.gazebosim.org <http://models.gazebosim.org>`_, which is stored in the environment variable ``GAZEBO_MODEL_DATABASE_URI`` and local models are stored in ``~/.gazebo/models/`` path. If you want to create a custom model, then you need to create a model folder under that folder. A custom model folder must contain a *model.sdf* and a *model.config*  as shown in figure below. More detailed information can be founf in `make a model tutorial <http://gazebosim.org/tutorials?tut=build_model>`_.
+
+   .. figure:: ../_static/images/ros/custom-model.png
+          :align: center
 
 
 Adding Sensors to the Gazebo Model (part 2)
@@ -98,7 +107,6 @@ Xacro: beginners_tutorials/urdf/mybot/mybot.xacro :code:`git clone -b base https
 
 ..
   Here is the `youtube tutorial of Moore robots <https://www.youtube.com/watch?v=8ckSl4MbZLg&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG>`_.
-
 
 
 TF Tutorial

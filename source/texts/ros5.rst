@@ -3,23 +3,22 @@ L5- Apply on Real Turtlebot
 ***************************************
 So far we have done everything on the PC but how to use a *real* robot and apply all the knowledge on it?
 
-Theme
+Theme (Lab5)
 ==============================================
 
 #. Turtlebot tutorials
 #. ROS
 #. Turtlebot
 #. SLAM
-#. RViz
-#. Gazebo
+#. Navigation
 
-Equipment
+Equipment (Lab5)
 ==============================================
 #. PC with ROS installed
 #. OPTIONAL: A real turtlebot
 #. Turtelbot tutorials from `robotis.com <https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/>`_
 
-Before the lab
+Before the lab (Lab5)
 ==============================================
 #. Do the previous lab.
 
@@ -28,13 +27,13 @@ Before the lab
 #. To use a real turtlebot, find your way to the HVL Robotics lab.
 
 
-Report
+Report (Lab5)
 ==============================================
 There is no need to hand in a report after this lab.
 
 Signed attendance will suffice as approved lab exercise.
 
-Tasks
+Tasks (Lab5)
 ==============================================
 #. `SLAM`_
 #. `Navigation`_
@@ -46,7 +45,7 @@ Tasks
 
 _`SLAM`
 ==============================================
-Follow the `SLAM tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/>`_ to
+Follow the `SLAM tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/slam>`_ to
 do some SLAM'in.
 
 Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous lab?
@@ -54,7 +53,7 @@ Remember roslaunch turtlebot3_gazebo turtlebot3_world.launch from the previous l
 
 _`Navigation`
 ==============================================
-See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/nav_simulation/>`_.
+See `navigation tutorial <https://emanual.robotis.com/docs/en/platform/turtlebot3/navigation/>`_.
 
 
 Questions

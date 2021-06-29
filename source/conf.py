@@ -41,6 +41,7 @@ except git.exc.InvalidGitRepositoryError:
 extensions = ['sphinx.ext.githubpages']
 extensions = ['sphinxcontrib.bibtex']
 extensions = ['sphinx_togglebutton']
+extensions = ['sphinx.ext.autosectionlabel']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
