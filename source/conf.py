@@ -64,8 +64,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HVL Robotics Førde'
-copyright = '2019, MOJO'
-author = 'MOJO'
+copyright = '2019, HVL Robotics'
+author = 'HVL Robotics'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
