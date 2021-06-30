@@ -4,6 +4,8 @@ Gazebo (RViz) TF URDF MATLAB
 
 As we talked, there are 2 main simulation tools in the ROS environment. `Rviz <http://wiki.ros.org/rviz>`_ and `Gazebo <http://gazebosim.org/tutorials?tut=ros_overview>`_. Even though they both are simulation tools, they diverge when it comes to usage. Rviz is more *visualization* purposes such that map creation, transfer function visualization, point cloud, image visualization etc. Gazebo, on the other hand, is used for physical testing. Despite the fact that it is possible to test sensor readings on Rviz as well, it is not possible to test collisions in Rviz; you need Gazebo (or another physics engine embedded simulation tools.
 
+.. _Gazebo-Tutorial:
+
 Gazebo Tutorial
 =================
 
@@ -70,6 +72,8 @@ Adding scanner and some obstacles on our 2 wheel robot. It is going to look like
 This part is going to be a homework. The tutorial is `in this link <https://www.youtube.com/watch?v=EZ3MYf24c6Y&list=PLTEmcYHVE7dPWixFnzkd68jPjwGzxHjUG&index=2&ab_channel=RichardWang>`_.
 
 
+.. _URDF-Tutorial:
+
 URDF Tutorial
 ==============
 Unified Robot Description Format. It is used to describe the robot model. It contains links, joints and basic material information of each part of the robot. You can follow the `list of parts <http://wiki.ros.org/urdf/Tutorials/Building%20a%20Visual%20Robot%20Model%20with%20URDF%20from%20Scratch>`_ is the R2D2 model written in URDF!
@@ -78,6 +82,7 @@ All the elements that you can use in an URDF file are `these. <http://wiki.ros.o
 
  .. literalinclude:: ../_static/scripts/simplexacro.xacro
        :language: xml
+
 
 URDF in RViz
 -------------

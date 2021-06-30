@@ -7,27 +7,28 @@ Both mobile robots (with and without a manipulator on) and industrial robotic ar
 
 **Hands-on activities using UR5/UR5e**:
 
-- **Lab 1**: :ref:`Basics of UR`
-- **Lab 2**: :ref:`Features and Safety Planes`
-- **Lab 3**: :ref:`Advanced UR`
+- **Lab 1**: :ref:`Basics-of-UR`
+- **Lab 2**: :ref:`Features-and-Safety-Planes`
+- **Lab 3**: :ref:`Advanced-UR`
 
 **Be ready to ROS:**
 
-- Recommended all-in-one virtual machine installation: :ref:`Install VM`
+- Recommended all-in-one virtual machine installation: :ref:`Install-VM`
 
 **ROS:**
 
-- What is ROS? Why do we need it? Important commands: :ref:`ROS Introduction`
-- **Lab 4:** :ref:`Getting Started with Turtlebots` - Turtlebot simulations
-- File system in ROS and where to locate ROS packages: :ref:`File System in ROS`
-- Hands-on activities in ROS: :ref:`First Package Nodes Launchers Parameters`
-- Simulation in ROS: :ref:`Gazebo Tutorial`
-- Visualization and robot modelling: :ref:`URDF in RViz`, :ref:`URDF Tutorial`
-- **Lab 5**: :ref:`Apply on Real Turtlebot` - Turtlebot in real world
+- What is ROS? Why do we need it? Important commands: :ref:`ROS-Introduction`
+- **Lab 4:** :ref:`Getting-Started-with-Turtlebots` - Turtlebot simulations
+- File system in ROS and where to locate ROS packages: :ref:`File-System-in-ROS`
+- Hands-on activities in ROS: :ref:`First-Package-Nodes-Launchers-Parameters`
+- Simulation in ROS: :ref:`Gazebo-Tutorial`
+- Visualization and robot modelling: :ref:`URDF-Tutorial`
+- **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
 
 
 **Prepare for Challenge**
 
-- :ref:`ROS with Matlab`
+- :ref:`with-Matlab`
 - :ref:`MoveIt`
 - **Project Presentation**
+

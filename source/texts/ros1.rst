@@ -1,3 +1,5 @@
+.. _Getting-Started-with-Turtlebots:
+
 ***************************************
 Getting Started with Turtlebots
 ***************************************

@@ -4,7 +4,7 @@ Additionals
 
 We can add whatever extra is needed here.
 
-* :ref:`ROS with Matlab`
+* :ref:`with-Matlab`
 * `AR tags <http://wiki.ros.org/ar_track_alvar>`_
 * `OpenCV and ROS <https://dabit-industries.github.io/turtlebot2-tutorials/14b-OpenCV2_Python.html>`_, `OpenCV and ROS 2 <http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython>`_
 * `2 Turtlebots SLAM <https://www.youtube.com/watch?v=ndvwDFi-I3I>`_
@@ -13,8 +13,10 @@ We can add whatever extra is needed here.
 * UR5 with Moveit
 
 
+.. _with-Matlab:
+
 ROS with Matlab
-=================
+=======================
 
 .. note::
    This section is covered only for ELE306 students.
@@ -78,8 +80,10 @@ Copy this piece of code into a new script which you created under the work direc
 * Chance the :code:`/turtle1/cmd_vel` into :code:`/mobile_base/commands/velocity`.
 
 
+.. _AR-tags:
+
 AR tags
-=========
+============
 .. note::
    This section is covered only for DAT160 students.
 
@@ -96,6 +100,7 @@ There is a specigic package called ``ar-track-alvar`` available in ROS enables t
 
 To generate new AR tags run the ROS node: ``rosrun ar_track_alvar createMarker``, give a prefered ID number and leave the dimension/position as default by pressing only **Enter** without any value entered.
 
+.. _Navigation-From-Scratch:
 
 Navigation From Scratch
 =========================
@@ -103,6 +108,8 @@ Navigation From Scratch
 .. note::
    This section is covered only for DAT160 students.
 
+
+.. _Multiple-Robot-Control-in-Gazebo:
 
 Multiple Robot Control in Gazebo
 ==================================
@@ -112,7 +119,7 @@ Multiple Robot Control in Gazebo
 
 
 
-
+.. _MoveIt:
 
 MoveIt
 ========

@@ -1,3 +1,5 @@
+.. _Features-and-Safety-Planes:
+
 ****************************
 Features and Safety Planes
 ****************************
