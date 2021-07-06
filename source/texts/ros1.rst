@@ -67,15 +67,20 @@ _`Setup, PC Setup, Remote PC`
    **How to**:
    ::
 
+      sudo apt-get install ros-melodic-dynamixel-sdk
+      sudo apt-get install ros-melodic-turtlebot3-msgs
+      sudo apt-get install ros-melodic-turtlebot3
       cd ~/catkin_ws/src
       git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
       git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
       git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+      git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench.git
+      git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
       cd ..
       rosdep install --from-paths src --ignore-src -r -y
       catkin_make
       source devel/setup.bash
-      rospack profile
+
 
    Note that in general, the following packages are available for the Turtlebots, depending on your exact model and needs:
 
