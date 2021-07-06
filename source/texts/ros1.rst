@@ -52,7 +52,7 @@ Signed attendance will suffice as approved lab exercise.
 
 Tasks (Lab4)
 ==============================================
-#. `Setup, PC Setup, Remote PC`_
+#. `Optional: Installation instructions`_
 #. `Simulation`_
 #. `Turtlebot Control`_
 #. `Questions`_
@@ -84,7 +84,7 @@ _`Optional: Installation instructions`
       source devel/setup.bash
 
 
-   Note that in general, the following packages are available for the Turtlebots, depending on your exact model and needs:
+   Note that in general, the following packages are available for the Turtlebots (TB) and Open Manipulator (OM), depending on your exact model and needs:
 
    * OM+TB3: https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3
    * OM: https://github.com/ROBOTIS-GIT/open_manipulator and https://github.com/ROBOTIS-GIT/open_manipulator_simulations
