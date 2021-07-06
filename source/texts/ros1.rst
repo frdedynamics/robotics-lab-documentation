@@ -58,7 +58,7 @@ Tasks (Lab4)
 #. `Questions`_
 
 
-_`Setup, PC Setup, Remote PC`
+_`Optional: Installation instructions`
 ==============================================
 
 .. note::
