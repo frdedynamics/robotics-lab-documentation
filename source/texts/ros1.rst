@@ -64,18 +64,20 @@ _`Setup, PC Setup, Remote PC`
 .. note::
    The Turtlebot packages are already installed in the VM copy provided to you. However, for those who used a different installation method (for example dual boot, or your own VM) below are the basic instructions for installing the necessary packages.
 
-   **How to**:
+   **How to install on ROS Melodic**:
    ::
 
       sudo apt-get install ros-melodic-dynamixel-sdk
       sudo apt-get install ros-melodic-turtlebot3-msgs
       sudo apt-get install ros-melodic-turtlebot3
+      
       cd ~/catkin_ws/src
       git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
       git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
       git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
       git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench.git
       git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
+      
       cd ..
       rosdep install --from-paths src --ignore-src -r -y
       catkin_make
