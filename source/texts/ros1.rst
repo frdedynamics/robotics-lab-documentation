@@ -58,29 +58,31 @@ Tasks (Lab4)
 #. `Questions`_
 
 
-
-
 _`Setup, PC Setup, Remote PC`
 ==============================================
 
 .. note::
-   The turtlebot packages are installed in the VM copy provided to you. However, for those who used a different installation method should have had those packages available in your \src folder:
-
-   * OM+TB3: https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3
-   * OM: https://github.com/ROBOTIS-GIT/open_manipulator and https://github.com/ROBOTIS-GIT/open_manipulator_simulations
-   * TB: https://github.com/ROBOTIS-GIT/turtlebot3.git
-   * TB manipulation: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations and https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
-   * ros_controll ``sudo apt install ros-melodic-ros-controll ros-melodic-ros-controllers``
+   The Turtlebot packages are already installed in the VM copy provided to you. However, for those who used a different installation method (for example dual boot, or your own VM) below are the basic instructions for installing the necessary packages.
 
    **How to**:
    ::
 
       cd ~/catkin_ws/src
-      git clone -b master https://github.com/XXX # For all links
+      git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+      git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
+      git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+      cd ..
       rosdep install --from-paths src --ignore-src -r -y
       catkin_make
       source devel/setup.bash
       rospack profile
+
+   Note that in general, the following packages are available for the Turtlebots, depending on your exact model and needs:
+
+   * OM+TB3: https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3
+   * OM: https://github.com/ROBOTIS-GIT/open_manipulator and https://github.com/ROBOTIS-GIT/open_manipulator_simulations
+   * TB: https://github.com/ROBOTIS-GIT/turtlebot3.git
+   * TB manipulation: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations and https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
 
 
 _`Simulation`
