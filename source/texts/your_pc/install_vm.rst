@@ -10,7 +10,7 @@ Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/D
 
 .ova import
 --------------
-We provide you ready-to-use virtual copy of what you need. Please download it using `this link <https://hvl365.sharepoint.com/:p:/r/sites/RobotikkUndervisningHVL/Delte%20dokumenter/DAT160/2021-2022/Utkast/dat160_introduction.pptx?d=w27531791c315406aae3f3c87fbba0b8a&csf=1&web=1&e=B5fZDq>`_. The followings are installed:
+We provide you ready-to-use virtual copy of what you need. Please download it using `this link <https://hvl365.sharepoint.com/:u:/r/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/ROS_MELODIC_VM_with_TB.ova?csf=1&web=1&e=hdnigs>`_. The followings are installed:
 
 * `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
 * `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
