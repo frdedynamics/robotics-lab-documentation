@@ -2,3 +2,4 @@ gitpython
 recommonmark
 sphinx_rtd_theme
 sphinxcontrib-bibtex==1.0.0
+sphinx-togglebutton==0.2.3
