@@ -1,9 +1,9 @@
 ***************************************
 DAT160 ROS Syllabus
 ***************************************
-The main objectives of the ROS teaching for DAT160 are that students get experience with programming robots with ROS, and a platform for applying robot intelligence related algorithms (path finding, AR tag reading, navigation, SLAM etc.).
+The objectives of the ROS teaching for DAT160 are that students get experience with programming robots with ROS, and a platform for applying robot intelligence related algorithms (path finding, AR tag reading, navigation, SLAM etc.).
 
-It is a mobile-robots centered collection that enables students to get to know the ROS environment, control multiple robots in the same simulation environment, and be competent in effective problem solving in a semester project (competition).
+It is a mobile-robot centered collection that enables students to get to know the ROS environment, control multiple robots in the same simulation environment, and be competent in effective problem solving in a semester project (competition).
 
 **Get ready for ROS:**
 
@@ -16,13 +16,13 @@ It is a mobile-robots centered collection that enables students to get to know t
 - File system in ROS and where to locate ROS packages: :ref:`File-System-in-ROS`
 - Hands-on activities in ROS: :ref:`First-Package-Nodes-Launchers-Parameters`
 - Simulation in ROS: :ref:`Gazebo-Tutorial`
-- Visufor alization and robot modelling: :ref:`URDF-Tutorial`
+- Optional: Visualization and robot modelling: :ref:`URDF-Tutorial`
 - **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
 
 
-**Project-specific content**
+**Project-specific ROS content**
 
 - :ref:`AR-tags`
 - :ref:`Navigation-From-Scratch`
 - :ref:`Multiple-Robot-Control-in-Gazebo`
-- **Competition**
+- **See Canvas for further information on the semester projects**
