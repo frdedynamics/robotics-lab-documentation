@@ -1,21 +1,16 @@
 ***************************************
-ELE306 Syllabus
+ELE306 ROS Syllabus
 ***************************************
-The main objective in this ROS series for ELE306 students is to create a baseline for them to apply both mobile robots and robot manipulators efficiently in the ROS environment.
+The objectives of the ROS teaching for ELE306 are that students get experience with programming, modelling, simulating and controlling both mobile robots and robot manipulators with ROS. The skills learned will also be used as part of a semester project on designing a robotic system for a real-world challenge.
 
-Both mobile robots (with and without a manipulator on) and industrial robotic arms are covered adequately to enable students to get to know ROS environment, control different robot types both in a simulation environment and in real world. Moreover, students are aimed to be competent in effective problem solving in a case study (project).
+For the UR labs for ELE306 see link **TODO**.
 
-**Hands-on activities using UR5/UR5e**:
 
-- **Lab 1**: :ref:`Basics-of-UR`
-- **Lab 2**: :ref:`Features-and-Safety-Planes`
-- **Lab 3**: :ref:`Advanced-UR`
+**Get ready for ROS:**
 
-**Be ready to ROS:**
+- We recommend using the all-in-one virtual machine installation: :ref:`Install-VM`
 
-- Recommended all-in-one virtual machine installation: :ref:`Install-VM`
-
-**ROS:**
+**Generic ROS content and labs:**
 
 - What is ROS? Why do we need it? Important commands: :ref:`ROS-Introduction`
 - **Lab 4:** :ref:`Getting-Started-with-Turtlebots` - Turtlebot simulations
@@ -24,11 +19,12 @@ Both mobile robots (with and without a manipulator on) and industrial robotic ar
 - Simulation in ROS: :ref:`Gazebo-Tutorial`
 - Visualization and robot modelling: :ref:`URDF-Tutorial`
 - **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
+- TODO: Controlling the OM
 
 
-**Prepare for Challenge**
+**Project-specific ROS content**
 
 - :ref:`with-Matlab`
 - :ref:`MoveIt`
-- **Project Presentation**
+- **See Canvas for further information on the semester projects**
 
