@@ -52,35 +52,44 @@ Signed attendance will suffice as approved lab exercise.
 
 Tasks (Lab4)
 ==============================================
-#. `Setup, PC Setup, Remote PC`_
+#. `Optional: Installation instructions`_
 #. `Simulation`_
 #. `Turtlebot Control`_
 #. `Questions`_
 
 
-
-
-_`Setup, PC Setup, Remote PC`
+_`Optional: Installation instructions`
 ==============================================
 
 .. note::
-   The turtlebot packages are installed in the VM copy provided to you. However, for those who used a different installation method should have had those packages available in your \src folder:
+   The Turtlebot packages are already installed in the VM copy provided to you. However, for those who used a different installation method (for example dual boot, or your own VM) below are the basic instructions for installing the necessary packages.
+
+   **How to install on ROS Melodic**:
+   ::
+
+      sudo apt-get install ros-melodic-dynamixel-sdk
+      sudo apt-get install ros-melodic-turtlebot3-msgs
+      sudo apt-get install ros-melodic-turtlebot3
+      
+      cd ~/catkin_ws/src
+      git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+      git clone https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
+      git clone https://github.com/ROBOTIS-GIT/open_manipulator_dependencies.git
+      git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench.git
+      git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
+      
+      cd ..
+      rosdep install --from-paths src --ignore-src -r -y
+      catkin_make
+      source devel/setup.bash
+
+
+   Note that in general, the following packages are available for the Turtlebots (TB) and Open Manipulator (OM), depending on your exact model and needs:
 
    * OM+TB3: https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3
    * OM: https://github.com/ROBOTIS-GIT/open_manipulator and https://github.com/ROBOTIS-GIT/open_manipulator_simulations
    * TB: https://github.com/ROBOTIS-GIT/turtlebot3.git
    * TB manipulation: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations and https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
-   * ros_controll ``sudo apt install ros-melodic-ros-controll ros-melodic-ros-controllers``
-
-   **How to**:
-   ::
-
-      cd ~/catkin_ws/src
-      git clone -b master https://github.com/XXX # For all links
-      rosdep install --from-paths src --ignore-src -r -y
-      catkin_make
-      source devel/setup.bash
-      rospack profile
 
 
 _`Simulation`
