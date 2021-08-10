@@ -38,7 +38,7 @@ Simple Publisher
 --------------------
 ::
 
-   #!/usr/bin/env python3
+   #!/usr/bin/env python
    # license removed for brevity
    import rospy
    from std_msgs.msg import String
@@ -64,7 +64,7 @@ Simple Subscriber
 ------------------
 ::
 
-   #!/usr/bin/env python3
+   #!/usr/bin/env python
    import rospy
    from std_msgs.msg import String
 
