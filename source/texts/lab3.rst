@@ -33,9 +33,8 @@ Equipment
 #. Lab station with
 
     #. E-stop, box with red button and 2 sets of wiring
-    #. Control box. 2 buttons, 2 indicators
-    #. Machine simulation box. 2 buttons, 2 indicators
-    #. Stack of small boxes
+    #. Workpiece holder
+    #. Stack of workpieces
     #. Big box with sliding door.
 
 Before the lab
@@ -62,11 +61,11 @@ Signed attendance will suffice as approved lab exercise.
 Tasks
 ==============================================
 #. `Connect and test E-stop`_
-#. `Connect Control and Machine digital IO's, test IO's`_
-#. `Make a program to pick a box from a stack`_
+#. `Connect Control box digital IO's, test IO's`_
+#. `Make a program to pick up a workpiece`_
 #. `Make a program to open the machine door`_
 #. `Make a program to close the machine door`_
-#. `Make a program to place boxes in a grid`_
+#. `Make a program to place workpieces in a grid`_
 #. `Combine everything to a complete machine tending program`_
 
 
@@ -88,9 +87,9 @@ switches are opened, breaking the circuits.
 #. Fire up the robot again and verify that all E-stops work
 
 
-_`Connect Control and Machine digital IO's, test IO's`
+_`Connect Control box digital IO's, test IO's`
 ========================================================
-You will connect a total of 4 digital inputs and 4 digital outputs now.
+You will connect a total of 4 digital inputs to the UR.
 
 #. Shutdown the robot
 #. Disconnect power
@@ -101,17 +100,18 @@ You will connect a total of 4 digital inputs and 4 digital outputs now.
 #. Test and name the inputs
 
 
-_`Make a program to pick a box from a stack`
+_`Make a program to pick up a workpiece`
 ========================================================
-Make a program to pick a box from a stack. There are several ways to this.
+Make a program to pick a workpiece. There are several ways to this.
 Consider the following suggestion as a starting point:
 
 #. Move to a waypoint above the stack.
 #. Close gripper.
-#. Lower slowly relative to the waypoint above, until box is detected.
+#. Lower slowly relative to the waypoint above, until workpiece is detected.
 #. Relative move up 1 cm.
 #. Open gripper.
-#. Pick box.
+#. Move to position.
+#. Pick workpiece.
 
 The direction option can be used to detect an object and perform an action.
 Also, have a look at stack/de-stack options on the UR5e.
@@ -134,9 +134,9 @@ _`Make a program to close the machine door`
 Make a program to close the machine door. Same as above, but close.
 
 
-_`Make a program to place boxes in a grid`
+_`Make a program to place workpieces in a grid`
 ========================================================
-Make a program to place boxes in a grid. There are several ways to this.
+Make a program to place the workpieces in a grid. There are several ways to this.
 Consider the following suggestion as a starting point:
 
 #. Make a waypoint at a corner of your grid.
@@ -145,27 +145,29 @@ Consider the following suggestion as a starting point:
 #. Offset placement waypoints by using row_num.
 #. Add col_num to the mix.
 
-Also, take a look at palletize/de-palletize options on the UR5e.
+Also, take a look at palletize/de-palletize options on the UR5e for the built-in template.
 
 
 _`Combine everything to a complete machine tending program`
-=============================================================
+===============================================================
 Using the above programs as subprograms or copy/paste source,
-make a program to feed boxes into the machine from the stack,
-let the machine do it's work, pick the boxes from the machine
-and place them in a grid. One box at a time.
+make a program to feed the workpieces into the machine,
+let the machine do it's work, pick the workpieces from the machine
+and place them in a grid. One workpiece at a time.
 
-Use the digital I/O's for program flow, i.e. use the control box
-to start/reset program and show running/waiting status, and the machine
-simulation box to signal machine done.
+.. figure:: ../_static/images/CNC_UR.png
+          :align: center
 
+Voilà! Kick your feet up and let the robot do all the work!
 
 
 Questions
 ==============================================
 
 #. The E-stop has 2 NC switches. Why?
-#. We used buttons, active while clicked. Discuss the difference to switches.
 #. How many tasks did you complete? What kept you from completing everything?
-#. How would you now make a machine tending program for a lathe or cnc?
+#. If the robot or the "CNC" changed location, how would you update the program?
+#. What are the pros and cons between cobots and industrial robots?
+#. Discuss how cobots can be applied to enhance workflow for a company, or in everyday life.
+#. Does the configuration of the robot affect the applied force when opening/closing the door? 
 #. Did you remember to have fun?

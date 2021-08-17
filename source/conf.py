@@ -40,7 +40,7 @@ except git.exc.InvalidGitRepositoryError:
 # ones.
 extensions = ['sphinx.ext.githubpages']
 extensions = ['sphinxcontrib.bibtex']
-extensions = ['sphinx_togglebutton']
+#extensions = ['sphinx_togglebutton']
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -395,3 +395,6 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
+
+import six
+print('Six version: %s' % six.__version__)
