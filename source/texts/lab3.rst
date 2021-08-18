@@ -62,9 +62,12 @@ Tasks
 ==============================================
 #. `Connect and test E-stop`_
 #. `Connect Control box digital IO's, test IO's`_
-#. `Make a program to pick up a workpiece`_
+#. `Elements of the Work Station`_
+#. `Finite-State Sequence of the Machine Tending Box`_
 #. `Make a program to open the machine door`_
 #. `Make a program to close the machine door`_
+#. `Make a program to pick up a workpiece`_
+#. `Make a program to place a workpiece in the work station`_
 #. `Make a program to place workpieces in a grid`_
 #. `Combine everything to a complete machine tending program`_
 
@@ -89,7 +92,7 @@ switches are opened, breaking the circuits.
 
 _`Connect Control box digital IO's, test IO's`
 ========================================================
-You will connect a total of 4 digital inputs to the UR.
+You will connect a total of 4 digital inputs to the UR, from the control box.
 
 #. Shutdown the robot
 #. Disconnect power
@@ -99,28 +102,23 @@ You will connect a total of 4 digital inputs to the UR.
 #. Fire up the robot again
 #. Test and name the inputs
 
+_`Elements of the Work Station`
+====================================
+.. figure:: ../_static/images/CNC_elements_.png
+          :align: center
+          
+#. Door_open sensor
+#. Door_close sensor
+#. Workpiece_sensor
+#. Clamp servo
+#. Ready_LED and busy_LED
 
-_`Make a program to pick up a workpiece`
-========================================================
-Make a program to pick a workpiece. There are several ways to this.
-Consider the following suggestion as a starting point:
+_`Finite-State Sequence of the Machine Tending Box`
+===========================================================
+Set the machine to its initial state when starting up.
 
-#. Move to a waypoint above the stack.
-#. Close gripper.
-#. Lower slowly relative to the waypoint above, until workpiece is detected.
-#. Relative move up 1 cm.
-#. Open gripper.
-#. Move to position.
-#. Pick workpiece.
-
-The direction option can be used to detect an object and perform an action.
-Also, have a look at stack/de-stack options on the UR5e.
-
-It is also possible to detect the force applied to the gripper on contact,
-with pre-built functions. Have a look at them!
-
-Tip: `my_variable = get_actual_tcp_pose()` and add 0.01 meters to the
-Z index `[2]`, then MoveL to this variable position.
+.. figure:: ../_static/images/CNC_finite_state.png
+          :align: left
 
 
 _`Make a program to open the machine door`
@@ -132,6 +130,35 @@ Feel free to fasten the box. Consider using force control.
 _`Make a program to close the machine door`
 ========================================================
 Make a program to close the machine door. Same as above, but close.
+
+
+_`Make a program to pick up a workpiece`
+========================================================
+Make a program to pick a workpiece. There are several ways to this.
+Consider the following suggestion as a starting point:
+
+#. Move to a waypoint above the workpiece.
+#. Close gripper.
+#. Lower slowly relative to the waypoint above, until workpiece is detected.
+#. Relative move up 1 cm.
+#. Open gripper.
+#. Move to position.
+#. Pick workpiece.
+
+The direction option can be used to detect an object on contact and perform an action.
+Also, have a look at stack/de-stack options on the UR5e.
+
+It is also possible to detect the force applied to the gripper on contact,
+with pre-built functions. Have a look at them!
+
+Tip: `my_variable = get_actual_tcp_pose()` and add 0.01 meters to the
+Z index `[2]`, then MoveL to this variable position.
+
+
+_`Make a program to place a workpiece in the work station`
+==============================================================
+Make a program to place a workpiece in the work station. Try to be as accurate as
+possible when placing the workpiece!
 
 
 _`Make a program to place workpieces in a grid`
@@ -151,9 +178,9 @@ Also, take a look at palletize/de-palletize options on the UR5e for the built-in
 _`Combine everything to a complete machine tending program`
 ===============================================================
 Using the above programs as subprograms or copy/paste source,
-make a program to feed the workpieces into the machine,
-let the machine do it's work, pick the workpieces from the machine
-and place them in a grid. One workpiece at a time.
+make a program to open the door, fetch the workpiece, place them in a grid,
+feed the machine a new workpiece and close the door. Wait until its finished.
+And repeat. One workpiece at a time.
 
 .. figure:: ../_static/images/CNC_UR.png
           :align: center
