@@ -33,6 +33,7 @@ Syllabus (LAB and ROS related part):
 
    ELE306 <texts/ele306-syllabus.rst>
    DAT160 <texts/dat160-syllabus.rst>
+   ING104 <texts/ing104-syllabus.rst>
 
 
 LAB Exercises:
