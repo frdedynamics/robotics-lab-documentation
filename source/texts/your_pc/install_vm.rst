@@ -10,7 +10,7 @@ Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/D
 
 .ova import
 --------------
-We provide you ready-to-use virtual copy of what you need. Please download it using `this link <https://hvl365.sharepoint.com/:u:/r/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/ROS_MELODIC_VM_with_TB.ova?csf=1&web=1&e=hdnigs>`_. The followings are installed:
+We provide you ready-to-use virtual copy of what you need. Please download it using `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/EVDejQL1F7lMtC8NMmHY8S0BhopabPJn68poCpHLvJIcCg?e=UXBG7Q>`_ using your HVL credentials. The followings are installed:
 
 * `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
 * `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
@@ -19,6 +19,7 @@ We provide you ready-to-use virtual copy of what you need. Please download it us
 
 .. note::
   For those who don't use the given virtual copy should install the necessary software and packages by themselves manually. The links are provided as clickable.
+  **Update:** The *ready-to-use virtual copy* created by us has been updated on **26/08/2021**. For those who downloaded it before that date might have some missing libraries. Either download the newer version of the copy now or just install necessary packages as they are needed in the future.
 
 To import the virtual copy of *everything*, which is an **.ova** file, run your Virtualbox.
 
@@ -32,5 +33,5 @@ Afterwards, you should select **Start** with the green arrow kew on the upper to
 .. warning::
    Troubleshooting:
 
-   #. Fullscreen
-   #. Using host's peripherals like USB, webcam, etc: `Download VM expansion package <https://hvl365.sharepoint.com/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack>`_
+   #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-40). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
+   #. To use host's peripherals like USB, webcam, etc: `Download VM expansion package <https://hvl365.sharepoint.com/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack>`_
