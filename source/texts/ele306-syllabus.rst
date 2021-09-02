@@ -1,9 +1,9 @@
 ***************************************
-ELE306 ROS Syllabus
+ELE306 UR and ROS Syllabus
 ***************************************
-The objectives of the ROS teaching for ELE306 are that students get experience with programming, modelling, simulating and controlling both mobile robots and robot manipulators with ROS. The skills learned will also be used as part of a semester project on designing a robotic system for a real-world challenge.
+The objective of the UR labs is to get students familiar with collaborative and industrial robot manipulators. The idea is to give a grasp of how to program them and solve simple tasks. 
 
-For the UR labs for ELE306 see link **TODO**.
+The objectives of the ROS teaching for ELE306 are that students get experience with programming, modelling, simulating and controlling both mobile robots and robot manipulators with ROS. The skills learned will also be used as part of a semester project on designing a robotic system for a real-world challenge.
 
 **UR5/UR5e activities**:
 
