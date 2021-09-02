@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<robot name="multipleshapes">
-  <link name="base_link">
+<robot name="myrobot">
+  <link name="link1">
     <visual>
       <geometry>
         <cylinder length="0.6" radius="0.2"/>
@@ -8,7 +8,7 @@
     </visual>
   </link>
 
-  <link name="right_leg">
+  <link name="link2">
     <visual>
       <geometry>
         <box size="0.6 0.1 0.2"/>
@@ -16,9 +16,9 @@
     </visual>
   </link>
 
-  <joint name="base_to_right_leg" type="fixed">
-    <parent link="base_link"/>
-    <child link="right_leg"/>
+  <joint name="link1_to_link2" type="fixed">
+    <parent link="link1"/>
+    <child link="link2"/>
   </joint>
 
 </robot>
