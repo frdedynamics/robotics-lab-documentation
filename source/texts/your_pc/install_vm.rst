@@ -3,6 +3,12 @@
 ****************************
 Install VM
 ****************************
+Virtual machines are basically some software which run just like a regular PC but without any physical components. They use the *host*'s hardware equipments as a *guest*. Since ROS works best on Linux based operating systems but we assume most of you have Windows PCs, we provide this ready-to-use solution for you to start ROS as smooth as possible.
+
+There will be two components: 
+
+#. A software to run the virtual machine (VirtualBox or VMware)
+#. The virtual machine (an .ova file which contains everything you would need)
 
 VirtualBox Install
 ==========================
@@ -32,9 +38,12 @@ Afterwards, you should select **Start** with the green arrow kew on the upper to
 
 VMware Install
 ==========================
-`VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_ is one of the most well known virtual machine program but it has some limitations. Especially graphical-intensive programs (such as Gazebo) are lagging. As an alternative you can use `VMware <https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html>`_ just as in Virtualbox. You can import the same .ova file by clicking **Open a Virtual Machine**. It has higher graphics card capacity and better for simulations. 
+.. note::
+   VMware is an alternative to VirtualBox. You should have only one of them.
 
-After you import .ova, which can take ~15 mins, go to **Edit virtual machine settings** and in Display settings enable **Accelerate 3D graphics** and choose recommended Graphics Memory from the dropdown box as shown in the pictures.
+`VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_ is one of the most well known virtual machine program but it has some limitations. Especially graphical-intensive programs (such as Gazebo) are lagging. As an alternative you can use `VMware <https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html>`_ just as in Virtualbox. You can import the same .ova file by clicking **Open a Virtual Machine** and choose the .ova file you downloaded.
+
+After you import .ova, which can take upto ~15 mins, go to **Edit virtual machine settings** and in Display settings enable **Accelerate 3D graphics** and choose recommended Graphics Memory from the dropdown box as shown in the pictures.
 
   .. figure:: ../../_static/images/ros/VM-settings.png
           :align: center
