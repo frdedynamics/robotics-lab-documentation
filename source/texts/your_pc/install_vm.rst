@@ -4,7 +4,7 @@
 Install VM
 ****************************
 
-Virtual Machine Install
+VirtualBox Install
 ==========================
 Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/Downloads>`_. Choose your operating system.
 
@@ -29,6 +29,20 @@ To import the virtual copy of *everything*, which is an **.ova** file, run your 
 The left bar under **Tools** must be empty for your case. From ** Files>Import Appliences** select your .ova file and press **Next** and then **Import**. Now, you will be able to see **ROS_MELODIC_VM** on the left bar.
 
 Afterwards, you should select **Start** with the green arrow kew on the upper toolbar.
+
+VMware Install
+==========================
+`VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_ is one of the most well known virtual machine program but it has some limitations. Especially graphical-intensive programs (such as Gazebo) are lagging. As an alternative you can use `VMware <https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html>`_ just as in Virtualbox. You can import the same .ova file by clicking **Open a Virtual Machine**. It has higher graphics card capacity and better for simulations. 
+
+After you import .ova, which can take ~15 mins, go to **Edit virtual machine settings** and in Display settings enable **Accelerate 3D graphics** and choose recommended Graphics Memory from the dropdown box as shown in the pictures.
+
+  .. figure:: ../../_static/images/ros/VM-settings.png
+          :align: center
+
+  .. figure:: ../../_static/images/ros/VM-settings2.png
+          :align: center
+
+**PS:** If you have any problems in running Gazebo, plese `follow this link for troubleshooting <https://robocademy.com/2020/05/02/solved-opengl-issues-with-gazebo-and-vmware/>`_.
 
 .. warning::
    Troubleshooting:
