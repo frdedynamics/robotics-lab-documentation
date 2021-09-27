@@ -13,9 +13,15 @@ Topics
 ==============
 Some sample text about topics
 
+Custom Message
+----------------
+
 Services
 ==============
 Some sample text about services
+
+Custom Service
+---------------
 
 Actions
 ==============
