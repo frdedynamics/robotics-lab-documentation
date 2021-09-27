@@ -4,7 +4,7 @@ Robot navigation with ROS
 
 Launching one robot in gazebo
 ==============
-Writing a launch file which includes gazebo world, SLAM package, RVIZ.
+Writing a launch file which includes gazebo world, SLAM package, RVIZ. (this will probably be a video)
 
 Go to Point
 ==============
