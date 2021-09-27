@@ -1,7 +1,11 @@
 **********************************
 ROS Communication Patterns
 **********************************
-Some sample text about the differnt patterns
+ROS provides different patterns that can be used to communcate between ROS Nodes:
+  *Topics <https://wiki.ros.org/Topics>: should be used to send continuous data
+  *Services <https://wiki.ros.org/Services>: should be used for short procedures
+  *Actions <https://wiki.ros.org/actionlib>: sh
+  *Parameters <https://wiki.ros.org/Parameter%20Server>: is not actually a communication pattern but rather is used for 
 
 Topics
 ==============
@@ -14,3 +18,7 @@ Some sample text about services
 Actions
 ==============
 Some sample text about actions
+
+Parameters
+==============
+Some sample parameter text
