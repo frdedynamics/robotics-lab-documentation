@@ -25,6 +25,7 @@ Our location, Øyrane_ 12, 6800 Førde, 2. floor (under Reodorklubben).
       [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
       Additionals <texts/additionals.rst>
       ROS Communication Patterns <texts/ros_communication.rst>
+      ROS Robot Navigation <texts/ros_robot_navigation.rst>
 
 Syllabus (LAB and ROS related part):
 --------------------------------------
@@ -58,6 +59,7 @@ Important Resources:
    Universal Robots Academy <texts/UR_exercises.rst>
    ROS Introduction <texts/ros0.rst>
    ROS Communication Patterns <texts/ros_communication.rst>
+   ROS Robot Navigation <texts/ros_robot_navigation.rst>
    Navigating in ROS <texts/ros2.rst>
    First Package Nodes Launchers Parameters <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
