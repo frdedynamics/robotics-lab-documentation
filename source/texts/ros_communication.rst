@@ -4,32 +4,35 @@ ROS Communication Patterns
 
 ROS provides different patterns that can be used to communcate between ROS Nodes:
 
-  * `Topics <https://wiki.ros.org/Topics>`_: should be used to send continuous data
-  * `Services <https://wiki.ros.org/Services>`_: should be used for short procedures
-  * `Actions <https://wiki.ros.org/actionlib>`_: sh
-  * `Parameters <https://wiki.ros.org/Parameter%20Server>`_: is not actually a communication pattern but rather is used for
+  * `Topics <https://wiki.ros.org/Topics>`_: are used to send continuous data streams like e.g. sensor data. Data can be published on the topic independent of if there are any subscribers listening. Similarly, Nodes can also subscribe to topics independent of if a publisher exists. Topics allow for many to many connections, meaning that multiple nodes can publish and/or subscribe to the same topic.
+  * `Services <https://wiki.ros.org/Services>`_: are used when it is important that a message is recieved by the recipient and a response on the outcome is wanted. Services should only be used for short procedure calls e. g. changing the state of a system, inverse kinematics calculations or triggering a process.
+  * `Actions <https://wiki.ros.org/actionlib>`_: are similar as services but are used if the triggered event needs more time and the possebility for recieving updates on the process or being able to cancel the process is wanted. An example could be when sending a navigation command.
+  * `Parameters <https://wiki.ros.org/Parameter%20Server>`_: are not actually a communication pattern but rather is a storage space for variables. It is not designed for high-performance and therefore mostly used for static variables like configuration parameters.
 
 Topics
 ==============
-Some sample text about topics
+Video of how to do a simple publisher + subscriber combo
 
 Custom Message
 ----------------
+Video on creating a custom message type for ros topics
 
 Services
 ==============
-Some sample text about services
+Video on how to make a simple Service server + client combo
 
 Custom Service
 ---------------
+Video on creating a custom service request/response message
 
 Actions
 ==============
-Some sample text about actions
+Video on how to make a simple action server + client combo
 
 Custom Action Message
 ---------------
+Video on how to create a custom action message
 
 Parameters
 ==============
-Some sample parameter text
+Video on how to work with parameters in python and launch files
