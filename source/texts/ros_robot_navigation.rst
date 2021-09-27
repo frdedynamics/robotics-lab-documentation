@@ -2,27 +2,27 @@
 Robot navigation with ROS
 **********************************
 
-Launching one robot in gazebo
+Launching one robot in gazebo (preparation?)
 ==============
 Writing a launch file which includes gazebo world, SLAM package, RVIZ. (this will probably be a video)
 
-Go to Point
+Go to Point (Lecture)
 ==============
 Most of the code is given here with an explanation what it does during the lecture. The students have to complete the code by adding the ros communication: creating a ros package, figuring out what sensor data is needed and subscribing to it.
 
-Follow wall
+Follow wall (Lecture)
 ==============
 Similar to the previous point.
 
-Bug2 Algorithm
+Bug2 Algorithm (Lecture)
 ==============
 Similar to previous point. Students will have to use services here to use go to point and follow wall to combine it into a bug2 algorithm.
 
-Reading the map
+Reading the map (preparation or lecture?)
 ==============
 Video explaining how to work with Occupacy Grids (data format of the maps created by slam) and how to extract positions from it.
 
-Move Base
+Move Base (Video to watch after lecture?)
 ==============
 Video on how to use move_base navigation stack.
 
