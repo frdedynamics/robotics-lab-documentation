@@ -26,6 +26,7 @@ Our location, Øyrane_ 12, 6800 Førde, 2. floor (under Reodorklubben).
       Additionals <texts/additionals.rst>
       ROS Communication Patterns <texts/ros_communication.rst>
       ROS Robot Navigation <texts/ros_robot_navigation.rst>
+      ROS Working with multiple Robots <text/ros_multi_robot.rst>
 
 Syllabus (LAB and ROS related part):
 --------------------------------------
@@ -60,6 +61,7 @@ Important Resources:
    ROS Introduction <texts/ros0.rst>
    ROS Communication Patterns <texts/ros_communication.rst>
    ROS Robot Navigation <texts/ros_robot_navigation.rst>
+   ROS Working with multiple Robots <text/ros_multi_robot.rst>
    Navigating in ROS <texts/ros2.rst>
    First Package Nodes Launchers Parameters <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
