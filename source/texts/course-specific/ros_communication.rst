@@ -1,6 +1,8 @@
-**********************************
+.. _ros_communication:
+
+******************************************
 ROS Communication Patterns (preparation)
-**********************************
+******************************************
 
 ROS provides different patterns that can be used to communcate between ROS Nodes:
 
@@ -32,7 +34,7 @@ Actions
 Video on how to make a simple action server + client combo
 
 Custom Action Message
----------------
+-----------------------
 Video on how to create a custom action message
 
 Parameters

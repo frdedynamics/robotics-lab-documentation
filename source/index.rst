@@ -8,26 +8,6 @@ Welcome to HVL Robotics Førde's documentation!
 
 Our location, Øyrane_ 12, 6800 Førde, 2. floor (under Reodorklubben).
 
-..
-   The TOC before a big refraction. Keep it for a while.
-   .. toctree::
-      :maxdepth: 2
-
-      Universal Robots Academy <texts/UR_exercises.rst>
-      [LAB] Exercise 1, UR <texts/lab1.rst>
-      [LAB] Exercise 2, UR <texts/lab2.rst>
-      [LAB] Exercise 3, UR <texts/lab3.md>
-      ROS Introduction <texts/ros0.rst>
-      [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
-      Navigating in ROS <texts/ros2.rst>
-      First Package Nodes Launchers Parameters <texts/ros3.rst>
-      Gazebo Rviz URDF TF <texts/ros4.rst>
-      [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
-      Additionals <texts/additionals.rst>
-      ROS Communication Patterns <texts/ros_communication.rst>
-      ROS Robot Navigation <texts/ros_robot_navigation.rst>
-      ROS Working with multiple Robots <text/ros_multi_robot.rst>
-
 Syllabus (LAB and ROS related part):
 --------------------------------------
 
@@ -37,6 +17,15 @@ Syllabus (LAB and ROS related part):
    ELE306 <texts/ele306-syllabus.rst>
    DAT160 <texts/dat160-syllabus.rst>
    ING104 <texts/ing104-syllabus.rst>
+
+
+Installation related:
+--------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm.rst>
 
 
 LAB Exercises:
@@ -51,35 +40,41 @@ LAB Exercises:
    [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
    [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>   
 
-Important Resources:
+Common Content:
 --------------------------------------
 
 .. toctree::
    :maxdepth: 1
 
+   --COMMON CONTENTS-- <texts/common_content.rst>
    Universal Robots Academy <texts/UR_exercises.rst>
    ROS Introduction <texts/ros0.rst>
-   ROS Communication Patterns <texts/ros_communication.rst>
-   ROS Robot Navigation <texts/ros_robot_navigation.rst>
-   ROS Working with multiple Robots <text/ros_multi_robot.rst>
    Navigating in ROS <texts/ros2.rst>
-   First Package Nodes Launchers Parameters <texts/ros3.rst>
+   Creating Your First ROS Package <texts/ros3.rst>
    Gazebo Rviz URDF TF <texts/ros4.rst>
-   Additionals <texts/additionals.rst>
-   (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
-   
 
-Installation related:
+
+Project-specific ROS content
 --------------------------------------
 
 .. toctree::
    :maxdepth: 1
 
-   (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm.rst>
+   --PROJECT SPECIFIC CONTENTS-- <texts/course_specific_content.rst>
+   ROS with MatLab <texts/course-specific/ros_with_matlab.rst>
+   AR Tags <texts/course-specific/ar_tags.rst>
+   ROS Communication Patterns <texts/course-specific/ros_communication.rst>
+   ROS Robot Navigation <texts/course-specific/ros_robot_navigation.rst>
+   ROS Working with multiple Robots <texts/course-specific/ros_multi_robot.rst>
+   
+
+
+..
    Choose your poison: W10, Ubuntu xx.yy, MacOS <texts/your_pc/select_os.rst>
    Install MatLab <texts/your_pc/install_matlab.rst>
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
+   (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
       
 
 

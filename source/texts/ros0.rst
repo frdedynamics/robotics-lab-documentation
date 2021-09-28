@@ -4,7 +4,11 @@
 ROS Introduction
 ****************************
 
-Welcome to the **ROS Chapters**. The purpose of this chapter is to give you a compact ROS introduction where you can use in your course project. The documentation in this chapter is a target-based collection of mainly the following very nice ROS tutorials. 
+Welcome to the ROS section of the course. The purpose of these pages is to give you a compact ROS introduction where you can use in your course project. The documentation in this chapter is a target-based collection of mainly the following very nice ROS tutorials. 
+
+.. seealso::
+
+      For a deeper understanding, they are highly recommended to be checked out (OPTIONAL).
 
       * `Official ROS Documentation <http://wiki.ros.org/Documentation>`_
       * `TheConstructSim <https://www.theconstructsim.com/robotigniteacademy_learnros/ros-courses-library/>`_
@@ -13,7 +17,6 @@ Welcome to the **ROS Chapters**. The purpose of this chapter is to give you a co
 
       .. https://www.rosin-project.eu/ros-i-summer-school-at-hvl-forde-norway
 
-For a deeper understanding, they are highly recommended to be checked out. 
 
 This page serves as a look-up page where you can find process and commands easily.
 

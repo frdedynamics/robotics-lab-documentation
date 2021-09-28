@@ -15,8 +15,7 @@ It is a mobile-robot centered collection that enables students to get to know th
 - **Lab 4:** :ref:`Getting-Started-with-Turtlebots` - Turtlebot simulations
 - File system in ROS and where to locate ROS packages: :ref:`File-System-in-ROS`
 - Hands-on activities in ROS: :ref:`First-Package-Nodes-Launchers-Parameters`
-- Simulation in ROS: :ref:`Gazebo-Tutorial`
-- Optional: Visualization and robot modelling: :ref:`URDF-Tutorial`
+- Simulation and Visualization Robots in ROS: :ref:`URDF_Gazebo_RViz`
 - **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
 
 

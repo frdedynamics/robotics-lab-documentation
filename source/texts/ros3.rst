@@ -1,7 +1,7 @@
 .. _First-Package-Nodes-Launchers-Parameters:
 
 **********************************************
-First Package Nodes Launchers Parameters
+Creating Your First ROS Package
 **********************************************
 
 Let's start hands on activities!

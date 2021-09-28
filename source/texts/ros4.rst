@@ -1,7 +1,8 @@
-**********************************
-URDF Gazebo RViz TF
-**********************************
+.. _URDF_Gazebo_RViz:
 
+********************************************
+Simulation and Visualization Robots in ROS
+********************************************
 Robot model is described in `URDF <http://wiki.ros.org/urdf/Tutorials/>`_ format in ROS. There are 2 main simulation tools in the ROS environment to visualize your robot: `Rviz <http://wiki.ros.org/rviz>`_ and `Gazebo <http://gazebosim.org/tutorials?tut=ros_overview>`_. Even though they both are simulation tools, they diverge when it comes to usage. Rviz is more *visualization* purposes such that map creation, transfer function visualization, point cloud, image visualization etc. Gazebo, on the other hand, is used for physical testing. Despite the fact that it is possible to test sensor readings on Rviz as well, it is not possible to test collisions in Rviz; you need Gazebo (or another physics engine embedded simulation tools.
 
 .. warning::
