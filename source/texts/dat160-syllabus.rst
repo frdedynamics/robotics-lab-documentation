@@ -8,6 +8,7 @@ It is a mobile-robot centered collection that enables students to get to know th
 **Get ready for ROS:**
 
 - We recommend using the all-in-one virtual machine installation: :ref:`Install-VM`
+- We recommend you to get familiar with `Linux terminal and basic commands <https://youtu.be/SkB-eRCzWIU>`_
 
 **Generic ROS content and labs:**
 

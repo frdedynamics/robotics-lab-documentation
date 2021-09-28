@@ -15,6 +15,8 @@ The objectives of the ROS teaching for ELE306 are that students get experience w
 **Get ready for ROS:**
 
 - We recommend using the all-in-one virtual machine installation: :ref:`Install-VM`
+- We recommend you to get familiar with `Linux terminal and basic commands <https://youtu.be/SkB-eRCzWIU>`_
+- We also recommend you to know some `basic Python <https://youtu.be/VchuKL44s6E>`_.
 
 **Generic ROS content and labs:**
 
