@@ -23,7 +23,7 @@ VMware Install
 .. note::
    VMware is an alternative to VirtualBox. You should have only one of them.
 
-`VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_ is one of the most well known virtual machine program but it has some limitations. Especially graphical-intensive programs (such as Gazebo) are lagging. As an alternative you can use VMware (`Windows/Linux download <https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html>`_) just as in Virtualbox. You can import the same .ova file by clicking **Open a Virtual Machine** and choose the .ova file you downloaded.
+`VirtualBox <https://www.virtualbox.org/wiki/Downloads>`_ is one of the most well known virtual machine program but it has some limitations. Especially graphical-intensive programs (such as Gazebo) are lagging. As an alternative you can use VMware (`Windows/Linux download <https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html>`_, `Mac download <https://www.vmware.com/products/fusion/fusion-evaluation.html>`_) just as in Virtualbox. You can import the same .ova file by clicking **Open a Virtual Machine** and choose the .ova file you downloaded.
 
 After you import .ova, which can take upto ~15 mins, go to **Edit virtual machine settings** and in Display settings enable **Accelerate 3D graphics** and choose recommended Graphics Memory from the dropdown box as shown in the pictures.
 
