@@ -1,7 +1,7 @@
 .. _ros_communication:
 
 ******************************************
-ROS Communication Patterns (preparation)
+ROS Communication Patterns
 ******************************************
 
 ROS provides different patterns that can be used to communcate between ROS Nodes:
