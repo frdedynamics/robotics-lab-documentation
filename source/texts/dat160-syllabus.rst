@@ -18,7 +18,7 @@ It is a mobile-robot centered collection that enables students to get to know th
 - Hands-on activities in ROS: :ref:`First-Package-Nodes-Launchers-Parameters`
 - Simulation and Visualization Robots in ROS: :ref:`URDF_Gazebo_RViz`
 - **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
-- :ref:`ROS Communication Patterns`
+- :ref:`ROS-Communication-Patterns`
 
 
 **Project-specific ROS content**
