@@ -24,6 +24,6 @@ It is a mobile-robot centered collection that enables students to get to know th
 **Project-specific ROS content**
 
 - :ref:`AR-tags`
-- :ref:`Navigation-From-Scratch`
-- :ref:`Multiple-Robot-Control-in-Gazebo`
+- :ref:`ros_robot_navigation`
+- :ref:`ros_multi_robot`
 - **See Canvas for further information on the semester projects**
