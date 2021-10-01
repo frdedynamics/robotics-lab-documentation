@@ -11,7 +11,7 @@ ROS provides different patterns that can be used to communcate between ROS Nodes
   * `Actions <https://wiki.ros.org/actionlib>`_: are similar as services but are used if the triggered event needs more time and the possebility for recieving updates on the process or being able to cancel the process is wanted. An example could be when sending a navigation command.
   * `Parameters <https://wiki.ros.org/Parameter%20Server>`_: are not actually a communication pattern but rather is a storage space for variables. It is not designed for high-performance and therefore mostly used for static variables like configuration parameters.
 
-In the Media Gallery of your course page in Canvas are videos, explaining how to use these communication patterns in python. The following sections contain the example code which is explained in the videos. 
+In the Media Gallery of your course page in Canvas are videos, explaining how to use these communication patterns in python. **Make sure to watch them! During the lecture it will be expected that you know the covered content.** The following sections contain the example code which is explained in the videos. 
 
 Topics
 ==============
