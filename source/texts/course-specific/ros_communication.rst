@@ -15,7 +15,7 @@ In the Media Gallery of your course page in Canvas are videos, explaining how to
 
 Topics
 ==============
-The video called Simple Topic Implementation is about how to write a simple publisher and subsriber in python. Extra information can also be found on the ROS webpage (`creating a ROS package<http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_).
+The video called Simple Topic Implementation is about how to write a simple publisher and subsriber in python. Extra information can also be found on the ROS webpage (`creating a ROS package <http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_).
 
 Custom Message
 ----------------
