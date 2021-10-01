@@ -15,7 +15,7 @@ In the Media Gallery of your course page in Canvas are videos, explaining how to
 
 Topics
 ==============
-The video called **Simple Topic Implementation** is about how to write a simple publisher and subsriber in python. Additional information can also be found on the ROS webpage: (`creating a ROS package <http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_. The following code is explained in the video:
+The video called **Simple Topic Implementation** is about how to write a simple publisher and subsriber in python. Additional information can also be found on the ROS webpage: `creating a ROS package <http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_. The following code is an example implementation created and explained in the video:
 
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_publisher.py
        :language: python
@@ -35,11 +35,23 @@ The video called **Create Custom Messages** is about how to create a custom mess
 
 Services
 ==============
-Video on how to make a simple Service server + client combo
+The video called **Simple Service Implementation** is about how to write a simple service server and client in python. Additional information can also be found on the ROS webpage: `service server and client <http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29>`_. The following code is an example implementation created and explained in the video:
+
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_server.py
+       :language: python
+       :caption: Simple Service Server in Python
+       
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_client.py
+       :language: python
+       :caption: Simple Service Client in Python
 
 Custom Service
 ---------------
-Video on creating a custom service request/response message
+The video calle **Creating Custom Services** explains how to create a custom service message type usable by ROS Services. Additional information can also be found on the ROS webpage: `creating a message and service <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>`_. The following is an example of a service message type definition which was created in the tutorial video:
+
+.. literalinclude:: ../../_static/scripts/ros_communication/random_sum.srv
+       :language: C
+       :caption: Custom Service Message Type: random_sum.srv
 
 Actions
 ==============
