@@ -1,0 +1,6 @@
+<launch>
+  <param name="starting_pos_x" type="double" value="9.5" />
+  <param name="starting_pos_y" type="double" value="-4.0" />
+
+  <node pkg="communication_tutorial" name="simple_param" type="simple_param.py" output="screen" />
+</launch>
