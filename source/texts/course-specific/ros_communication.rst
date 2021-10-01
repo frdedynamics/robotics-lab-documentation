@@ -55,8 +55,15 @@ The video calle **Creating Custom Services** explains how to create a custom ser
 
 Actions
 ==============
-Video on how to make a simple action server + client combo
+The video called **Simple Action Implementation** explains how to create a custom action message type usable by ROS Actions. It also shows how to write a simple action server and client in python. Additional information can also be found on the ROS webpage: `action server <http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29>`_.
 
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_action_server.py
+       :language: python
+       :caption: Simple Action Server in Python
+       
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_action_client.py
+       :language: python
+       :caption: Simple Action Client in Python
 
 Parameters
 ==============
