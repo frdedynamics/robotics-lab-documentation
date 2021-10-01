@@ -29,7 +29,7 @@ Custom Message
 ----------------
 The video called **Create Custom Messages** is about how to create a custom message type which can be used by ROS Topics. Additional information can also be found on the ROS webpage: `creating a message and service <http://wiki.ros.org/ROS/Tutorials/CreatingMsgAndSrv>`_. The following is an example of a message type definition which was created in the tutorial video:
 
-.. literalinclude:: ../../_static/scripts/ros_communication/simple_publisher.py
+.. literalinclude:: ../../_static/scripts/ros_communication/custom_msg.msg
        :language: C
        :caption: Custom Message Type: rand_num.msg
 
