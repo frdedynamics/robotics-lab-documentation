@@ -67,7 +67,7 @@ The video called **Simple Action Implementation** explains how to create a custo
 
 Parameters
 ==============
-The video called **Working with Parameters** shows how to write parameters to the parameterserver and launch a python script from a launch file as well as read and write parameters in a python script. Additional information can also be found on the ROS webpage: `writing parameters from launch file <http://wiki.ros.org/roslaunch/XML/param>`_, `using parameters in python <http://wiki.ros.org/rospy_tutorials/Tutorials/Parameters>`_. The following code is an example implementation of a launch file and python script working with parameters: Test
+The video called **Working with Parameters** shows how to write parameters to the parameterserver and launch a python script from a launch file as well as read and write parameters in a python script. Additional information can also be found on the ROS webpage: `writing parameters from launch file <http://wiki.ros.org/roslaunch/XML/param>`_, `using parameters in python <http://wiki.ros.org/rospy_tutorials/Tutorials/Parameters>`_. The following code is an example implementation of a launch file and python script working with parameters:
 
 .. literalinclude:: ../../_static/scripts/ros_communication/param_test.launch
        :language: C
