@@ -55,7 +55,7 @@ The video calle **Creating Custom Services** explains how to create a custom ser
 
 Actions
 ==============
-The video called **Simple Action Implementation** explains how to create a custom action message type usable by ROS Actions. It also shows how to write a simple action server and client in python. Additional information can also be found on the ROS webpage: `action server <http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28python%29>`_.
+The video called **Simple Action Implementation** explains how to create a custom action message type usable by ROS Actions. It also shows how to write a simple action server and client in python. Additional information can also be found on the ROS webpage: `action server <http://wiki.ros.org/actionlib_tutorials/Tutorials/Writing%20a%20Simple%20Action%20Server%20using%20the%20Execute%20Callback%20%28Python%29>`_, `action client <http://wiki.ros.org/actionlib_tutorials/Tutorials/Writing%20a%20Simple%20Action%20Client%20%28Python%29>`_, creating an action message <http://wiki.ros.org/actionlib_tutorials/Tutorials/SimpleActionServer%28GoalCallbackMethod%29>. The following code is an example implementation created and explained in the video:
 
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_action_server.py
        :language: python
@@ -67,4 +67,12 @@ The video called **Simple Action Implementation** explains how to create a custo
 
 Parameters
 ==============
-Video on how to work with parameters in python and launch files
+The video called **Working with Parameters** shows how to write parameters to the parameterserver and launch a python script from a launch file as well as read and write parameters in a python script. Additional information can also be found on the ROS webpage: `writing parameters from launch file <http://wiki.ros.org/roslaunch/XML/param>`_, `using parameters in python <http://wiki.ros.org/rospy_tutorials/Tutorials/Parameters>`_. The following code is an example implementation of a launch file and python script working with parameters:
+
+.. literalinclude:: ../../_static/scripts/ros_communication/param_test.launch
+       :language: C
+       :caption: Writing Parameters from Launch Files
+       
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_param.py
+       :language: python
+       :caption: Working with Parameters in Python
