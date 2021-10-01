@@ -11,15 +11,15 @@ ROS provides different patterns that can be used to communcate between ROS Nodes
   * `Actions <https://wiki.ros.org/actionlib>`_: are similar as services but are used if the triggered event needs more time and the possebility for recieving updates on the process or being able to cancel the process is wanted. An example could be when sending a navigation command.
   * `Parameters <https://wiki.ros.org/Parameter%20Server>`_: are not actually a communication pattern but rather is a storage space for variables. It is not designed for high-performance and therefore mostly used for static variables like configuration parameters.
 
-The following videos will show how to work with these differnt communication patterns in python.
+In the Media Gallery of your course page in Canvas are videos, explaining how to use these communication patterns in python. The following sections contain the example code which is explained in the videos. 
 
 Topics
 ==============
-Video of how to do a simple publisher + subscriber combo
+The video called Simple Topic Implementation is about how to write a simple publisher and subsriber in python. Extra information can also be found on the ROS webpage (`creating a ROS package<http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_).
 
 Custom Message
 ----------------
-Video on creating a custom message type for ros topics
+The video called 
 
 Services
 ==============
@@ -33,9 +33,6 @@ Actions
 ==============
 Video on how to make a simple action server + client combo
 
-Custom Action Message
------------------------
-Video on how to create a custom action message
 
 Parameters
 ==============
