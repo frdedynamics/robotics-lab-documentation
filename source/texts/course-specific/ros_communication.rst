@@ -17,38 +17,10 @@ Topics
 ==============
 The video called Simple Topic Implementation is about how to write a simple publisher and subsriber in python. Extra information can also be found on the ROS webpage (`creating a ROS package <http://wiki.ros.org/ROS/Tutorials/CreatingPackage>`_, `publisher and subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_). The following code is explained in the video:
 
-::
-    #! /usr/bin/env python
+.. literalinclude:: ../../_static/scripts/ros_communication/simple_publisher.py
+       :language: python
+       :caption: Simple Publisher in Python
 
-    import rospy
-    import random
-    from std_msgs.msg import Int64
-    from communication_tutorial.msg import rand_num
-
-    class simple_publisher():
-        def __init__(self):
-            rospy.init_node("simple_publisher", anonymous=False)
-
-            self.topic_pub = rospy.Publisher("random_number", rand_num, queue_size=10)
-
-        def main(self):
-            numbers = [1,2,3,4,5,6]
-            objects = ["Apples","Bananas","Oranges"]
-
-            r = rospy.Rate(1)
-            while not rospy.is_shutdown():
-                msg = rand_num()
-                msg.random_number = random.choice(numbers)
-                msg.object = random.choice(objects)
-                self.topic_pub.publish(msg)
-                rospy.loginfo("Published data: "+str(msg))
-
-                r.sleep()
-
-
-    if __name__=="__main__":
-        spub = simple_publisher()
-        spub.main()
 
 Custom Message
 ----------------
