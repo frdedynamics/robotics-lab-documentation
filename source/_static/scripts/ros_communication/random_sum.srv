@@ -1,0 +1,4 @@
+int64 random_init
+---
+int64 random_sum
+bool success

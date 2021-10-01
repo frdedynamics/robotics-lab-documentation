@@ -1,0 +1,11 @@
+#goal definition
+int64 random_start
+int64 goal_number
+---
+#result definition
+int64 final_number
+int64 final_iterations
+---
+#feedback definition
+int64 current_sum
+int64 current_iterations
