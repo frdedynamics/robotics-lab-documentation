@@ -6,22 +6,28 @@ Robot navigation with ROS
 
 Launching one robot in gazebo (preparation)
 ========================================================
-Writing a launch file which includes gazebo world, SLAM package, RVIZ. (this will probably be a video)
-
-
-To replicate what has been done in the video and prepare a ROS package for the lecture the needed files can be downloaded `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EiMkZWhQFVBGuSMwCKt169MBSl2zqY5AUcCk0dvRSBtxQQ?e=6a2zg8>`_.
+The video called **Launich One Robot in Gazebo** should be available on Canvas in the Media Gallery. It explains the different components of the launch file which includes gazebo world, turtlebot3, SLAM package and RVIZ. Watch it as a preparation for the Lecture. To replicate what has been done in the video and prepare a ROS package for the lecture the needed files can be downloaded `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EiMkZWhQFVBGuSMwCKt169MBSl2zqY5AUcCk0dvRSBtxQQ?e=6a2zg8>`_.
 
 Go to Point
 ============================
-Most of the code is given here with an explanation what it does during the lecture. The students have to complete the code by adding the ros communication: creating a ros package, figuring out what sensor data is needed and subscribing to it.
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/go_to_point.py
+       :language: python
+       :caption: go_to_point.py
 
 Follow wall
 ============================
-Similar to the previous point.
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/follow_wall.py
+       :language: python
+       :caption: follow_wall.py
 
 Bug2 Algorithm
 ============================
-Similar to previous point. Students will have to use services here to use go to point and follow wall to combine it into a bug2 algorithm.
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/bug2.py
+       :language: python
+       :caption: bug2.py
 
 Reading the map (preparation or lecture?)
 ==========================================
