@@ -10,6 +10,7 @@ The video called **Launich One Robot in Gazebo** should be available on Canvas i
 
 Go to Point
 ============================
+The robot is supposed to turn until it faces in the direction of the target. Once it does it should stop turning and move forward as long as the robot still faces towards the target point. Reapeat until the goal is reached. The following code is a starting point and has to be adapted to achieve the wanted behaviour:
 
 .. literalinclude:: ../../_static/scripts/ros_navigation/go_to_point.py
        :language: python
