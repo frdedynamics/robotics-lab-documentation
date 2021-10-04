@@ -92,6 +92,18 @@ Simple Subscriber
    Complete the ROS tutorials on simple publisher and subscriber in the `following link <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_.
 
 
+.. note::
+   Some useful commands related this part:
+
+   ::
+
+      rosnode list
+      rostopic list
+      rostopic echo TOPIC_NAME
+      rosrun rqt_graph rqt_graph
+      rosmsg info ROS_MSG_NAME
+
+
 Understanding ROS Topics
 -------------------------
 Please see the comprehensive `ROS topics tutorials on the official guide <http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics>`_.
