@@ -165,6 +165,21 @@ A simple launch file looks like this:
    </launch>
 
 
+So our launch file will look like this:
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+
+   <launch>
+
+      <node name="my_publisher" pkg="beginner_tutorials" type="publisher.py"/>
+      <node name="my_subscriber" pkg="beginner_tutorials" type="subscriber.py"/>    
+
+   </launch>
+
+
+
 .. seealso::
    Check out the `roslaunch tutorial <http://wiki.ros.org/ROS/Tutorials/UsingRqtconsoleRoslaunch>`_ starting from 2.2 in the given link.
 
