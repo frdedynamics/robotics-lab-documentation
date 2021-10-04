@@ -8,6 +8,9 @@ Launching one robot in gazebo (preparation)
 ========================================================
 Writing a launch file which includes gazebo world, SLAM package, RVIZ. (this will probably be a video)
 
+
+To replicate what has been done in the video and prepare a ROS package for the lecture the needed files can be downloaded `**here** <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EiMkZWhQFVBGuSMwCKt169MBSl2zqY5AUcCk0dvRSBtxQQ?e=6a2zg8>`_.
+
 Go to Point
 ============================
 Most of the code is given here with an explanation what it does during the lecture. The students have to complete the code by adding the ros communication: creating a ros package, figuring out what sensor data is needed and subscribing to it.
