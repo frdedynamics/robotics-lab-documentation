@@ -28,7 +28,7 @@ Bug2 Algorithm
 ============================
 In the beginning the robot should calculate a direct line between its current position and the target position. It should the start following that line as long as it doesn't run into an obstacle. If it does, it should start following the obstacle until it reaches a point on the line which is closer to the target then the point where it encountered the obstacle. The robot should repeat these behaviours until the goal is reached. You are supposed to use the previous two scripts (got to point and follow wall) to achieve this behavoiur. Each script should run seperatly while communicating through ROS the nessesary information. The following code is a starting point for the bug2 algorithm script and has to be adapted to achieve the wanted behaviour:
 
-.. figure:: ../_static/images/ros/bug2_algorithm.jpg
+.. figure:: ../../_static/images/ros/bug2_algorithm.jpg
           :align: center
 
 .. literalinclude:: ../../_static/scripts/ros_navigation/bug2.py
