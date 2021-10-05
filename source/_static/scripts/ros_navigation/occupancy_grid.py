@@ -8,5 +8,5 @@ class map_sub():
         rospy.init_node('map_sub', anonymous=False)
         rospy.Subscriber("map", OccupancyGrid, self.map_callback)
 
-def map_callback(self, data):
+    def map_callback(self, data):
         self.map = data
