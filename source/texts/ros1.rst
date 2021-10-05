@@ -236,7 +236,7 @@ Let's visualize the surrounding of the turtlebot.
 #. Start the Rviz to visualize sensor data: ``roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch``
    #. Observe the red laser dots.
    #. Activate camera (select the checkmark)
-#. Start teleoperation and navigate: ``roslaunch turtlebot3_teleop turtlebot3_teleop_key``
+#. Start teleoperation and navigate: ``roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch``
 #. Observe active nodes and topics.
 
 
