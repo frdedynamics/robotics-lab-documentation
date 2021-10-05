@@ -35,14 +35,19 @@ In the beginning the robot should calculate a direct line between its current po
        :language: python
        :caption: bug2.py
 
-Reading the map (preparation or lecture?)
+Reading the map
 ==========================================
-Video explaining how to work with Occupacy Grids (data format of the maps created by slam) and how to extract positions from it.
+The map data published by the SLAM algorithm has the type OccupancyGrid. It is a list of integer values where each value gives shows the probability of an obstacle being there with a value between 0 and 100, where 100 (displayed in rviz as black) means high probability and 0 (white) means no obstacle. The map values can also be -1 which stands for unkown areas.
 
-Move Base (Video to watch after lecture?)
+.. figure:: ../../_static/images/ros/slam_map.png
+          :align: center
+
+Explaining how to work with Occupacy Grids (data format of the maps created by slam) and how to extract positions from it.
+
+Move Base
 ========================================================
 Video on how to use move_base navigation stack.
 
 Orientation (Quaternions)
 --------------------------
-Video with a brief explanation how quaternions work and then showing how to use the by me provided function to calculate the orientation needed to send goal commands to the move_base navigation stack.
+Showing how to use the by me provided function to calculate the orientation needed to send goal commands to the move_base navigation stack.
