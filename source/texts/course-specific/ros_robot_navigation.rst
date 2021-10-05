@@ -55,7 +55,19 @@ As already mentioned previously, the map is stored in a list of int values. The 
 
 Move Base
 ========================================================
-Video on how to use move_base navigation stack.
+The **move_base** package lets you move a robot to desired positions using the navigation stack. It starts a ros node which runs an action server. To use the move_base package in your own ROS package, add the following lines to the under section "Launching One Robot in Gazebo" created launch file:
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/move_base.launch
+       :language: C
+       :caption: adding move_base package to the previously created launch file
+
+
+The following code gives an example of how to send a desired position to the move_base action server from a python script:
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/move_base.py
+       :language: python
+       :caption: Sending a target to the move_base action server
+
 
 Orientation (Quaternions)
 --------------------------
