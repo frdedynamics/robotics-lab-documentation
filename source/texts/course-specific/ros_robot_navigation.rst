@@ -71,4 +71,8 @@ The following code gives an example of how to send a desired position to the mov
 
 Orientation (Quaternions)
 --------------------------
-Showing how to use the by me provided function to calculate the orientation needed to send goal commands to the move_base navigation stack.
+Quaternions is a number system which can be used to describe 3 dimensional roations. When sending a target to the move_base action server, it expects a pose which conists of the position (x, y, z) and the orientation (in quaternions). It is out of the scope of this course to explain what they are and how they work but if you are curious you can look at `this video <https://www.youtube.com/watch?v=d4EgbgTm0Bg>`_. You can use the following function to calculate the orientation for the robot given just one angle (in `radian <https://en.wikipedia.org/wiki/Radian>`_):
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/quaternions.py
+       :language: python
+       :caption: Function that takes the wanted angle as an argument and returns the quaternion orientation representation
