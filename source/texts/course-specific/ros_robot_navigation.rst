@@ -39,7 +39,7 @@ Reading the map
 ==========================================
 The map data published by the SLAM algorithm has the type OccupancyGrid. It is a list of integer values where each value gives shows the probability of an obstacle being there with a value between 0 and 100, where 100 (displayed in rviz as black) means high probability and 0 (white) means no obstacle. The map values can also be -1 which stands for unkown areas.
 
-.. figure:: ../../_static/images/ros/slam_map.png
+.. figure:: ../../_static/images/ros/slam_map.PNG
           :align: center
 
 Explaining how to work with Occupacy Grids (data format of the maps created by slam) and how to extract positions from it.
