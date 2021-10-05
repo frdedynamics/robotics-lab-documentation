@@ -41,6 +41,12 @@ The map data published by the SLAM algorithm has the type OccupancyGrid. It is a
 
 .. figure:: ../../_static/images/ros/slam_map.PNG
           :align: center
+          
+The following python script is a short example of how to subscribe to a map topic:
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/occupancy_grid.py
+       :language: python
+       :caption: Short example of how to subscribe to a map topic
 
 As already mentioned previously, the map is stored in a list of int values. The following image gives a visualization of what list item corresponds to what cell on a two dimensional grid as well as how to access certain properties in python which can be used to transform between grid cells and position values:
 
