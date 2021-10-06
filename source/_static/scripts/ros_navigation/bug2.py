@@ -1,25 +1,13 @@
 #! /usr/bin/env python
 
-# import ros stuff
 import rospy
-#import util
-# import ros message
 from geometry_msgs.msg import Point
-from sensor_msgs.msg import LaserScan
-from nav_msgs.msg import Odometry
 from tf import transformations
-from gazebo_msgs.msg import ModelState
-from gazebo_msgs.srv import SetModelState
-# import ros service
-from std_srvs.srv import *
 import math
 
 class bug2():
     def __init__(self):
-
         
-        self.srv_client_go_to_point_ = None
-        self.srv_client_wall_follower_ = None
         self.yaw_ = 0
         self.yaw_error_allowed_ = 5 * (math.pi / 180) # 5 degrees
         
@@ -42,9 +30,7 @@ class bug2():
 
         
         
-
-    # callbacks
-    
+    #callback function for odometry subscriber
     def clbk_odom(self, msg):
         # global position_, yaw_
 
@@ -59,7 +45,8 @@ class bug2():
             msg.pose.pose.orientation.w)
         euler = transformations.euler_from_quaternion(quaternion)
         self.yaw_ = euler[2]
-
+        
+    #callback function for laser subscriber
     def clbk_laser(self, msg):
         # global regions_
         self.regions_ = {
@@ -78,6 +65,7 @@ class bug2():
         
         # ADD CODE HERE
 
+    #calculating the distance to the line dependend on the current position of the robot
     def distance_to_line(self, p0):
         # p0 is the current position
         # p1 and p2 points define the line
@@ -91,6 +79,7 @@ class bug2():
 
         return distance
 
+    #ensures that the angle is between pi and -pi [rad] which is between 180 and -180 [degrees]
     def normalize_angle(self, angle):
         if(math.fabs(angle) > math.pi):
             angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
