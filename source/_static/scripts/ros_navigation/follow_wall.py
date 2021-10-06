@@ -1,18 +1,13 @@
 #! /usr/bin/env python
 
-# import ros stuff
 import rospy
-from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import Twist
-from nav_msgs.msg import Odometry
 from tf import transformations
-from std_srvs.srv import *
 import math
 
 active_ = False
 
 
-
+#global variables
 pub_ = None
 regions_ = {
     'right': 0,
@@ -28,6 +23,7 @@ state_dict_ = {
     2: 'follow the wall',
 }
 
+#callback function for laser subscriber
 def clbk_laser(msg):
     global regions_
     regions_ = {
@@ -47,6 +43,7 @@ def change_state(state):
         rospy.loginfo('Wall follower - ['+str(state)+'] - '+str(state_dict_[state]))
         state_ = state
 
+#deciding what action to take dependend on the laser data
 def take_action():
     global regions_
     regions = regions_
@@ -88,17 +85,19 @@ def take_action():
 
     # rospy.loginfo(state_description)
 
+#trying to find a wall by moving forward and turning to the right
 def find_wall():
     msg = Twist()
     msg.linear.x = 0.2
     msg.angular.z = -0.3
     return msg
-
+#turning left
 def turn_left():
     msg = Twist()
     msg.angular.z = 0.3
     return msg
 
+#moving forward
 def follow_the_wall():
     global regions_
     
