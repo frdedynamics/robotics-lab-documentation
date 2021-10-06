@@ -4,9 +4,6 @@ import rospy
 from tf import transformations
 import math
 
-active_ = False
-
-
 #global variables
 pub_ = None
 regions_ = {
