@@ -37,7 +37,7 @@ In the beginning the robot should calculate a direct line between its current po
 
 Reading the map
 ==========================================
-The map data published by the SLAM algorithm has the type OccupancyGrid. It is a list of integer values where each value gives shows the probability of an obstacle being there with a value between 0 and 100, where 100 (displayed in rviz as black) means high probability and 0 (white) means no obstacle. The map values can also be -1 which stands for unknown areas.
+The map data published by the SLAM algorithm has the type OccupancyGrid. It is a list of integer values where each value shows the probability of an obstacle being there with a value between 0 and 100, where 100 (displayed in rviz as black) means high probability and 0 (white) means no obstacle. The map values can also be -1 which stands for unknown areas.
 
 .. figure:: ../../_static/images/ros/slam_map.PNG
           :align: center
