@@ -2,15 +2,11 @@
 
 # import ros stuff
 import rospy
-from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import Twist, Point
-from nav_msgs.msg import Odometry
 from tf import transformations
-from std_srvs.srv import *
 import math
 
 
-# robot state variables
+# global variables
 position_ = Point()
 yaw_ = 0
 # machine state
@@ -24,17 +20,16 @@ desired_position_.z = 0
 yaw_precision_ = math.pi / 90 # +/- 2 degree allowed
 dist_precision_ = 0.2
 
-active_ = False
-
 # publishers
 pub = None
 
-
+#ensures that the angle is between pi and -pi [rad] which is between 180 and -180 [degrees]
 def normalize_angle(angle):
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
 
+#if the robot is not facing towards the target position it starts turning to correct that
 def fix_yaw(des_pos):
     global yaw_, pub, yaw_precision_, state_
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
@@ -54,6 +49,7 @@ def fix_yaw(des_pos):
         rospy.loginfo('Yaw error: ['+str(err_yaw)+']')
         change_state(1)
 
+#as long as the robot faces towards the target, move forward
 def go_straight_ahead(des_pos):
     global yaw_, pub, yaw_precision_, state_
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
@@ -72,7 +68,7 @@ def go_straight_ahead(des_pos):
     if math.fabs(err_yaw) > yaw_precision_:
         rospy.loginfo('Yaw error: '+str(err_yaw))
         change_state(0)
-
+#function should be called when the target is reached; stops all movement of the robot
 def done():
     twist_msg = Twist()
     twist_msg.linear.x = 0
@@ -85,6 +81,7 @@ def change_state(state):
     state_ = state
     rospy.loginfo('State changed to '+str(state_))
 
+#callback function for odometry subscriber 
 def clbk_odom(msg):
     global position_
     global yaw_
