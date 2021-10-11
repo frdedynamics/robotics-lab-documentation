@@ -47,9 +47,9 @@ VirtualBox Install
 Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/Downloads>`_. Choose your operating system and download.
 
 
-Virtual Appliance (.ova import)
+Virtual Appliance
 ===================================
-A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. Please download it using `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/EVDejQL1F7lMtC8NMmHY8S0BhopabPJn68poCpHLvJIcCg?e=UXBG7Q>`_ using your HVL credentials. The followings are installed:
+A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. If you use WMware as is recommended, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ed3rtAqeA3lAhUOkc4qREMkB4Awbm7UKbAtPxNdOaqBgpw?e=G4G2Vk>`_ to download a copy of the virtual appliance using you HVL credentials. If you are not using VMware, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/EVDejQL1F7lMtC8NMmHY8S0BhopabPJn68poCpHLvJIcCg?e=UXBG7Q>`_ to download the .ova file which can be importet in any player. The followings are installed:
 
 * `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
 * `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
