@@ -77,10 +77,7 @@ URDF files are able to be used in Gazebo by including mass, inertia, joint effor
 However, at this moment, there is no need to frustrate with a new file format than URDF yet it is nice to know this fact. For more detailed information, you can `read this <http://gazebosim.org/tutorials?tut=ros_urdf>`_.
 
 .. note::
-   With the current URDF model we cannot visualize our robot in Gazebo because we haven't defined any physical properties. We need to improve the URDF model by adding some ``<collision/>`` and ``<inertial/>`` properties. Since the main purpose of this lecture is not to teach *how to create a URDF file*, you can just `download the \urdf folder in the gazebo_tutorials package <https://hvl365.sharepoint.com/:f:/r/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/download_materials/urdf?csf=1&web=1&e=OzgQfY>`_, `download the \config folder <https://hvl365.sharepoint.com/:f:/r/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/download_materials/config?csf=1&web=1&e=XHls30>`_ and keep following rest of the tutorial.
-   URDF: https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Eo5KrqgiiGZEtIbHoIvZI_UBx-z07lKGgMVZsgQggYWLPw?e=u7yUOO
-   config: https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/ErbSj1Kt3axPo9PtDI2OLqMBnf3zjQZxhWOfy4eDS2pmDA?e=X0jQEl
-
+   With the current URDF model we cannot visualize our robot in Gazebo because we haven't defined any physical properties. We need to improve the URDF model by adding some ``<collision/>`` and ``<inertial/>`` properties. Since the main purpose of this lecture is not to teach *how to create a URDF file*, you can just `download the \urdf folder in the gazebo_tutorials package <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Eo5KrqgiiGZEtIbHoIvZI_UBx-z07lKGgMVZsgQggYWLPw?e=u7yUOO>`_, `download the \config folder <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/ErbSj1Kt3axPo9PtDI2OLqMBnf3zjQZxhWOfy4eDS2pmDA?e=X0jQEl>`_ and keep following rest of the tutorial.
 
 
 
