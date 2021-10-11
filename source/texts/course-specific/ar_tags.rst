@@ -55,6 +55,7 @@ If you cannot list any markers plese download the **models** folder from follow 
 
 We are ready to spawn a Turtlebot in a custom world filled with 5 different AR tags.
 
+
 .. code::
 
    roslaunch ar_tutorials tb_ar_world.launch
@@ -64,6 +65,20 @@ We are ready to spawn a Turtlebot in a custom world filled with 5 different AR t
    rostopic echo /ar_pose_marker
 
 Please analyse the topic and try to capture id of a visible marker through terminal.
+
+.. literalinclude:: ../../_static/scripts/ar_tutorials/launch/tb_ar_world.launch
+      :language: xml
+      :caption: tb_ar_world.launch
+
+
+.. literalinclude:: ../../_static/scripts/ar_tutorials/worlds/custom.world
+      :language: xml
+      :caption: custom.world
+
+
+.. literalinclude:: ../../_static/scripts/ar_tutorials/launch/ar_track.launch
+      :language: xml
+      :caption: tb_ar_world.launch
 
 
 Subscriber node to ``/ar_pose_marker``

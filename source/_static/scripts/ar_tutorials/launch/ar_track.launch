@@ -5,7 +5,7 @@
   <arg name="camera_transformation" value="0 0 0 0 0 0" />
     <node pkg="tf" type="static_transform_publisher" name="$(arg camera)_base_link3"
         args="$(arg camera_transformation) /world camera_rgb_optical_frame 100" />  
-    <arg name="marker_size" default="6" />
+    <arg name="marker_size" default="5" />
     <arg name="max_new_marker_error" default="0.08" />
     <arg name="max_track_error" default="0.2" />
     <arg name="cam_image_topic" default="/camera/rgb/image_raw" />
