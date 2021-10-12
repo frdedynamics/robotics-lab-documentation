@@ -128,3 +128,7 @@ Now we can have a template subscriber to get AR tag pose data and take an action
 
    if __name__ == '__main__':
       main()  
+
+
+.. note::
+   You can download the whole `ar_tutorials package with this link <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Ep9s5GmgWddNh7EeCnwZgDMByhJZ7ZtZJ--Fc1mbiQlzOA?e=M4hleE>`_.
