@@ -24,5 +24,5 @@ The ROS package multirobot_map_merge takes as input multiple maps and tries to m
 
    sudo apt install ros-melodic-multirobot-map-merge
    
-Testing
+
 
