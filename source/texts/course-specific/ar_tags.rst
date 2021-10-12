@@ -78,7 +78,7 @@ Please analyse the topic and try to capture id of a visible marker through termi
 
 .. literalinclude:: ../../_static/scripts/ar_tutorials/launch/ar_track.launch
       :language: xml
-      :caption: tb_ar_world.launch
+      :caption: ar_track.launch
 
 
 Subscriber node to ``/ar_pose_marker``
