@@ -21,5 +21,8 @@ Merging maps
 The ROS package multirobot_map_merge takes as input multiple maps and tries to merge them into one. More information on the package can be found `here <http://wiki.ros.org/multirobot_map_merge>`_. To use the package you first need to install it by using the following command in your terminal:
 
 .. code::
+
    sudo apt install ros-melodic-multirobot-map-merge
+   
+Testing
 
