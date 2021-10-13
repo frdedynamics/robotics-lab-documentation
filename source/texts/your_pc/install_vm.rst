@@ -35,16 +35,18 @@ After you import .ova, which can take upto ~15 mins, go to **Edit virtual machin
 
 **PS:** If you have any problems in running Gazebo, plese `follow this link for troubleshooting <https://robocademy.com/2020/05/02/solved-opengl-issues-with-gazebo-and-vmware/>`_.
 
+
+VirtualBox Install
+---------------------
+Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/Downloads>`_. Choose your operating system and download.
+
+
 .. warning::
    Troubleshooting:
 
    #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-40). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
    #. To use host's peripherals like USB, webcam, etc: `Download VM extension package <https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html#extpack>`_
 
-
-VirtualBox Install
----------------------
-Follow the `official VirtualBox download link <https://www.virtualbox.org/wiki/Downloads>`_. Choose your operating system and download.
 
 
 Virtual Appliance
