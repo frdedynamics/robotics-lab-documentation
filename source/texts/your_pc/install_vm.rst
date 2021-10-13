@@ -39,7 +39,7 @@ After you import .ova, which can take upto ~15 mins, go to **Edit virtual machin
    Troubleshooting:
 
    #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-40). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
-   #. To use host's peripherals like USB, webcam, etc: `Download VM expansion package <https://hvl365.sharepoint.com/sites/RobotikkUndervisningHVL/Delte%20dokumenter/ROSTeaching/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack>`_
+   #. To use host's peripherals like USB, webcam, etc: `Download VM extension package <https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html#extpack>`_
 
 
 VirtualBox Install
