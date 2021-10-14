@@ -88,6 +88,24 @@ Simple Publisher
          pass
 
 
+Simplified publisher:
+
+::
+
+   #!/usr/bin/env python
+   import rospy
+   from std_msgs.msg import String
+
+   if __name__ == '__main__':
+      pub = rospy.Publisher('chatter', String, queue_size=10)
+      rospy.init_node('talker')
+      rate = rospy.Rate(10)
+      while not rospy.is_shutdown():
+         hello_str = "hello world"
+         pub.publish(hello_str)
+         rate.sleep()
+
+
 Simple Subscriber
 ------------------
 ::
@@ -115,6 +133,25 @@ Simple Subscriber
 
    if __name__ == '__main__':
       listener() 
+
+
+Simplified subscriber:
+
+::
+
+   #!/usr/bin/env python
+   import rospy
+   from std_msgs.msg import String
+
+   def callback(data):
+      print data.data
+
+   if __name__ == '__main__':
+      rospy.init_node('listener')
+      rospy.Subscriber("chatter", String, callback)
+      rospy.spin() 
+
+
 
 .. seealso::
    Complete the ROS tutorials on simple publisher and subscriber in the `following link <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_.
