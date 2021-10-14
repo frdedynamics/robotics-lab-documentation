@@ -6,6 +6,34 @@ Creating Your First ROS Package
 
 Let's start hands on activities!
 
+The commands we will be using in this tutorial:
+
+.. note::
+
+   .. code::
+
+      cd ~/catkin_ws/src  # change directory into source folder in our catkin workspace
+      catkin_create_pkg beginner_tutorials std_msgs rospy roscpp  # create new package
+      cd ..  # change directory to where /src folder located
+      catkin_make  # build packages
+      source devel/setup.bash  # Tell Linux that we have new built packages there
+      rospack profile  # Tell ROS that we have new packages and update the list
+      roscd beginner_tutorials/src # change directory into newly created package
+      gedit publisher.py # create a publisher node
+      gedit subscriber.py # create a subscriber node
+      sudo chmod +x publisher.py # Make the publisher node executable
+      sudo chmod +x subscriber.py # Make the subscriber node executable
+      ls # list the files in the current directory
+      roscore # start ROS master node
+      rosrun beginner_tutorials publisher.py # start publisher node
+      rosrun beginner_tutorials subscriber.py # start subscriber node
+      rosnode list # display active nodes
+      rostopic list # display active topics
+      rostopic info /chatter # get information about the */chatter* topic
+      rostopic echo /chatter # display the data in the */chatter* topic
+      rosrun rqt_graph rqt_graph # display active nodes and topics in a GUI
+
+
 Create Package
 ================
 A ROS package is simply a folder contains executables. It must have a **CMakeLists.txt** and **package.xml** files to define dependencies include it as a *ROS package* to the ROS environment. **CMakeLists.txt** is a build script, it does not explicitly express the run dependencies of the targets that get built. **package.xml** contains meta-data (in addition to the dependency declarations you identified): things not necessarily needed for building (or even running) a package, but still nice to have around in a central place. Examples would be author, maintainer, url, description and license. More about these files: `CMakeLists.txt <http://wiki.ros.org/catkin/CMakeLists.txt>`_ and `package.xml <http://wiki.ros.org/catkin/package.xml>`_.
