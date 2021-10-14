@@ -36,6 +36,21 @@ Let's start hands on activities!
 
 Create Package
 ================
+
+.. note::
+
+   The commands we will be using in this part:
+
+   .. code::
+
+      cd ~/catkin_ws/src
+      catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+      cd ..
+      catkin_make
+      source devel/setup.bash
+      rospack profile
+
+
 A ROS package is simply a folder contains executables. It must have a **CMakeLists.txt** and **package.xml** files to define dependencies include it as a *ROS package* to the ROS environment. **CMakeLists.txt** is a build script, it does not explicitly express the run dependencies of the targets that get built. **package.xml** contains meta-data (in addition to the dependency declarations you identified): things not necessarily needed for building (or even running) a package, but still nice to have around in a central place. Examples would be author, maintainer, url, description and license. More about these files: `CMakeLists.txt <http://wiki.ros.org/catkin/CMakeLists.txt>`_ and `package.xml <http://wiki.ros.org/catkin/package.xml>`_.
 
 Apart from these two files, the folders are up to you (a.k.a. the developer). However, to have a consistency with all the ROS community, you should not place your files unintendedly. A mid-size ROS package has generally these folders:
@@ -50,6 +65,27 @@ Basically, a **/src** folder for source codes (nodes), a **/launch** folder for 
 
 Create Publisher and Subscriber
 ================================
+
+.. note::
+
+   The commands we will be using in this part:
+
+   .. code::
+
+      # Create Nodes
+      roscd beginner_tutorials/src
+      gedit publisher.py
+      gedit subscriber.py
+      sudo chmod +x publisher.py
+      sudo chmod +x subscriber.py
+      ls
+
+      # Run Nodes
+      roscore
+      rosrun beginner_tutorials publisher.py
+      rosrun beginner_tutorials subscriber.py
+
+
 Publishers and Subscribers are what we have been telling so far as **nodes**. Publishers provide data to the ROS server and subscribers retrieve data from the server. They are run using the following command:
 
 ``rosrun package_name node_name``
@@ -158,15 +194,16 @@ Simplified subscriber:
 
 
 .. note::
-   Some useful commands related this part:
 
-   ::
+   Some extra commands used in this part:
+
+   .. code::
 
       rosnode list
       rostopic list
-      rostopic echo TOPIC_NAME
+      rostopic info /chatter
+      rostopic echo /chatter
       rosrun rqt_graph rqt_graph
-      rosmsg info ROS_MSG_NAME
 
 
 Understanding ROS Topics
