@@ -218,8 +218,7 @@ Let's first start a GUI form of a turtlebot (well, it is turtlesim) using the fo
 
 To control the turtle, here is the code for you. Don't celebrate it immediately for that you have the source code, there are some empty lines for you!
 
- .. literalinclude:: ../_static/scripts/turtlebotPublisher.py
-       :language: Python
+
 
 **Hint:** To find out which topic name you should publish your message, use :code:`rostopic list`.
 

@@ -33,9 +33,11 @@ def GoForward():
 
 def GoUpward():
     # Fill yourself
+    pass
 
 def GoCircularClockwise():
     # Fill yourself
+    pass
 
 
 if __name__ == '__main__':
