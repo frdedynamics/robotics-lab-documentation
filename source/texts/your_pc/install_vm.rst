@@ -70,3 +70,15 @@ To import the virtual copy of *everything*, which is an **.ova** file, run your 
 The left bar under **Tools** must be empty for your case. From ** Files>Import Appliences** select your .ova file and press **Next** and then **Import**. Now, you will be able to see **ROS_MELODIC_VM** on the left bar.
 
 Afterwards, you should select **Start** with the green arrow kew on the upper toolbar.
+
+.. warning::
+   
+   There are some presettings that we missed out in this version of our virtual machine. Here is the list that you might need to change after you run VM:
+
+   #. Change language: `here is the video solution <https://streamable.com/l013bh>`_
+
+      #. Show Applications (Left bottom) > Settings > Region & Language > Input Sources
+      #. Click Turkish, Click the minus sign (-) on the left bottom.
+      #. Click the plus sign (+) on the left bottom. Click 3 dots, type "norwegian", click "Other", select **Norwegian**.
+      #. Click green ADD on the right top.
+      #. You can move Norwegian as your first keyboard by using arrow signs at the bottom.
