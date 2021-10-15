@@ -26,6 +26,7 @@ Installation related:
    :maxdepth: 1
 
    (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm.rst>
+   (OPTIONAL) Dualboot (or fresh Linux) installation <texts/your_pc/select_os.rst>
 
 
 LAB Exercises:

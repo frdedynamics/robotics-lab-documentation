@@ -2,6 +2,10 @@
 Select OS
 ****************************
 
+.. warning::
+
+   This part has not been double checked. If you have any issues in any steps, please directly contact to your lecturer so that we can fix it in advance and update the website accordingly.
+
 We will help you out if you use Windows 10 (W10), Ubuntu or MacOS.
 The main reason for needing Ubuntu is ROS and controlling stuff really fast.
 
@@ -10,21 +14,21 @@ If you are hesitant to move out of your operating system (OS) comfort zone, try 
 
 Options
 =======================================
-#. `Dual boot W10 and at least 90Gb Ubuntu 16.04 LTS`_ [**recommended**]
-#. `Native Ubuntu 16.04`_
-#. `W10 with Windows Subsystem for Linux (WSL) from Microsoft Store (Ubuntu 16.04)`_
+#. `Dual boot W10 and at least 90Gb Ubuntu 18.04 LTS`_ [**recommended**]
+#. `Native Ubuntu 18.04`_
+#. `W10 with Windows Subsystem for Linux (WSL) from Microsoft Store (Ubuntu 18.04)`_
 #. `MacOS with Parallels VM`_ (if you can afford a Mac, you can afford Parallels)
 #. `W10 with VirtualBox VM`_
 #. `ROS on Windows`_
 #. `ROS 2`_
 
 
-.. warning::
+.. note::
 	Gazebo requires a bit of resources. A decent CPU makes life better. It doesn't really utilize GPU's.
 
 
 .. note::
-	Ubuntu 16.04 is recommended for ROS Kinetic. Feel free to go for 18.04 and ROS Melodic at your own discretion.
+	We use Ubuntu 18.04 and ROS Melodic in these tutorials.
 
 
 .. note::
@@ -41,8 +45,9 @@ Options
 	ROS on windows is starting to look good and is on the road map for 2021.
 
 
-_`Dual boot W10 and at least 90Gb Ubuntu 16.04 LTS`
+_`Dual boot W10 and at least 90Gb Ubuntu 18.04 LTS`
 ==============================================================================
+
 Get full use of Ubuntu, while keeping your "normal" W10. Select what to use 
 each time you turn on your PC.
 
@@ -50,21 +55,64 @@ Recommended for everyone.
 
 How to dual boot:
 
-#. Download the Ubuntu version you want. You want `16.04 LTS <http://releases.ubuntu.com/16.04/>`_
+#. Download the Ubuntu version you want. You want `18.04 LTS <http://releases.ubuntu.com/18.04/>`_
 #. Set aside 90Gb or more on your disk and install Rufus as shown at `tecmint.com <https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/>`_
-#. Don't bother with installation type "Something else", just go for "Install Ubuntu alongside Windows 10". Tut und kjør.
+#. Don't bother with installation type "Something else", just go for "Install Ubuntu alongside Windows 10".
+#. Follow the `Native Ubuntu 18.04`_ steps afterwards **for ROS and necessary packages installation part only**.
 
 
-_`Native Ubuntu 16.04`
+_`Native Ubuntu 18.04`
 ==============================================================================
-Like the developer boss you are, you only need Ubuntu.
-
-Recommended for 31337 h4x0r.
-
-Most likely, you don't need installation instructions from here.
 
 
-_`W10 with Windows Subsystem for Linux (WSL) from Microsoft Store (Ubuntu 16.04)`
+You can download the `Ubuntu 18.04 LTS (Bionic Beaver) following this link <https://releases.ubuntu.com/18.04/>`_
+
+After installing Ubuntu, it is highly recommended to du `sudo apt update` and `sudo apt upgrade`. If at some point you are asked to *upgrade Ubuntu*, please click no because we want to stick on Ubuntu 18.04 LTS version.
+
+After your Linux system is up and running, you need to **install ROS and necessary packages**. 
+
+#. `Install ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_. You will see different installation options in this website. You are supposed to follow `sudo apt install ros-melodic-desktop-full` one.
+
+#. `Create ~/catkin_ws <http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment>`_
+
+#. Install necessary packages that we use in our tutorials.
+
+	#. The packages directly installed: (Note that some packages might be missing but you can install them as they are needed later)
+
+	::
+
+		sudo apt install ros-melodic-moveit
+		sudo apt install ros-melodic-ros-controll ros-melodic-ros-controllers
+		sudo apt install ros-melodic-moveit-simple-controller-manager
+		sudo apt install ros-melodic-rqt*
+
+	#. The packages which will be located in ~/catkin_ws/src (Note that you need to `cd ~/catkin_ws/src` before computing the following commands).
+
+	::
+
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/open_manipulator.git
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/open_manipulator_simulations.git
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations.git
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_manipulation.git
+		git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+
+		# After clonning the repositories above, compile your workspace
+		rosdep install --from-paths src --ignore-src -r -y
+		catkin_make
+		source devel/setup.bash
+		rospack profile
+
+
+
+.. note::
+
+   ONLY FOR ELE306 STUDENTS:
+   You will need to install Matlab. Please follow this link `to install MATLAB 2020a <https://se.mathworks.com/matlabcentral/answers/518584-how-do-i-install-on-ubuntu>`_
+
+
+
+_`W10 with Windows Subsystem for Linux (WSL) from Microsoft Store (Ubuntu 18.04)`
 ==================================================================================
 
 .. role:: strike
