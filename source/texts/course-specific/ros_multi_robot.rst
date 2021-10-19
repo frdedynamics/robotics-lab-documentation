@@ -11,6 +11,17 @@ The ROS package which you use for your semester project can be downloaded `here 
 .. figure:: ../../_static/images/ros/controller_layout.png
           :align: center
 
+The different worlds including the main ROS packages are started as follows:
+
+.. code::
+
+   roslaunch multi_robot_challenge rescue_robots_w0.launch
+   
+this command launches world 0 you can launc different worlds by changing 0 to another number between 0 and 5. The pyhton controller scripts (robot.py, map_filter.py and leader.py) are started with the following launch file:
+
+.. code::
+
+   roslaunch multi_robot_challenge controller.launch
 
 Namespaces
 =====================================================
