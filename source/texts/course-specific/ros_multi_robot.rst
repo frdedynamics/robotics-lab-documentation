@@ -6,7 +6,11 @@ Working with multiple robots in ROS
 
 Semester project
 =====================================================
-The ROS package which you use for your semester project can be downloaded `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EvZ3c7F1UaJBibTwLuER8u0BB8-LgIv21KM9Ah1lYZCt5A?e=gdpx23>`_.
+The ROS package which you use for your semester project can be downloaded `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EvZ3c7F1UaJBibTwLuER8u0BB8-LgIv21KM9Ah1lYZCt5A?e=gdpx23>`_. The suggested controller layout looks like this: 
+
+.. figure:: ../_static/images/ros/controller_layout.pdf
+          :align: center
+
 
 Namespaces
 =====================================================
