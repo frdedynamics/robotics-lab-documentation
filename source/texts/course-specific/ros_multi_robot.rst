@@ -17,7 +17,7 @@ The different worlds including the main ROS packages are started as follows:
 
    roslaunch multi_robot_challenge rescue_robots_w0.launch
    
-this command launches world 0 you can launc different worlds by changing 0 to another number between 0 and 5. The pyhton controller scripts (robot.py, map_filter.py and leader.py) are started with the following launch file:
+This command launches world 0. You can launch different worlds by changing 0 to another number between 0 and 5. The python controller scripts (robot.py, map_filter.py and leader.py) are started with the following launch file:
 
 .. code::
 
