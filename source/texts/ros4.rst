@@ -128,6 +128,10 @@ We can add some items by just adding items as we included the *sun* and the *gro
 	  <uri>model://postbox</uri>
 	</include>
 
+
+.. warning::
+   If you experience **[Err] [REST.cc:205] Error in REST request** error and cannot spawn a new oject, please use `this workaround <[Err] [REST.cc:205] Error in REST request>`_.
+
 Also you can change the position and orientation of any object which you have added with the :code:`<pose>x y z roll pitch yaw</pose>` tag.
 
 .. figure:: ../_static/images/Gazebo_postbox.png
