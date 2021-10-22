@@ -143,7 +143,7 @@ When you launch the Gazebo simulated robot, there are several nodes started and 
           Available topics
 
 
-#. Run the command: ``roslaunch turtlebot3_bringup turtlebot3_empty_world.launch``
+#. Run the command: ``roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch``
 #. See which nodes and topics are available:
 
    #. ``rosnode list``
