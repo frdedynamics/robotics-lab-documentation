@@ -77,10 +77,9 @@ URDF files are able to be used in Gazebo by including mass, inertia, joint effor
 However, at this moment, there is no need to frustrate with a new file format than URDF yet it is nice to know this fact. For more detailed information, you can `read this <http://gazebosim.org/tutorials?tut=ros_urdf>`_.
 
 .. note::
-   With the current URDF model we cannot visualize our robot in Gazebo because we haven't defined any physical properties. We need to improve the URDF model by adding some ``<collision/>`` and ``<inertial/>`` properties. Since the main purpose of this lecture is not to teach *how to create a URDF file*, you can just `download the urdf folder <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Eo5KrqgiiGZEtIbHoIvZI_UBx-z07lKGgMVZsgQggYWLPw?e=u7yUOO>`_, `download the config folder <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/ErbSj1Kt3axPo9PtDI2OLqMBnf3zjQZxhWOfy4eDS2pmDA?e=X0jQEl>`_, `downlad the meshes folder <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EtuT0QYjFqFHojNMJ6IGOT0B9Vtd3NHzeTRpc_w2rwSyaw?e=Mh5oUV>`_ in the gazebo_tutorials package and keep following rest of the tutorial.
-
-
-
+   With the current URDF model we cannot visualize our robot in Gazebo because we haven't defined any physical properties. We need to improve the URDF model by adding some ``<collision/>`` and ``<inertial/>`` properties. Since the main purpose of this lecture *is not* to teach *how to create a URDF file*, you can just `download the additional folders (config, meshes, urdf) <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Ek18x5CSJ5hGpmzpUYvXjhsBtEn21aQ3xPPS-svjxkPcpQ?e=NChLd9>`_ in the **gazebo_tutorials** package and keep following rest of the tutorial.
+   
+   
 .. _Gazebo-Tutorial:
 
 Gazebo Tutorial
@@ -234,11 +233,11 @@ Now we can spawn the new robot model in the Gazebo with the following lauch file
       :language: xml
       :caption: gazebo_tutorials/launch/my_gazebo_with_sensor.launch
 
-At this point, we can either start an empty RViz ``rosrun rviz rviz`` and add the necessary visualization tools in it or you can use the following launch file:
+At this point, we can either start an empty RViz ``rosrun rviz rviz`` and add the necessary visualization tools in it or you can use the following launch file to staer everything we did so far:
 
-.. literalinclude:: ../_static/scripts/gazebo_tutorials/launch/my_rviz_with_odom.launch
+.. literalinclude:: ../_static/scripts/gazebo_tutorials/launch/my_robot_allinone.launch
       :language: xml
-      :caption: gazebo_tutorials/launch/my_rviz_with_odom.launch
+      :caption: gazebo_tutorials/launch/my_robot_allinone.launch
 
 
 About ROS Controllers
