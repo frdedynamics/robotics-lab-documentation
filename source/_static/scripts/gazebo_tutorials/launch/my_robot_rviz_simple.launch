@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <launch>
 
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find gazebo_tutorials)/urdf/my_robot_simple.xacro'"/>
+  <remap from="/joint_states" to="/myrobot/joint_states" />
+
   <!-- send joint values -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"> 
-    <param name="use_gui" value="False"/>
+    <param name="use_gui" value="True"/>
   </node>
 
   <!-- Combine joint values -->
