@@ -233,7 +233,7 @@ Now we can spawn the new robot model in the Gazebo with the following lauch file
       :language: xml
       :caption: gazebo_tutorials/launch/my_gazebo_with_sensor.launch
 
-At this point, we can either start an empty RViz ``rosrun rviz rviz`` and add the necessary visualization tools in it or you can use the following launch file to staer everything we did so far:
+At this point, we can either start an empty RViz ``rosrun rviz rviz`` and add the necessary visualization tools in it or you can use the following launch file to start everything we did so far:
 
 .. literalinclude:: ../_static/scripts/gazebo_tutorials/launch/my_robot_allinone.launch
       :language: xml
