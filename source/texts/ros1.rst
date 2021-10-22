@@ -189,7 +189,7 @@ Only OM with JointPositionController:
 ::
 
    roslaunch open_manipulator_with_tb3_gazebo empty_world.launch
-   rostopic pub /om_with_tb/joint1_position/command std_msgs/Float64 "data: 0.5"
+   rostopic pub /om_with_tb3/joint1_position/command std_msgs/Float64 "data: 0.5"
 
 Only OM with Moveit:
 --------------------
