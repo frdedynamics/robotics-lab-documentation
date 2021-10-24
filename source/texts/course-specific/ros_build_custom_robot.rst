@@ -12,4 +12,6 @@ In this Chapter we will look at how to build a gazebo model of a robot given the
 Building a Gazebo Model
 =========================
 
-#. cd ~/catking_ws/src
+::
+
+ cd ~/catking_ws/src
