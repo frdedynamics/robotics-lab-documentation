@@ -23,3 +23,20 @@ Building a Gazebo Model
  roscd custom_robot_tutorial
  mkdir launch urdf config meshes worlds scripts rviz
  touch urdf/mobile_manipulator_robot.xarco
+
+
+
+Link definition
+---------------------
+
+
+Inertial Parameters
+---------------------
+gazebo tutorial on calculation inertia parameters: http://gazebosim.org/tutorials?tut=inertia
+automated inertia parameters calculator from mesh file (mesh cleaner): https://www.hamzamerzic.info/mesh_cleaner/
+formulas for calculating simple shape inertia parameters: https://en.wikipedia.org/wiki/List_of_moments_of_inertia
+
+
+Joint definition
+---------------------
+urdf joint definition: http://wiki.ros.org/urdf/XML/joint
