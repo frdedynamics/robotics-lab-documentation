@@ -43,6 +43,22 @@ Joint definition
 ---------------------
 urdf joint definition: http://wiki.ros.org/urdf/XML/joint
 
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_continuous.urdf.xacro
+       :language: XML
+       :caption: defining a continuous joint in xacro
+       
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_revolute.urdf.xacro
+       :language: XML
+       :caption: defining a revolute joint in xacro 
+       
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_prismatic.urdf.xacro
+       :language: XML
+       :caption: defining a prismatic joint in xacro    
+       
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_fixed.urdf.xacro
+       :language: XML
+       :caption: defining a fixed joint in xacro       
+
 Exercise
 ---------------------
 
