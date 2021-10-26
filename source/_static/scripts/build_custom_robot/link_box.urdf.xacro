@@ -1,0 +1,27 @@
+<xacro:property name="length" value="1.0" />
+<xacro:property name="width" value="1.0" />
+<xacro:property name="height" value="1.0" />
+<xacro:property name="density" value="1" />
+<xacro:property name="mass" value="${length*height*width*density}" />
+<link name="link_name">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="${length} ${width} ${height}"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <box size="${length} ${width} ${height}"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="${mass}"/>
+    <inertia
+      ixx="${mass*(pow(height,2) + pow(width,2))/12}" ixy="0.0" ixz="0.0"
+      iyy="${mass*(pow(length,2) + pow(height,2))/12}" iyz="0.0"
+      izz="${mass*(pow(length,2) + pow(width,2))/12}"/>
+  </inertial>
+</link>
