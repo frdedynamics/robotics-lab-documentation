@@ -1,0 +1,5 @@
+<joint name="JOINT_NAME" type="fixed">
+  <parent link="PARENT_LINK_NAME"/>
+  <child link="CHILD_LINK_NAME" />
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+</joint>

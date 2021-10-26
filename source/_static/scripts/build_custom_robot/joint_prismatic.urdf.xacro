@@ -1,0 +1,7 @@
+<joint type="prismatic" name="JOINT_NAME">
+  <origin xyz="0 0 1.0" rpy="0 0 0"/>
+  <child link="CHILD_LINK_NAME"/>
+  <parent link="PARENT_LINK_NAME"/>
+  <axis xyz="0 0 1" rpy="0 0 0"/>
+  <limit effort="100" velocity="100" lower="-1.0" upper="1.0"/>
+</joint>
