@@ -1,0 +1,25 @@
+<xacro:property name="radius" value="1.0" />
+<xacro:property name="density" value="1.0" />
+<xacro:property name="mass" value="${(4/3)*pi*pow(radius,3)}" />
+<link name="LINK_NAME">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="${radius}"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="${radius}"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="${mass}"/>
+    <inertia
+      ixx="${2*mass*pow(radius,2)/5}" ixy="0.0" ixz="0.0"
+      iyy="${2*mass*pow(radius,2)/5}" iyz="0.0"
+      izz="${2*mass*pow(radius,2)/5}"/>
+  </inertial>
+</link>
