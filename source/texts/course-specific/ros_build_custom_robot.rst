@@ -67,17 +67,10 @@ urdf joint definition: http://wiki.ros.org/urdf/XML/joint
 
 Exercise
 ---------------------
-`link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ea8kb_mYnChEgkMMtsu2ADsBUF5L2bPqn_ZkFg1B4gEjYQ?e=P1R1tu>`_
+Download the ROS package used for the exercise from this `link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ea8kb_mYnChEgkMMtsu2ADsBUF5L2bPqn_ZkFg1B4gEjYQ?e=P1R1tu>`_. After unzipping it, copy it to the VM in catkin_ws/src/. Run the following commands in a terminal window:
 
 ::
 
- cd ~/catking_ws/src
- catkin_create_pkg custom_robot_tutorial rospy geometry_msgs urdf
- cd ..
+ cd ~/catking_ws/
  catkin_make
- source devel/setup.bash
- rospack profile
- roscd custom_robot_tutorial
- mkdir launch urdf config meshes worlds scripts rviz
- touch urdf/mobile_manipulator_robot.urdf.xarco urdf/mobile_manipulator_robot.urdf.gazebo 
 
