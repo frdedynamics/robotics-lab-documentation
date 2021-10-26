@@ -67,6 +67,7 @@ urdf joint definition: http://wiki.ros.org/urdf/XML/joint
 
 Exercise
 ---------------------
+`link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ea8kb_mYnChEgkMMtsu2ADsBUF5L2bPqn_ZkFg1B4gEjYQ?e=P1R1tu>`_
 
 ::
 
@@ -78,5 +79,5 @@ Exercise
  rospack profile
  roscd custom_robot_tutorial
  mkdir launch urdf config meshes worlds scripts rviz
- touch urdf/mobile_manipulator_robot.xarco
+ touch urdf/mobile_manipulator_robot.urdf.xarco urdf/mobile_manipulator_robot.urdf.gazebo 
 
