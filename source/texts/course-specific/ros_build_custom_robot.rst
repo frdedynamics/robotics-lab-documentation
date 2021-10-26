@@ -20,14 +20,20 @@ Link definition
 ---------------------
 urdf link definition: http://wiki.ros.org/urdf/XML/link
 
+Box
+~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/link_box.urdf.xacro
        :language: XML
        :caption: xacro link for box object
-       
+
+Cylinder
+~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/link_cylinder.urdf.xacro
        :language: XML
        :caption: xacro link for cylinder object
        
+Sphere
+~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/link_sphere.urdf.xacro
        :language: XML
        :caption: xacro link for sphere object
