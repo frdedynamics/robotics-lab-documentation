@@ -11,12 +11,12 @@ In this Chapter we will look at how to build a gazebo model of a robot given the
  
 Building a Gazebo Model
 =========================
-A model in Gazebo is made out of links which are connected through joints. Since this is a ROS lecture we use URDF files to declare the model. There are other ways of doing it, which will not be covered. **In general it is important to notice that all distances are generally in** `meters <https://en.wikipedia.org/wiki/Metre>`_ **and all angles in** `radian <https://en.wikipedia.org/wiki/Radian>`_.
+A model in Gazebo is made of links which are connected through joints. Since this is a ROS lecture, we use URDF files to declare the model. There are other ways of doing it, which will not be covered. **In general it is important to notice that all distances are generally in** `meters <https://en.wikipedia.org/wiki/Metre>`_ **and all angles in** `radian <https://en.wikipedia.org/wiki/Radian>`_.
 
 
 Link definition
 ---------------------
-urdf link definition: http://wiki.ros.org/urdf/XML/link
+The official documentation of how to define a link in urdf can be found `here <http://wiki.ros.org/urdf/XML/link>`_.
 
 Box
 ~~~~~~~~
@@ -51,7 +51,7 @@ formulas for calculating simple shape inertia parameters: https://en.wikipedia.o
 
 Joint definition
 ---------------------
-urdf joint definition: http://wiki.ros.org/urdf/XML/joint
+The official documentation of how to define a joint in urdf can be found `here <http://wiki.ros.org/urdf/XML/joint>`_.
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_continuous.urdf.xacro
        :language: XML
@@ -77,6 +77,18 @@ Download the ROS package used for the exercise from this `link <https://hvl365.s
 
  cd ~/catking_ws/
  catkin_make
+
+To start the Gazebo world use the following command in the terminal:
+
+::
+
+ roslaunch custom_robot_tutorial mobile_manipulator.launch
+ 
+To spawn the robot in the existing Gazebo world use the following terminal command:
+
+::
+
+ roslaunch custom_robot_tutorial robot_spawn.launch
 
 .. figure:: ../../_static/scripts/build_custom_robot/mobile_robot_plan_2.png
           :align: center   
