@@ -51,7 +51,7 @@ formulas for calculating simple shape inertia parameters: https://en.wikipedia.o
 
 Joint definition
 ---------------------
-The official documentation of how to define a joint in urdf can be found `here <http://wiki.ros.org/urdf/XML/joint>`_.
+The official documentation of how to define a joint in urdf can be found `here <http://wiki.ros.org/urdf/XML/joint>`_. Some important parts of the joint definition are the following:
 
  * **<axis>:** defines which axis is used by the joint for movement.
  * **<limit>**
@@ -62,24 +62,32 @@ The official documentation of how to define a joint in urdf can be found `here <
 
 Continuous Joint
 ~~~~~~~~~~~~~~~~~~
+Continuous joints rotate around the defined axis (1 degree of freedom).
+
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_continuous.urdf.xacro
        :language: XML
        :caption: defining a continuous joint in xacro
        
 Revolute Joint
 ~~~~~~~~~~~~~~~~~~
+Revolute joints also rotate around the defined axis (1 degree of freedom) similar to continuous joints but have a defined minimum and maximum joint angle in [rad].
+
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_revolute.urdf.xacro
        :language: XML
        :caption: defining a revolute joint in xacro 
        
 Prismatic Joint
 ~~~~~~~~~~~~~~~~~~
+Prismatic joints move along the defined axis (1 degree of freedom) and have a minimum and maximum joint position definedin [m].
+
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_prismatic.urdf.xacro
        :language: XML
        :caption: defining a prismatic joint in xacro    
        
 Fixed Joint
 ~~~~~~~~~~~~~~~~~~
+Fixed joints are not really joints because all degrees of freedom are blocked.
+
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_fixed.urdf.xacro
        :language: XML
        :caption: defining a fixed joint in xacro       
