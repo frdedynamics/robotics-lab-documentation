@@ -121,6 +121,8 @@ To spawn the robot in the existing Gazebo world use the following terminal comma
 ::
 
  roslaunch custom_robot_tutorial robot_spawn.launch
+ 
+ Start adding the missing 3 wheels to the robot model by modifying the "mobile_manipulator_robot.urdf.xacro" file. Where to place the wheels can be deducted from the following mechanical drawings:
 
 .. figure:: ../../_static/scripts/build_custom_robot/mobile_robot_plan_2.png
           :align: center   
@@ -128,4 +130,10 @@ To spawn the robot in the existing Gazebo world use the following terminal comma
 .. figure:: ../../_static/scripts/build_custom_robot/robot_arm_plan_2.png
           :align: center
           
-   
+Once you finished with adding all the wheels to the mobile platform, copy the following code into the "mobile_manipulator_robot.urdf.xacro" file just **before** the </robot> tag at the end of the file:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/mobile_manipulator_robot_arm_init.urdf.xacro
+       :language: XML
+       :caption: mobile_manipulator_robot.urdf.xarco located in the urdf file 
+  
+  
