@@ -53,18 +53,32 @@ Joint definition
 ---------------------
 The official documentation of how to define a joint in urdf can be found `here <http://wiki.ros.org/urdf/XML/joint>`_.
 
+ * **<axis>:** defines which axis is used by the joint for movement.
+ * **<limit>**
+   * **effort** maximum torque/force measured in [Nm]
+   * **velocity** maximum speed measured in [m/s] for primatic joints and [rad/s] for revolute joints
+   
+
+Continuous Joint
+~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_continuous.urdf.xacro
        :language: XML
        :caption: defining a continuous joint in xacro
        
+Revolute Joint
+~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_revolute.urdf.xacro
        :language: XML
        :caption: defining a revolute joint in xacro 
        
+Prismatic Joint
+~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_prismatic.urdf.xacro
        :language: XML
        :caption: defining a prismatic joint in xacro    
        
+Fixed Joint
+~~~~~~~~~~~~~~~~~~
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_fixed.urdf.xacro
        :language: XML
        :caption: defining a fixed joint in xacro       
