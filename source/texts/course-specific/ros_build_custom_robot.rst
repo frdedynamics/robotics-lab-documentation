@@ -74,8 +74,10 @@ Download the ROS package used for the exercise from this `link <https://hvl365.s
  cd ~/catking_ws/
  catkin_make
 
+.. figure:: ../../_static/scripts/build_custom_robot/mobile_robot_plan_2.png
+          :align: center   
+
 .. figure:: ../../_static/scripts/build_custom_robot/robot_arm_plan_2.png
           :align: center
           
-.. figure:: ../../_static/scripts/build_custom_robot/mobile_robot_plan_2.png
-          :align: center      
+   
