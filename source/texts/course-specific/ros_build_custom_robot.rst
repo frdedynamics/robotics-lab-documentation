@@ -44,7 +44,9 @@ Mesh
 
 Inertial Parameters
 ---------------------
-An accurate simulation requires accurate dynamic properties of the links. These are defined by the inertial parameters. An official guide on the Gazebo website can be found `here <http://gazebosim.org/tutorials?tut=inertia>`_. An online tool (mesh cleaner) to calculate the inertial parameters for mesh files automatically can be found `here <https://www.hamzamerzic.info/mesh_cleaner/>`_. When using simple shapes the previous example code for the different links automatically calculates the inertial parameters assuming you use the defined variables. A list of formulas to calculate the inertial parameters for simple shapes can be found `here <https://en.wikipedia.org/wiki/List_of_moments_of_inertia>`_.
+An accurate simulation requires accurate dynamic properties of the links. These are defined by the inertial parameters. An official guide on the Gazebo website can be found `here <http://gazebosim.org/tutorials?tut=inertia>`_. An online tool (mesh cleaner) to calculate the inertial parameters for mesh files automatically can be found `here <https://www.hamzamerzic.info/mesh_cleaner/>`_. When using simple shapes, the previous example code for the different links automatically calculates the inertial parameters assuming you use the defined variables. A list of formulas to calculate the inertial parameters for simple shapes can be found `here <https://en.wikipedia.org/wiki/List_of_moments_of_inertia>`_. 
+
+**Make sure the center of mass is in the accurate location.** For simple shapes it is in the center of the link, which means, as long as the <origin> inside the <intertail> tag is the same as the <origin> in the <collision> tag it should be correct.
 
 
 Joint definition
