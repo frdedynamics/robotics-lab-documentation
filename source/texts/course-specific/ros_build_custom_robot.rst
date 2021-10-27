@@ -58,6 +58,8 @@ The official documentation of how to define a joint in urdf can be found `here <
    
       * **effort** maximum torque/force measured in [Nm]
       * **velocity** maximum speed measured in [m/s] for primatic joints and [rad/s] for revolute joints
+      * **lower** minimum allowed joint angle/position measured in [m] for prismatic joints and [rad] for revolute joints.
+      * **upper** maximum allowed joint angle/position
    
 
 Continuous Joint
