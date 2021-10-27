@@ -1,0 +1,3 @@
+<geometry>
+  <mesh filename="package://custom_robot_tutorial/meshes/wheel_mesh.stl" />
+</geometry>
