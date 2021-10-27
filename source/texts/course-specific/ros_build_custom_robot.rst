@@ -103,6 +103,13 @@ Download the ROS package used for the exercise from this `link <https://hvl365.s
  cd ~/catking_ws/
  catkin_make
 
+Copy the following code into the file "mobile_manipulator_robot.urdf.xacro" located in the "urdf" folder of the ROS package:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/mobile_manipulator_robot_init.urdf.xacro
+       :language: XML
+       :caption: mobile_manipulator_robot.urdf.xarco located in the urdf file 
+
+
 To start the Gazebo world use the following command in the terminal:
 
 ::
