@@ -55,8 +55,9 @@ The official documentation of how to define a joint in urdf can be found `here <
 
  * **<axis>:** defines which axis is used by the joint for movement.
  * **<limit>**
-   * **effort** maximum torque/force measured in [Nm]
-   * **velocity** maximum speed measured in [m/s] for primatic joints and [rad/s] for revolute joints
+   
+      * **effort** maximum torque/force measured in [Nm]
+      * **velocity** maximum speed measured in [m/s] for primatic joints and [rad/s] for revolute joints
    
 
 Continuous Joint
