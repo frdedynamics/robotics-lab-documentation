@@ -38,6 +38,12 @@ Sphere
        :language: XML
        :caption: xacro link for sphere object
 
+Mesh
+~~~~~~~~~~
+.. literalinclude:: ../../_static/scripts/build_custom_robot/mesh_geometry.urdf.xacro
+       :language: XML
+       :caption: using mesh files for link geometry
+
 Inertial Parameters
 ---------------------
 gazebo tutorial on calculation inertia parameters: http://gazebosim.org/tutorials?tut=inertia
