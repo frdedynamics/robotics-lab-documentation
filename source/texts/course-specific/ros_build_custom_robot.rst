@@ -14,8 +14,6 @@ Building a Gazebo Model
 A model in Gazebo is made out of links which are connected through joints. Since this is a ROS lecture we use URDF files to declare the model. There are other ways of doing it, which will not be covered. **In general it is important to notice that all distances are generally in** `meters <https://en.wikipedia.org/wiki/Metre>`_ **and all angles in** `radian <https://en.wikipedia.org/wiki/Radian>`_.
 
 
-
-
 Link definition
 ---------------------
 urdf link definition: http://wiki.ros.org/urdf/XML/link
