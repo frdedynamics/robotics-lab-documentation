@@ -11,7 +11,7 @@ In this Chapter we will look at how to build a gazebo model of a robot given the
  
 Building a Gazebo Model
 =========================
-A model in Gazebo is made out of links which are connected through joints. Since this is a ROS lecture we use URDF files to declare the model. There are other ways of doing it, which will not be covered. **In general it is important to notice that all distances are generally in meters and all angles in `radian <https://en.wikipedia.org/wiki/Radian>`_**.
+A model in Gazebo is made out of links which are connected through joints. Since this is a ROS lecture we use URDF files to declare the model. There are other ways of doing it, which will not be covered. **In general it is important to notice that all distances are generally in meters and all angles in** `**radian** <https://en.wikipedia.org/wiki/Radian>`_.
 
 
 
