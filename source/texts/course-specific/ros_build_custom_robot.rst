@@ -196,9 +196,7 @@ Both previously mentioned gazebo plugins create a controller which subscribes to
 
  rostopic pub /cmd_vel
 
-in urdf.gazebo add:
- -> both subscribe to /cmd_vel topic
- -> example terminal command publishing to the cmd_vel topic to test if it works
+To learn how to control the robot with MATLAB go to section :ref:`MATLAB_ROS_Control`
 
 Robot arm
 ---------------------
@@ -207,3 +205,9 @@ in urdf.xacro add:
  -> website which references all transmission types???
 in urdf.gazebo add:
  -> example code for ros control plugin
+ 
+ .. _MATLAB_ROS_Control:
+ 
+ ROS in Matlab
+---------------------
+
