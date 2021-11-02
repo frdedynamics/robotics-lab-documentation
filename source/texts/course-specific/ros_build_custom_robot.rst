@@ -206,8 +206,9 @@ in urdf.xacro add:
 in urdf.gazebo add:
  -> example code for ros control plugin
  
+ 
  .. _MATLAB_ROS_Control:
  
  ROS in Matlab
 ---------------------
-Matlab stuff
+Matlab stuff comes here
