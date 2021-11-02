@@ -1,1 +1,0 @@
-<xacro:include filename="$(find custom_robot_tutorial)/urdf/mobile_manipulator_robot.urdf.gazebo" />
