@@ -139,11 +139,18 @@ Once you finished with adding all the wheels to the mobile platform, copy the fo
  
 Controlling the Gazebo Model
 =============================
-link that gives the full model code
-add urdf.gazebo file reference
+In the previous Exercise a simulation model for gazebo of a custom robot has been built. This section will continuou from that point, by going through the process of adding a controller interface which makes the model movable through ROS. The completed URDF model file (mobile_manipulator_robot.urdf.xacro) can be downloaded `here <>`_. All gazebo plugins will be defined in the **mobile_manipulator_robot.urdf.gazebo** file. Therefore we must refence it in our xacro file by adding the following code as shown in the image below: 
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/add_gazebo_file.urdf.xacro
+       :language: XML
+       :caption: referencing the .urdf.gazebo file in our urdf.xacro file
+       
+.. figure:: ../../_static/scripts/build_custom_robot/add_gazebo_file.PNG
+          :align: center       
 
 Mobile platform
 ---------------------
+For mobile platforms whith two or four wheel, gazebo has predefined plugins. The pl
 in urdf.gazebo add:
  -> example code for differential drive plugin
  -> example code for skid drive plugin
