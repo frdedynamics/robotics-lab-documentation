@@ -155,7 +155,24 @@ The basic structure of the **mobile_manipulator_robot.urdf.gazebo** file is as f
 
 Mobile platform
 ---------------------
-For mobile platforms whith two or four wheel, gazebo has predefined plugins. The pl
+For mobile platforms whith two or four wheel, gazebo has predefined plugins. 
+
+Differential Drive (two wheels)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The gazebo plugin for two wheeled robots is called "libgazebo_ros_diff_drive.so" and can be used by copying the following code into your **mobile_manipulator_robot.urdf.gazebo** file: 
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/diff_drive.urdf.gazebo
+       :language: XML
+       :caption: example code for differential drive controller plugin
+       
+Skid Steer Drive (four wheels)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+The gazebo plugin for four wheeled robots is called "libgazebo_ros_skid_steer_drive.so" and can be used by copying the following code into your **mobile_manipulator_robot.urdf.gazebo** file: 
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/skid_steer_drive.urdf.gazebo
+       :language: XML
+       :caption: example code for skid steer drive controller plugin
+
 in urdf.gazebo add:
  -> example code for differential drive plugin
  -> example code for skid drive plugin
