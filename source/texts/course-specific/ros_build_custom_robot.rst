@@ -100,7 +100,7 @@ Download the ROS package used for the exercise from this `link <https://hvl365.s
 
 ::
 
- cd ~/catking_ws/
+ cd ~/catkin_ws/
  catkin_make
 
 Copy the following code into the file "mobile_manipulator_robot.urdf.xacro" located in the "urdf" folder of the ROS package:
@@ -146,7 +146,12 @@ In the previous Exercise a simulation model for gazebo of a custom robot has bee
        :caption: referencing the .urdf.gazebo file in our urdf.xacro file
        
 .. figure:: ../../_static/scripts/build_custom_robot/add_gazebo_file.PNG
-          :align: center       
+          :align: center
+          
+The basic structure of the **mobile_manipulator_robot.urdf.gazebo** file is as follows:
+.. literalinclude:: ../../_static/scripts/build_custom_robot/basic_structure.urdf.gazebo
+       :language: XML
+       :caption: basic structure .urdf.gazebo file
 
 Mobile platform
 ---------------------
