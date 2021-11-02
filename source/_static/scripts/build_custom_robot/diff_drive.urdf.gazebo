@@ -1,0 +1,22 @@
+  <gazebo>
+    <plugin name="mobile_base_controller" filename="libgazebo_ros_diff_drive.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>/odom</odometryFrame>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>LINK_NAME</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <legacyMode>false</legacyMode>
+      <updateRate>30</updateRate>
+      <leftJoint>JOINT_NAME</leftJoint>
+      <rightJoint>JOINT_NAME</rightJoint>
+      <wheelSeparation>DISTANCE_BETWEEN_LEFT_AND_RIGHT_WHEELS</wheelSeparation>
+      <wheelDiameter>WHEEL_DIAMETER</wheelDiameter>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>10</wheelTorque>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>

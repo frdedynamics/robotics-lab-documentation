@@ -1,0 +1,10 @@
+  <transmission name="TRANSMISSION_NAME">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="JOINT_NAME">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="MOTOR_NAME">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>

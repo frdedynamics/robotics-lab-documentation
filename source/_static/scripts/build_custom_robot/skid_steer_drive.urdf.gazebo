@@ -1,0 +1,22 @@
+  <gazebo>
+    <plugin name="mobile_base_controller" filename="libgazebo_ros_skid_steer_drive.so">
+      <updateRate>100.0</updateRate>
+      <robotNamespace>/</robotNamespace>
+      <leftFrontJoint>JOINT_NAME</leftFrontJoint>
+      <rightFrontJoint>JOINT_NAME</rightFrontJoint>
+      <leftRearJoint>JOINT_NAME</leftRearJoint>
+      <rightRearJoint>JOINT_NAME</rightRearJoint>
+      <wheelSeparation>DISTANCE_BETWEEN_LEFT_AND_RIGHT_WHEELS</wheelSeparation>
+      <wheelDiameter>WHEEL_DIAMETER</wheelDiameter>
+      <robotBaseFrame>LINK_NAME</robotBaseFrame>
+      <torque>50</torque>
+      <topicName>cmd_vel</topicName>
+      <commandTopic>cmd_vel</commandTopic>
+      <broadcastTF>true</broadcastTF>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>/odom</odometryFrame>
+      <covariance_x>0.000100</covariance_x>
+      <covariance_y>0.000100</covariance_y>
+      <covariance_yaw>0.010000</covariance_yaw>
+    </plugin>
+  </gazebo>
