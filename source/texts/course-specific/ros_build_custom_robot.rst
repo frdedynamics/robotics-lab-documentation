@@ -135,5 +135,25 @@ Once you finished with adding all the wheels to the mobile platform, copy the fo
 .. literalinclude:: ../../_static/scripts/build_custom_robot/mobile_manipulator_robot_arm_init.urdf.xacro
        :language: XML
        :caption: mobile_manipulator_robot.urdf.xarco located in the urdf file 
-  
-  
+ 
+ 
+Controlling the Gazebo Model
+=============================
+link that gives the full model code
+add urdf.gazebo file reference
+
+Mobile platform
+---------------------
+in urdf.gazebo add:
+ -> example code for differential drive plugin
+ -> example code for skid drive plugin
+ -> both subscribe to /cmd_vel topic
+ -> example terminal command publishing to the cmd_vel topic to test if it works
+
+Robot arm
+---------------------
+in urdf.xacro add:
+ -> example code for transmission for each motorized joint
+ -> website which references all transmission types???
+in urdf.gazebo add:
+ -> example code for ros control plugin
