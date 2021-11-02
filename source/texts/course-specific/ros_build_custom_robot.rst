@@ -94,6 +94,7 @@ Fixed joints are not really joints because all degrees of freedom are blocked.
        :language: XML
        :caption: defining a fixed joint in xacro       
 
+.. _Custom_Robot_Exercise:
 Exercise
 ---------------------
 Download the ROS package used for the exercise from this `link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ea8kb_mYnChEgkMMtsu2ADsBUF5L2bPqn_ZkFg1B4gEjYQ?e=P1R1tu>`_. After unzipping it, copy it to the VM in catkin_ws/src/. Run the following commands in a terminal window:
@@ -187,10 +188,9 @@ The parameters which needs adjusting are similar to the ones from the differenti
 .. _Controlling_Mobile_Platform:
 Controlling the Mobile Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Both previously mentioned gazebo plugins create a controller which subscribes to the "cmd_vel" topic. To check if the control works, you can use the following terminal command to publish on that same topic. **Make sure that the project is running by using the roslaunch commands shown in subsection :ref:`Custom_Robot_Exercise`**
 
 in urdf.gazebo add:
- -> example code for differential drive plugin
- -> example code for skid drive plugin
  -> both subscribe to /cmd_vel topic
  -> example terminal command publishing to the cmd_vel topic to test if it works
 
