@@ -190,7 +190,11 @@ The parameters which needs adjusting are similar to the ones from the differenti
 
 Controlling the Mobile Platform
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-Both previously mentioned gazebo plugins create a controller which subscribes to the "cmd_vel" topic. To check if the control works, you can use the following terminal command to publish on that same topic. **Make sure that the project is running by using the roslaunch commands shown in subsection :ref:`Custom_Robot_Exercise`**
+Both previously mentioned gazebo plugins create a controller which subscribes to the "cmd_vel" topic. To check if the control works, you can use a terminal command to publish on that same topic. **Make sure that the project is running by using the roslaunch commands shown in subsection :ref:`Custom_Robot_Exercise`.** Copy the following command in a terminal and then use the *tabulator* key twice to autocomplete the message. Adjust the values as wanted before pressing *enter*.
+
+::
+
+ rostopic pub /cmd_vel
 
 in urdf.gazebo add:
  -> both subscribe to /cmd_vel topic
