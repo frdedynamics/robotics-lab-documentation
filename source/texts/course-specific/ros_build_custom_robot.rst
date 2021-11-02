@@ -167,6 +167,7 @@ The gazebo plugin for two wheeled robots is called "libgazebo_ros_diff_drive.so"
        :caption: example code for differential drive controller plugin
        
 The following parameters need to be ajusted for the plugin to work:
+
  * **<robotBaseFrame>:** is the name of the link which is used as the base or origin frame of the robot.
  * **<leftJoint>:** is the name of the joint which turns the left wheel, as it has been defined in your urdf.xacro file.
  * **<rightJoint>:** is the name of the joint which turns the right wheel, as it has been defined in your urdf.xacro file.
