@@ -1,0 +1,10 @@
+ROBOT_NAME:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000
+
+  # Position Controllers ---------------------------------------
+  CONTROLLER_NAME:
+    type: position_controllers/JointPositionController
+    joint: JOINT_NAME
