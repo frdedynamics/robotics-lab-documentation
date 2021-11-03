@@ -198,6 +198,8 @@ Both previously mentioned gazebo plugins create a controller which subscribes to
 
 To learn how to control the robot with MATLAB go to section :ref:`MATLAB_ROS_Control`
 
+.. _ROS_robot_arm:
+
 Robot arm
 ---------------------
 Making the robot arm controllable is a bit more work than with the mobile platform. First we also add a gazebo plugin to our **mobile_manipulator_robot.urdf.gazebo** file:
@@ -223,6 +225,19 @@ It must be stated, that this example implements a transmission with a joint posi
 
 ROS parameter definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+The ROS controller_manager package needs the transmission joints defined as ROS parameters which we do in the **joint_controller.yaml** file which is located in the config folder. Copy the following example code in that file:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_controller.yaml
+       :language: XML
+       :caption: example code joint_controller.yaml file
+
+Replace ROBOT_NAME with the name you already used in the beginning of the :ref:`ROS_robot_arm` section. CONTROLLER_NAME can be chosen freely but needs to match the launch file definition later in this section. JOINT_NAME needs to be the name of the joint defined in your mobile_manipulator_robot.urdf.xacro file. Add as many controllers as you have motorized joints.
+
+Finally we need to add the following code to our launch file to start the controller_manager package:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/robot_controller.launch
+       :language: XML
+
 yaml file stuff
 launch file stuff
 
