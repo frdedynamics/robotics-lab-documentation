@@ -200,6 +200,26 @@ To learn how to control the robot with MATLAB go to section :ref:`MATLAB_ROS_Con
 
 Robot arm
 ---------------------
+Making the robot arm controllable is a bit more work then with the mobile platform. First we also add a gazebo plugin to our **mobile_manipulator_robot.urdf.gazebo** file:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/gazebo_ros_control.urdf.gazebo
+       :language: XML
+       :caption: example code for ros control plugin
+
+where ROBOT_NAME should be exchanged with the name you want to give your robot. The name should match with the robot name used in your mobile_manipulator_robot.urdf.xacro file as well as with the robot name used in later configurations.
+
+Transmission
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+In order to control the joint of the robot arm we have to define what type of transmission we want to use by adding the following example code in your **mobile_manipulator_robot.urdf.xacro** file positioned after the joint and link definition as visualized in the image below:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/joint_position_transmission.urdf.xacro
+       :language: XML
+       :caption: example code for a join position transmission definition
+       
+.. figure:: ../../_static/scripts/build_custom_robot/add_transmission.PNG
+          :align: center       
+
+
 in urdf.xacro add:
  -> example code for transmission for each motorized joint
  -> website which references all transmission types???
