@@ -4,11 +4,12 @@ ROBOT_NAME:
     type: joint_state_controller/JointStateController
     publish_rate: 1000
 
-  # Position Controllers ---------------------------------------
+  # Controller
   CONTROLLER_NAME:
     type: position_controllers/JointPositionController
     joint: JOINT_NAME
   
+  # Controller
   CONTROLLER_NAME:
     type: position_controllers/JointPositionController
     joint: JOINT_NAME
