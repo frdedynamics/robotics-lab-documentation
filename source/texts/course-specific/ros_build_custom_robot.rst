@@ -200,7 +200,7 @@ To learn how to control the robot with MATLAB go to section :ref:`MATLAB_ROS_Con
 
 .. _ROS_robot_arm:
 
-Robot arm
+Robot Arm
 ---------------------
 Making the robot arm controllable is a bit more work than with the mobile platform. First we also add a gazebo plugin to our **mobile_manipulator_robot.urdf.gazebo** file:
 
@@ -233,18 +233,30 @@ The ROS controller_manager package needs the transmission joints defined as ROS 
 
 Replace ROBOT_NAME with the name you already used in the beginning of the :ref:`ROS_robot_arm` section. CONTROLLER_NAME can be chosen freely but needs to match the launch file definition later in this section. JOINT_NAME needs to be the name of the joint defined in your mobile_manipulator_robot.urdf.xacro file. Add as many controllers as you have motorized joints.
 
-Finally we need to add the following code to our launch file to start the controller_manager package:
+Finally we need to add the following code to our **robot_spawn.launch** file to include the controller_manager package during startup. Make sure to change ROBOT_NAME and CONTROLLER_NAME to the appropriate values. And again, depending on how many motorized joints you have, you might need to add extra CONTROLLER_NAME references.
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/robot_controller.launch
        :language: XML
 
-yaml file stuff
-launch file stuff
-
 Controlling the robot arm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-terminal commands to move the robot arm
+The controller_manager subscribes to one topic for each perviously defined motorized joint. The topic names have the following syntax:
+
+::
+
+  /ROBOT_NAME/CONTROLLER_NAME/command
+
+An example of the topic names used in my example is shown in the following image:
+  
+.. figure:: ../../_static/scripts/build_custom_robot/rostopics.PNG
+          :align: center     
  
+To test if the control of the robot arm is working, you can use the following terminal command. After copying the command in a terminal, change the TOPIC_NAME according to the syntax previously explained press the tabulator key a view times to autocomplete the message.
+
+::
+  
+  rostopic pub TOPIC_NAME
+
 .. _MATLAB_ROS_Control: 
  
 Matlab Controller
