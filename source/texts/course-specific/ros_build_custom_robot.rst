@@ -299,7 +299,7 @@ To give more details on what the code does we will examine it line by line.
   
 This initiates a ROS Node
  
- ::
+::
  
    sub_odom = rossubscriber("/odom",@odom_callback);
    
