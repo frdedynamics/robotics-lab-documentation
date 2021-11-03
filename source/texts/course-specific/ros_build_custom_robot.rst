@@ -297,7 +297,7 @@ To give more details on what the code does we will examine it line by line.
 
   rosinit
   
- This initiates a ROS Node
+This initiates a ROS Node
  
  ::
  
@@ -306,36 +306,43 @@ To give more details on what the code does we will examine it line by line.
 Creates a subscriber which invokes the "odom_callback" function whenever a node publishes on the "/odom" topic. The function definition is at the end of the MATLAB SCRIPT.
 
 ::
+
   [pub_q1,msg_q1] = rospublisher('/mobile_manipulator/base_joint_position/command','std_msgs/Float64');
   
 Creates a publisher object "pub_q1" and a message object "msg_q1". The publisher object is used to send data to the topic with the name "/mobile_manipulator/base_joint_position/command". The message object is from message type "std_msgs/Float64" and will later be used to contain the data which is sent by the publisher.
 
 ::
+
   msg_vel.Linear.X = 0.5;
 
 The message type "Twist" has a sub-object Linear which has a sub-variable "X". The value "0.5" is assigned to that variable.
 
 ::
+
   rate = robotics.Rate(1);
   
 Defines a Rate object which in combination with the code "waitfor(rate);" at the end of the while loop ensures that the loop runs at a frequency of 1 Hz (1 message per second).
 
 ::
+
   rate.TotalElapsedTime
 
 Time elapsed since the creation of the Rate object in seconds.
 
 ::
+
   msg_q1.Data = q_temp(1);
   
 Saves the content of the first element in the "q_temp" array inside the "Data" element of the message object "msg_q1".
 
 ::
+
   send(pub_q1,msg_q1)
   
 Sends the message object "msg_q1" through the publisher object "pub_q1" to the previously defined topic.
 
 ::
+
   rosshutdown
   
 Shuts down the previously initiated ROS node.
