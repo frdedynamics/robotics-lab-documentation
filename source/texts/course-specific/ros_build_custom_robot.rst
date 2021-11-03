@@ -265,37 +265,78 @@ This section will go into detail on how to control the Gazebo model with a MATLA
 
 Kinematic Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The following code creates a standard kinematics representation of the robot arm:
+The following code creates a standard kinematics representation of the robot arm, where "T" stands for translation and "R" stands for rotation. "x", "y" and "z" define that the rotation or translation is around/along that axis of the base frame. The last code line plots the robot in the state with the defined joint angles.
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/robot_normal.m
        :language: MATLAB
 
 DH Parameters 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Another way of describing the kinematic model of a robot is to use the Denavit-Hartenberg Parameters. The following code shows an example of the syntax used to do this in MATLAB: 
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/robot_dh.m
        :language: MATLAB
 
 Forward/Inverse Kinematics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following code lines give an example of how to compute the forward and inverse kinematics for the previously created DH model of the robot. The first line computes the transformation matrix given the joint angles of each motorized joint. The second line calculates the transformation matrix given the end-effector position and orientation. The third line computes the joint angles given one of the two previous transformation matrices. 
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/robot_kinematics.m
        :language: MATLAB
 
 ROS in MATLAB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ROS allows different programs to communicate with each other. The following code gives an example of a ROS node written in MATLAB which subscribes to the Odometry topic from the robot and publishes movement commands to the mobile platform as well as the joints of the robot arm:
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/simple_topic.m
        :language: MATLAB
 
+To give more details on what the code does we will examine it line by line.
 
-example code to create model of the arm in matlab
-example code to calculate forward kinematics
-example code to calculate inverse kinematics
+::
 
-how to connect matlab to ros
-example code for publisher and subscriber
+  rosinit
+  
+ This initiates a ROS Node
+ 
+ ::
+ 
+   sub_odom = rossubscriber("/odom",@odom_callback);
+   
+Creates a subscriber which invokes the "odom_callback" function whenever a node publishes on the "/odom" topic. The function definition is at the end of the MATLAB SCRIPT.
 
+::
+  [pub_q1,msg_q1] = rospublisher('/mobile_manipulator/base_joint_position/command','std_msgs/Float64');
+  
+Creates a publisher object "pub_q1" and a message object "msg_q1". The publisher object is used to send data to the topic with the name "/mobile_manipulator/base_joint_position/command". The message object is from message type "std_msgs/Float64" and will later be used to contain the data which is sent by the publisher.
 
+::
+  msg_vel.Linear.X = 0.5;
 
-ADD FRICTION TO GAZEBO FILE???
+The message type "Twist" has a sub-object Linear which has a sub-variable "X". The value "0.5" is assigned to that variable.
+
+::
+  rate = robotics.Rate(1);
+  
+Defines a Rate object which in combination with the code "waitfor(rate);" at the end of the while loop ensures that the loop runs at a frequency of 1 Hz (1 message per second).
+
+::
+  rate.TotalElapsedTime
+
+Time elapsed since the creation of the Rate object in seconds.
+
+::
+  msg_q1.Data = q_temp(1);
+  
+Saves the content of the first element in the "q_temp" array inside the "Data" element of the message object "msg_q1".
+
+::
+  send(pub_q1,msg_q1)
+  
+Sends the message object "msg_q1" through the publisher object "pub_q1" to the previously defined topic.
+
+::
+  rosshutdown
+  
+Shuts down the previously initiated ROS node.
+
