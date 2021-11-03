@@ -266,6 +266,7 @@ example code to calculate forward kinematics
 example code to calculate inverse kinematics
 
 how to connect matlab to ros
+example code for publisher and subscriber
 
 
 
