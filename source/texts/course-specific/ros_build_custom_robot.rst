@@ -261,6 +261,34 @@ To test if the control of the robot arm is working, you can use the following te
  
 Matlab Controller
 ---------------------
+This section will go into detail on how to control the Gazebo model with a MATLAB script.
+
+Kinematic Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following code creates a standard kinematics representation of the robot arm:
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/robot_normal.m
+       :language: MATLAB
+
+DH Parameters 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/robot_dh.m
+       :language: MATLAB
+
+Forward/Inverse Kinematics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/robot_kinematics.m
+       :language: MATLAB
+
+ROS in MATLAB
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: ../../_static/scripts/build_custom_robot/simple_topic.m
+       :language: MATLAB
+
+
 example code to create model of the arm in matlab
 example code to calculate forward kinematics
 example code to calculate inverse kinematics
