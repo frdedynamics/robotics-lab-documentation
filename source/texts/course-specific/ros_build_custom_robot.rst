@@ -141,7 +141,7 @@ Once you finished with adding all the wheels to the mobile platform, copy the fo
  
 Controlling the Gazebo Model
 =============================
-In the previous Exercise a simulation model for gazebo of a custom robot has been built. This section will continuou from that point, by going through the process of adding a controller interface which makes the model movable through ROS. The completed URDF model file (mobile_manipulator_robot.urdf.xacro) can be downloaded `here <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/EVZzUx8PRMJKsVX8LpI3dIABQm-ga3slvF9rNK4IDNBfyg?e=aY81dO>`_. All gazebo plugins will be defined in the **mobile_manipulator_robot.urdf.gazebo** file. Therefore we must refence it in our xacro file by adding the following code as shown in the image below: 
+In the previous Exercise a simulation model for gazebo of a custom robot has been built. This section will continue from that point, by going through the process of adding a controller interface which makes the model movable through ROS. The completed URDF model file (mobile_manipulator_robot.urdf.xacro) can be downloaded `here <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/EVZzUx8PRMJKsVX8LpI3dIABQm-ga3slvF9rNK4IDNBfyg?e=aY81dO>`_. All gazebo plugins will be defined in the **mobile_manipulator_robot.urdf.gazebo** file. Therefore, we must refence it in our xacro file by adding the following code as shown in the image below: 
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/add_gazebo_file.urdf.xacro
        :language: XML
@@ -158,7 +158,7 @@ The basic structure of the **mobile_manipulator_robot.urdf.gazebo** file is as f
 
 Mobile platform
 ---------------------
-For mobile platforms whith two or four wheel, gazebo has predefined plugins. Both plugins subscibe to the "cmd_vel" ROS topic which can then be used to move the mobile robot. More information on how to publish on the "cmd_vel" topic can be found in subsection :ref:`Controlling_Mobile_Platform`.
+For mobile platforms with two or four wheels, gazebo has predefined plugins. Both plugins subscribe to the "cmd_vel" ROS topic which can then be used to move the mobile robot. More information on how to publish on the "cmd_vel" topic can be found in subsection :ref:`Controlling_Mobile_Platform`.
 
 Differential Drive (two wheels)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -184,7 +184,7 @@ The gazebo plugin for four wheeled robots is called "libgazebo_ros_skid_steer_dr
        :language: XML
        :caption: example code for skid steer drive controller plugin
 
-The parameters which needs adjusting are similar to the ones from the differential drive plugin, with the exception of having to reference four wheel joint names instead of two.
+The parameters which need adjusting are similar to the ones from the differential drive plugin, with the exception of having to reference four wheel joint names instead of two.
 
 .. _Controlling_Mobile_Platform:
 
@@ -200,7 +200,7 @@ To learn how to control the robot with MATLAB go to section :ref:`MATLAB_ROS_Con
 
 Robot arm
 ---------------------
-Making the robot arm controllable is a bit more work then with the mobile platform. First we also add a gazebo plugin to our **mobile_manipulator_robot.urdf.gazebo** file:
+Making the robot arm controllable is a bit more work than with the mobile platform. First we also add a gazebo plugin to our **mobile_manipulator_robot.urdf.gazebo** file:
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/gazebo_ros_control.urdf.gazebo
        :language: XML
@@ -210,7 +210,7 @@ where ROBOT_NAME should be exchanged with the name you want to give your robot. 
 
 Transmission
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-In order to control the joint of the robot arm we have to define what type of transmission we want to use by adding the following example code in your **mobile_manipulator_robot.urdf.xacro** file positioned after the joint and link definition as visualized in the image below:
+In order to control the joint of the robot arm we have to define what type of transmission we want to use for each motorized joint by adding the following example code in your **mobile_manipulator_robot.urdf.xacro** file positioned after the joint and link definition as visualized in the image below:
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/joint_position_transmission.urdf.xacro
        :language: XML
@@ -219,15 +219,27 @@ In order to control the joint of the robot arm we have to define what type of tr
 .. figure:: ../../_static/scripts/build_custom_robot/add_transmission.PNG
           :align: center       
 
+It must be stated, that this example implements a transmission with a joint position controller. More information on the `transmission definition <http://wiki.ros.org/urdf/XML/Transmission>`_ and the different `controller types <http://wiki.ros.org/ros_control#Controllers>`_ can be found on the official ROS website. 
 
-in urdf.xacro add:
- -> example code for transmission for each motorized joint
- -> website which references all transmission types???
-in urdf.gazebo add:
- -> example code for ros control plugin
+ROS parameter definition
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+yaml file stuff
+launch file stuff
+
+Controlling the robot arm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+terminal commands to move the robot arm
  
 .. _MATLAB_ROS_Control: 
  
 Matlab Controller
 ---------------------
-Matlab stuff comes here
+example code to create model of the arm in matlab
+example code to calculate forward kinematics
+example code to calculate inverse kinematics
+
+how to connect matlab to ros
+
+
+
+ADD FRICTION TO GAZEBO FILE???
