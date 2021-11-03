@@ -8,3 +8,7 @@ ROBOT_NAME:
   CONTROLLER_NAME:
     type: position_controllers/JointPositionController
     joint: JOINT_NAME
+  
+  CONTROLLER_NAME:
+    type: position_controllers/JointPositionController
+    joint: JOINT_NAME
