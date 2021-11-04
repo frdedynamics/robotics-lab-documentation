@@ -1,7 +1,7 @@
 close all
 import ETS3.*
 
-j = Revolute('a', 0, 'd', 0, 'alpha', 0, 'offset', 0);
+j = Revolute('d', 0, 'a', 0, 'alpha', 0, 'offset', 0);
 
 robot = SerialLink([j1 j2 j3 j4],'name', 'my robot');
 
