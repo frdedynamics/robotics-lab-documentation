@@ -138,6 +138,27 @@ Once you finished with adding all the wheels to the mobile platform, copy the fo
        :language: XML
        :caption: mobile_manipulator_robot.urdf.xarco located in the urdf file 
  
+ROS Connection Issues 
+=============================
+If you have done the lab with the real Turtlebot, you might have problems with starting roscore or connecting to the ROS master. To fix this, follow the following steps. Open up a terminal in your virtual machine and open the .bashrc file using the following command:
+
+::
+
+  gedit ~/.bashrc
+  
+Towards the end of the file you should have a line with the following text:
+
+::
+
+  export ROS_IP=SOME_IP_ADDRESS
+  
+Where SOME_IP_ADDRESS is the IP adress you had during the lab exercise. Change this text line to the following:
+
+::
+ 
+  export ROS_IP=127.0.0.1
+  
+Save the file and close it and all the terminals you have currently open. Once you start a new terminal the issue should be resolved. If you still have trouble don't hesitate to contact me (Laurenz Elstner) either on canvas or discord.
  
 Controlling the Gazebo Model
 =============================
@@ -155,6 +176,7 @@ The basic structure of the **mobile_manipulator_robot.urdf.gazebo** file is as f
 .. literalinclude:: ../../_static/scripts/build_custom_robot/basic_structure.urdf.gazebo
        :language: XML
        :caption: basic structure .urdf.gazebo file
+       
 
 Mobile platform
 ---------------------
