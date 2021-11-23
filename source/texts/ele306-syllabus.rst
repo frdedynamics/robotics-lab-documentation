@@ -32,6 +32,6 @@ The objectives of the ROS teaching for ELE306 are that students get experience w
 **Project-specific ROS content**
 
 - :ref:`with-Matlab`
-- :ref:`ros-build-a-custom-robot`
+- :ref:`ros_build_custom_robot`
 - **See Canvas for further information on the semester projects**
 
