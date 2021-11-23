@@ -26,12 +26,12 @@ The objectives of the ROS teaching for ELE306 are that students get experience w
 - Hands-on activities in ROS: :ref:`First-Package-Nodes-Launchers-Parameters`
 - Simulation and Visualization Robots in ROS: :ref:`URDF_Gazebo_RViz`
 - **Lab 5**: :ref:`Apply-on-Real-Turtlebot` - Turtlebot in real world
-- TODO: Controlling the OM
+- :ref:`ros_communication`
 
 
 **Project-specific ROS content**
 
 - :ref:`with-Matlab`
-- :ref:`MoveIt`
+- :ref:`ros-build-a-custom-robot`
 - **See Canvas for further information on the semester projects**
 
