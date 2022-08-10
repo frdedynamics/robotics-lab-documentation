@@ -7,10 +7,20 @@ Virtual machines are basically some software which run just like a regular PC bu
 
 There will be two components: 
 
-#. A software to run the virtual appliance (VMware or VirtualBox)
 #. The virtual appliance (an .ova file which contains everything you would need)
+#. A software to run the virtual appliance (VMware or VirtualBox)
 
+Virtual Appliance
+===================================
+A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ed3rtAqeA3lAhUOkc4qREMkB4Awbm7UKbAtPxNdOaqBgpw?e=G4G2Vk>`_ with your HVL credentials. The followings are installed:
 
+* `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
+* `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
+* Necessary `Turtlebot packages <https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/>`_.
+* `MATLAB 2020a <https://se.mathworks.com/products/new_products/release2020a.html>`_
+
+.. note::
+  For those who don't use the given virtual copy should install the necessary software and packages by themselves manually. The links are provided as clickable.
 
 Virtual Appliance Player
 ===========================
@@ -36,20 +46,9 @@ After you import .ova, which can take upto ~15 mins, go to **Edit virtual machin
 .. warning::
    Troubleshooting:
 
-   #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-40). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
-   #. To use host's peripherals like USB, webcam, etc: `Download VM extension package <https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html#extpack>`_
+   #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-34). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
 
 
 
-Virtual Appliance
-===================================
-A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ed3rtAqeA3lAhUOkc4qREMkB4Awbm7UKbAtPxNdOaqBgpw?e=G4G2Vk>`_ with your HVL credentials. The followings are installed:
 
-* `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
-* `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
-* Necessary `Turtlebot packages <https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/>`_.
-* `MATLAB 2020a <https://se.mathworks.com/products/new_products/release2020a.html>`_
-
-.. note::
-  For those who don't use the given virtual copy should install the necessary software and packages by themselves manually. The links are provided as clickable.
 
