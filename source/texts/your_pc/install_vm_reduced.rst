@@ -30,7 +30,7 @@ A virtual appliance player is a software on which you can run your virtual appli
 VMware Install
 ------------------
 
-You can download VMware here: (`Windows/Linux download <https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html>`_, `Mac download <https://www.vmware.com/products/fusion/fusion-evaluation.html>`_). After installing it you can import the .ova file by clicking **Open a Virtual Machine** and choose the .ova file you downloaded.
+You can download VMware here: `Windows/Linux download <https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html>`_, `Mac download <https://www.vmware.com/products/fusion/fusion-evaluation.html>`_. After installing it you can import the .ova file by clicking **Open a Virtual Machine** and choose the .ova file you downloaded.
 
 After you import .ova, which can take upto ~15 mins, go to **Edit virtual machine settings** and in Display settings enable **Accelerate 3D graphics** and choose recommended Graphics Memory from the dropdown box as shown in the pictures.
 
