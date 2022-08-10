@@ -24,7 +24,7 @@ A virtual appliance is a copy of a working operating system and its programs. We
 Virtual Appliance Player
 ===========================
 
-A virtual appliance player is a software on which you can run your virtual appliance (aka. a virtual copy of a system). We suggest you to download VMware (or VirtualBox) for this purpose.
+A virtual appliance player is a software on which you can run your virtual appliance (aka. a virtual copy of a system). We suggest you to download VMware for this purpose.
 
 
 VMware Install
