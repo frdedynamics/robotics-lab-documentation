@@ -15,11 +15,7 @@ Virtual Appliance
 A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ed3rtAqeA3lAhUOkc4qREMkB4Awbm7UKbAtPxNdOaqBgpw?e=G4G2Vk>`_ with your HVL credentials. 
 
 .. note::
-  For those who don't use the given virtual copy and choose to install the necessary software and packages by themselves use the following links: 
-  * `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_
-  * `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
-  * Necessary `Turtlebot packages <https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/>`_.
-  * `MATLAB 2020a <https://se.mathworks.com/products/new_products/release2020a.html>`_
+  For those who don't use the given virtual copy and choose to install the necessary software and packages by themselves use the following links: `Ubuntu 18.04 LTS <https://releases.ubuntu.com/18.04/>`_, `ROS Melodic <http://wiki.ros.org/melodic/Installation/Ubuntu>`_, `Necessary Turtlebot packages <https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/>`_, `MATLAB 2020a <https://se.mathworks.com/products/new_products/release2020a.html>`_.
 
 Virtual Appliance Player
 ===========================
