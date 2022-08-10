@@ -36,14 +36,7 @@ After you import .ova, which can take upto ~15 mins, go to **Edit virtual machin
   .. figure:: ../../_static/images/ros/VM-settings2.png
           :align: center
 
-
-
-.. warning::
-   Troubleshooting:
-
-   #. Please contact teaching assistants in installation related issues before ROS activities starts (Week-34). Unfortulately, we will not have any time during the lecture to solve installation problems so please make sure that all ROS-related installations are ready to use.
-
-
-
+Troubleshooting
+===========================
 
 
