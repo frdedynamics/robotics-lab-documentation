@@ -35,11 +35,13 @@ After you finished importing the virual appliance, go to **Edit virtual machine 
           
 Also make sure, that in the **Network Adapter** settings, under **Network connection**, **NAT** is selected, as shown in the pictures below.
 
-ADD SCREENSHOTS HERE
+  .. figure:: ../../_static/images/ros/vm_network_settings.PNG
+          :align: center
 
 When first opening the virtual machine, the following window will pop-up. Select **I Copied It** to continue.
 
-ADD SCREENSHOT HERE
+  .. figure:: ../../_static/images/ros/vm_installation_popup.PNG
+          :align: center
 
 Troubleshooting
 ===========================
