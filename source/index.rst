@@ -63,6 +63,7 @@ Project-specific ROS content
    :maxdepth: 1
 
    --PROJECT SPECIFIC CONTENTS-- <texts/course_specific_content.rst>
+   [Exercise] Simple Navigation <texts/course-specific/simple_navigation_exercise.rst>
    ROS with MatLab <texts/course-specific/ros_with_matlab.rst>
    AR Tags <texts/course-specific/ar_tags.rst>
    ROS Communication Patterns <texts/course-specific/ros_communication.rst>
