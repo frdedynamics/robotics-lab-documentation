@@ -16,9 +16,11 @@ Setup Process
 #. Download already prepared files here (ADD LINK TO THE DOWNLOAD)
 #. Copy the .launch file into the launch folder, the .py file in the src folder and the .world file in the worlds folder.
 #. Open a terminal and navigate to the catkin_ws folder
+
 .. literalinclude:: ../../_static/scripts/ros_communication/custom_msg.msg
        :language: C
        :caption: Custom Message Type: rand_num.msg
+       
 #. Run catkin_make
     Testing stuff  
 #. Run source devel/setup.bash
