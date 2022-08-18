@@ -35,5 +35,6 @@ Exercise
 #. Initialize a ros node
 #. Create a subscriber to the **/scan** topic using as a callback function the already existing function inside the class called **clbk_laser**
 #. Create a publisher to the **/cmd_vel** topic 
-#. Inside the **runNavigation** function...
+#. Inside the **runNavigation** function set *vel_msg.linear.x* and *vel_msg.angular.z* depending on the values from *self.lidar_left_front* and *self.lidar_right_front*
+#. When the robot reaches the finish set *finished* to True
 
