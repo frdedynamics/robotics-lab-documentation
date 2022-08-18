@@ -18,6 +18,7 @@ Setup Process
 #. Open a terminal and navigate to the catkin_ws folder
 #. Run catkin_make
 #. Run source devel/setup.bash
+#. Make the python script executable
 #. Test if the setup process was done correctly by running the launch file. Gazebo should open up with the obstacle course and a turtlebot.
 
 ADD SCREENSHOT OF HOW IT LOOKS
@@ -29,3 +30,4 @@ Exercise
 #. Create a subscriber to the **/scan** topic using as a callback function the already existing function inside the class called **clbk_laser**
 #. Create a publisher to the **/cmd_vel** topic 
 #. Inside the **runNavigation** function...
+
