@@ -17,10 +17,8 @@ Setup Process
 #. Copy the .launch file into the launch folder, the .py file in the src folder and the .world file in the worlds folder.
 #. Open a terminal and navigate to the catkin_ws folder
 #. Run catkin_make
-
-::
-
-  Testing if this works
+  ::
+    Testing if this works
   
 #. Run source devel/setup.bash
 #. Make the python script executable
