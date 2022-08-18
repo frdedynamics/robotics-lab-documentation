@@ -12,7 +12,7 @@ There will be two components:
 
 Virtual Appliance
 ===================================
-A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Ed3rtAqeA3lAhUOkc4qREMkB4Awbm7UKbAtPxNdOaqBgpw?e=G4G2Vk>`_ with your HVL credentials. After downloading, extract the folder inside the .zip file.  
+A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Eb_Fy_CWLGNFkK0zY8PSimoBwOSer6dVaL8LRUHWVQUTNQ?e=llEm2S>`_ with your HVL credentials. After downloading, extract the folder inside the .zip file.  
 
 Virtual Appliance Player
 ===========================
