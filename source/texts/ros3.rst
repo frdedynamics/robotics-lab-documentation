@@ -6,49 +6,51 @@ Creating Your First ROS Package
 
 Let's start hands on activities!
 
-.. note::
+..
+   .. note::
 
-   The commands we will be using in this tutorial:
+      The commands we will be using in this tutorial:
 
-   .. code::
+      .. code::
 
-      cd ~/catkin_ws/src  # change directory into source folder in our catkin workspace
-      catkin_create_pkg beginner_tutorials std_msgs rospy roscpp  # create new package
-      cd ..  # change directory to where /src folder located
-      catkin_make  # build packages
-      source devel/setup.bash  # Tell Linux active terninal that we have new built packages there
-      rospack profile  # Tell ROS that we have new packages and update the list
-      roscd beginner_tutorials/src # change directory into newly created package
-      gedit publisher.py # create a publisher node
-      gedit subscriber.py # create a subscriber node
-      sudo chmod +x publisher.py # Make the publisher node executable
-      sudo chmod +x subscriber.py # Make the subscriber node executable
-      ls # list the files in the current directory
-      roscore # start ROS master node
-      rosrun beginner_tutorials publisher.py # start publisher node
-      rosrun beginner_tutorials subscriber.py # start subscriber node
-      rosnode list # display active nodes
-      rostopic list # display active topics
-      rostopic info /chatter # get information about the */chatter* topic
-      rostopic echo /chatter # display the data in the */chatter* topic
-      rosrun rqt_graph rqt_graph # display active nodes and topics in a GUI
+         cd ~/catkin_ws/src  # change directory into source folder in our catkin workspace
+         catkin_create_pkg beginner_tutorials std_msgs rospy roscpp  # create new package
+         cd ..  # change directory to where /src folder located
+         catkin_make  # build packages
+         source devel/setup.bash  # Tell Linux active terninal that we have new built packages there
+         rospack profile  # Tell ROS that we have new packages and update the list
+         roscd beginner_tutorials/src # change directory into newly created package
+         gedit publisher.py # create a publisher node
+         gedit subscriber.py # create a subscriber node
+         sudo chmod +x publisher.py # Make the publisher node executable
+         sudo chmod +x subscriber.py # Make the subscriber node executable
+         ls # list the files in the current directory
+         roscore # start ROS master node
+         rosrun beginner_tutorials publisher.py # start publisher node
+         rosrun beginner_tutorials subscriber.py # start subscriber node
+         rosnode list # display active nodes
+         rostopic list # display active topics
+         rostopic info /chatter # get information about the */chatter* topic
+         rostopic echo /chatter # display the data in the */chatter* topic
+         rosrun rqt_graph rqt_graph # display active nodes and topics in a GUI
 
 
 Create Package
 ================
 
-.. note::
+..
+   .. note::
 
-   The commands we will be using in this part:
+      The commands we will be using in this part:
 
-   .. code::
+      .. code::
 
-      cd ~/catkin_ws/src
-      catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
-      cd ..
-      catkin_make
-      source devel/setup.bash
-      rospack profile
+         cd ~/catkin_ws/src
+         catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+         cd ..
+         catkin_make
+         source devel/setup.bash
+         rospack profile
 
 
 A ROS package is simply a folder contains executables. It must have a **CMakeLists.txt** and **package.xml** files to define dependencies include it as a *ROS package* to the ROS environment. **CMakeLists.txt** is a build script, it does not explicitly express the run dependencies of the targets that get built. **package.xml** contains meta-data (in addition to the dependency declarations you identified): things not necessarily needed for building (or even running) a package, but still nice to have around in a central place. Examples would be author, maintainer, url, description and license. More about these files: `CMakeLists.txt <http://wiki.ros.org/catkin/CMakeLists.txt>`_ and `package.xml <http://wiki.ros.org/catkin/package.xml>`_.
@@ -66,24 +68,25 @@ Basically, a **/src** folder for source codes (nodes), a **/launch** folder for 
 Create Publisher and Subscriber
 ================================
 
-.. note::
+..
+   .. note::
 
-   The commands we will be using in this part:
+      The commands we will be using in this part:
 
-   .. code::
+      .. code::
 
-      # Create Nodes
-      roscd beginner_tutorials/src
-      gedit publisher.py
-      gedit subscriber.py
-      sudo chmod +x publisher.py
-      sudo chmod +x subscriber.py
-      ls
+         # Create Nodes
+         roscd beginner_tutorials/src
+         gedit publisher.py
+         gedit subscriber.py
+         sudo chmod +x publisher.py
+         sudo chmod +x subscriber.py
+         ls
 
-      # Run Nodes
-      roscore
-      rosrun beginner_tutorials publisher.py
-      rosrun beginner_tutorials subscriber.py
+         # Run Nodes
+         roscore
+         rosrun beginner_tutorials publisher.py
+         rosrun beginner_tutorials subscriber.py
 
 
 Publishers and Subscribers are what we have been telling so far as **nodes**. Publishers provide data to the ROS server and subscribers retrieve data from the server. They are run using the following command:
@@ -193,17 +196,18 @@ Simplified subscriber:
    Complete the ROS tutorials on simple publisher and subscriber in the `following link <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29>`_.
 
 
-.. note::
+..
+   .. note::
 
-   Some extra commands used in this part:
+      Some extra commands used in this part:
 
-   .. code::
+      .. code::
 
-      rosnode list
-      rostopic list
-      rostopic info /chatter
-      rostopic echo /chatter
-      rosrun rqt_graph rqt_graph
+         rosnode list
+         rostopic list
+         rostopic info /chatter
+         rostopic echo /chatter
+         rosrun rqt_graph rqt_graph
 
 
 Understanding ROS Topics

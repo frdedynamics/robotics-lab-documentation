@@ -69,6 +69,7 @@ Project-specific ROS content
    ROS Robot Navigation <texts/course-specific/ros_robot_navigation.rst>
    ROS Working with multiple Robots <texts/course-specific/ros_multi_robot.rst>
    ROS Build a Custom Robot <texts/course-specific/ros_build_custom_robot.rst>
+   (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
    
 
 
