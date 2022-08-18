@@ -25,8 +25,7 @@ Installation related:
 .. toctree::
    :maxdepth: 1
 
-   (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm.rst>
-   (UNDER CONTRUCTION) All-in-One Virtual Machine (a reduced version) <texts/your_pc/install_vm_reduced.rst>
+   (RECOMMENDED) All-in-One Virtual Machine <texts/your_pc/install_vm_reduced.rst>
    (OPTIONAL) Dualboot (or fresh Linux) installation <texts/your_pc/select_os.rst>
 
 
