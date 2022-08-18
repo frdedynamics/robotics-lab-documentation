@@ -18,6 +18,7 @@ Setup Process
 #. Open a terminal and navigate to the catkin_ws folder
 #. Run catkin_make
   ::
+  
     Testing if this works
   
 #. Run source devel/setup.bash
