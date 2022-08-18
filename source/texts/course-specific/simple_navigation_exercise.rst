@@ -17,10 +17,7 @@ Setup Process
 #. Copy the .launch file into the launch folder, the .py file in the src folder and the .world file in the worlds folder.
 #. Open a terminal and navigate to the catkin_ws folder
 #. Run catkin_make
-  ::
-  
-    Testing if this works
-  
+    Testing stuff  
 #. Run source devel/setup.bash
 #. Make the python script executable
 #. Test if the setup process was done correctly by running the launch file. Gazebo should open up with the obstacle course and a turtlebot.
