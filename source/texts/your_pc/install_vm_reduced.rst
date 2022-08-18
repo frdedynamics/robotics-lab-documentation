@@ -8,7 +8,9 @@ Virtual machines are basically some software which run just like a regular PC bu
 There will be two components: 
 
 #. The virtual appliance
-#. A software to run the virtual appliance (VMware or VirtualBox)
+#. A software to run the virtual appliance (VMware)
+
+The admin password inside the virtual appliance is: **ros** 
 
 Virtual Appliance
 ===================================
