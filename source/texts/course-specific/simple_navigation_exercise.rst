@@ -37,7 +37,7 @@ Setup Process
   roscd simple_navigation_exercise
   mkdir launch worlds
 
-* Download already prepared files here: (ADD LINK TO THE DOWNLOAD)
+* Download already prepared files `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EqWEpWUR_qpKv9oWZ_hCQicBwff0IHeYyzTlxF6nDPc32Q?e=xJCZmT>`_.
 * Copy the **.launch** file into the launch folder, the **.py** file in the src folder and the **.world** file in the worlds folder.
 * Make the python script executable
 
