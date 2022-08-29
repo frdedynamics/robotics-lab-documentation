@@ -5,16 +5,16 @@ Install VM
 ****************************
 Virtual machines are basically some software which run just like a regular PC but without any physical components. They use the *host*'s hardware equipments as a *guest*. Since ROS works best on Linux based operating systems but we assume most of you have Windows PCs, we provide this ready-to-use solution for you to start ROS as smooth as possible.
 
-There will be two components: 
+There will be two components:
 
 #. The virtual appliance
 #. A software to run the virtual appliance (VMware)
 
-The admin password inside the virtual appliance is: **ros** 
+The admin password inside the virtual appliance is: **ros**
 
 Virtual Appliance
 ===================================
-A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Eb_Fy_CWLGNFkK0zY8PSimoBwOSer6dVaL8LRUHWVQUTNQ?e=llEm2S>`_ with your HVL credentials. After downloading, extract the folder inside the .zip file.  
+A virtual appliance is a copy of a working operating system and its programs. We provide you ready-to-use virtual copy of what you need. To download it, use `this link <https://hvl365.sharepoint.com/:u:/s/RobotikkUndervisningHVL/Eb_Fy_CWLGNFkK0zY8PSimoBwOSer6dVaL8LRUHWVQUTNQ?e=llEm2S>`_ with your HVL credentials. After downloading, extract the folder inside the .zip file.
 
 Virtual Appliance Player
 ===========================
@@ -34,7 +34,7 @@ After you finished importing the virual appliance, go to **Edit virtual machine 
 
   .. figure:: ../../_static/images/ros/VM-settings2.png
           :align: center
-          
+
 Also make sure, that in the **Network Adapter** settings, under **Network connection**, **NAT** is selected, as shown in the pictures below.
 
   .. figure:: ../../_static/images/ros/vm_network_settings.PNG

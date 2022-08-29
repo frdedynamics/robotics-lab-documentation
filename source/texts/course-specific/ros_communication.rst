@@ -11,7 +11,7 @@ ROS provides different patterns that can be used to communcate between ROS Nodes
   * `Actions <https://wiki.ros.org/actionlib>`_: are similar as services but are used if the triggered event needs more time and the possebility for recieving updates on the process or being able to cancel the process is wanted. An example could be when sending a navigation command.
   * `Parameters <https://wiki.ros.org/Parameter%20Server>`_: are not actually a communication pattern but rather is a storage space for variables. It is not designed for high-performance and therefore mostly used for static variables like configuration parameters.
 
-In the Media Gallery of your course page in Canvas are videos, explaining how to use these communication patterns in python. **Make sure to watch them! During the lecture it will be expected that you know the covered content.** The following sections contain the example code which is explained in the videos. 
+In the Media Gallery of your course page in Canvas are videos, explaining how to use these communication patterns in python. The following sections contain the example code which is explained in the videos. 
 
 Topics
 ==============
@@ -20,10 +20,10 @@ The video called **Simple Topic Implementation** is about how to write a simple 
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_publisher.py
        :language: python
        :caption: Simple Publisher in Python
-       
+
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_subscriber.py
        :language: python
-       :caption: Simple Subscriber in Python       
+       :caption: Simple Subscriber in Python
 
 Custom Message
 ----------------
@@ -40,7 +40,7 @@ The video called **Simple Service Implementation** is about how to write a simpl
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_server.py
        :language: python
        :caption: Simple Service Server in Python
-       
+
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_client.py
        :language: python
        :caption: Simple Service Client in Python
@@ -60,7 +60,7 @@ The video called **Simple Action Implementation** explains how to create a custo
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_action_server.py
        :language: python
        :caption: Simple Action Server in Python
-       
+
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_action_client.py
        :language: python
        :caption: Simple Action Client in Python
@@ -72,7 +72,7 @@ The video called **Working with Parameters** shows how to write parameters to th
 .. literalinclude:: ../../_static/scripts/ros_communication/param_test.launch
        :language: C
        :caption: Writing Parameters from Launch Files
-       
+
 .. literalinclude:: ../../_static/scripts/ros_communication/simple_param.py
        :language: python
        :caption: Working with Parameters in Python

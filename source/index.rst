@@ -39,7 +39,7 @@ LAB Exercises:
    [LAB] Exercise 2, UR <texts/lab2.rst>
    [LAB] Exercise 3, UR <texts/lab3.md>
    [LAB] Exercise 4, Turtlebot Tutorials-1 <texts/ros1.rst>
-   [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>   
+   [LAB] Exercise 5, Turtlebot Tutorials-2 <texts/ros5.rst>
 
 Common Content:
 --------------------------------------
@@ -62,15 +62,15 @@ Project-specific ROS content
    :maxdepth: 1
 
    --PROJECT SPECIFIC CONTENTS-- <texts/course_specific_content.rst>
-   [Exercise] Simple Navigation <texts/course-specific/simple_navigation_exercise.rst>
+   [Assignment] Simple Navigation <texts/course-specific/simple_navigation_exercise.rst>
+   [Assignment] Bug2 Navigation Algorithm <texts/course-specific/bug2_exercise.rst>
+   [Semester Project] Multi Robot Challenge <texts/course-specific/multi_robot_challenge.rst>
    ROS with MatLab <texts/course-specific/ros_with_matlab.rst>
    AR Tags <texts/course-specific/ar_tags.rst>
    ROS Communication Patterns <texts/course-specific/ros_communication.rst>
-   ROS Robot Navigation <texts/course-specific/ros_robot_navigation.rst>
-   ROS Working with multiple Robots <texts/course-specific/ros_multi_robot.rst>
    ROS Build a Custom Robot <texts/course-specific/ros_build_custom_robot.rst>
    (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
-   
+
 
 
 ..
@@ -79,7 +79,7 @@ Project-specific ROS content
    Install ROS <texts/your_pc/install_ros.rst>
    Install IDE`s <texts/your_pc/install_ide.rst>
    (DEPRECATED) Kalman Filter <texts/lab_Kalman.rst>
-      
+
 
 
 Our robots:

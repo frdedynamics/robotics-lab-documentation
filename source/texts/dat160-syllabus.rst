@@ -21,9 +21,8 @@ It is a mobile-robot centered collection that enables students to get to know th
 - :ref:`ros_communication`
 
 
-**Project-specific ROS content**
+**Project-specific ROS content:**
 
+- :ref:`ros_simple_navigation_exercise`
 - :ref:`AR-tags`
-- :ref:`ros_robot_navigation`
-- :ref:`ros_multi_robot`
 - **See Canvas for further information on the semester projects**

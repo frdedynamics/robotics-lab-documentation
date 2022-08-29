@@ -1,10 +1,10 @@
 .. _ros_simple_navigation_exercise:
 
 ***************************************************
-[Exercise] Simple Navigation on a Turtlebot Robot
+[Assignment] Simple Navigation on a Turtlebot Robot
 ***************************************************
 
-In this exercise you will create a controller which navigates a turtlebot robot through an obstacle course. The steps to complete this task will be outlined but the exact code/commands needed you will have to figure out yourself using what you have learned in the lecture, the information available on this website or what you can find on the internet.
+In this assignment you will create a controller which navigates a turtlebot robot through an obstacle course. The steps to complete this task will be outlined but the exact code/commands needed you will have to figure out yourself using what you have learned in the lecture, the information available on this website or what you can find on the internet.
 
 You will control a Turtlebot in a simulated environment. Using two points (+12 and -12 degrees) from the 360 degree onboard LiDAR as input, the robot should show the following behaviours:
 
@@ -62,7 +62,7 @@ Setup Process
 .. figure:: ../../_static/images/ros/simple_navigation_world.png
           :align: center
 
-Exercise
+Assignment
 ==============================================
 #. Open up the **controller.py** file with the editor of you choice (e.g. Atom). Inside the python script you will comments showing you where to write the different code snippets (marked with **TODO**).
 #. Initialize a ros node
