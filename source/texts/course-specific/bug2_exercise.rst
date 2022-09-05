@@ -38,12 +38,29 @@ A special case you will also need to take care off is when the wall suddenly sto
 .. figure:: ../../_static/images/ros/bug2_turn.PNG
           :align: center
 
-For moving the robot create a publisher for the /cmd_vel topic. Inside the control loop use a boolean variable to decide if the velocity command is published or not. Create a ROS service server which changes sets the state of the variable (either True or False). For this you can either use the standard service message *std_srvs/SetBool* or create your own custom message.
+For moving the robot create a publisher for the /cmd_vel topic. Inside the control loop use a boolean variable to decide if the velocity command is published or not. Create a ROS service server which changes sets the state of the variable (either True or False). For this you can either use the standard service message *std_srvs/SetBool* or create your own custom message. In canvas under **Emnets mediefiler** you will find a playlist called **ROS COMMUNICATION PATTERNS** which contain tutorials on how to implement/work with the different communication patterns in python. For help on ROS services watch the videos **Simple Service Implementation** and **Creating Custom Services**.
 
 Go-To-Point
 ----------------
 
-The go-to-point algorithm takes as input a target position. It then turns the robot until it faces that target and starts moving forward. While moving straight the controller needs to make sure that the robot doesn't stray off by constantly correcting the direction if necessary. To get the position and orientation of the robot subscribe to the odometry sensor topic (/odom).
+The go-to-point algorithm takes as input a target position. It then turns the robot until it faces that target and starts moving forward. While moving straight the controller needs to make sure that the robot doesn't stray off by constantly correcting the direction if necessary. To get the position and orientation of the robot subscribe to the odometry sensor topic (/odom). The orientation is given in quaternions which is a mathematical number system used to describe orientations in a 3D space. Since it is out of the scope of this course to explain how it works you can use the following callback function for the odometry topic which extracts the position (**self.robot_pos**) of the robot and the orientation around the z axis (**self.robot_orientation**).
+
+::
+
+  from tf import transformations
+
+  def odom_callback(self, msg):
+      self.robot_pos = msg.pose.pose.position
+
+      quaternion = (
+          msg.pose.pose.orientation.x,
+          msg.pose.pose.orientation.y,
+          msg.pose.pose.orientation.z,
+          msg.pose.pose.orientation.w)
+      euler = transformations.euler_from_quaternion(quaternion)
+
+      self.robot_orientation = euler[2]
+
 
 .. figure:: ../../_static/images/ros/go_to_point.PNG
           :align: center
@@ -64,7 +81,7 @@ For the second hand-in you are required to create a **bug2** controller using th
 .. figure:: ../../_static/images/ros/bug2_algorithm.jpg
           :align: center
 
-The bug2 controller should also host an **action server** which allows other ROS packages to send a target position for the robot. The action message structure should look like this:
+The bug2 controller should also host an **action server** which allows other ROS packages to send a target position for the robot. For help on how to implement an action server in python watch the video **Simple Action Implementation** in the **ROS Communications Patterns** playlist on canvas. The action message structure should look like this:
 
 ::
 
