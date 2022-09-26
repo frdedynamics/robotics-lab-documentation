@@ -15,7 +15,7 @@ Setup Process
 ==============================================
 For setting up the assignment follow these steps:
 
-* Download the package from here (ADD LINK FOR DOWNLOAD)
+* Download the package from `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/Enrwaes3-StMpUmWQ6EXNMgB3bnecXjSRwwHYvVniw06mg?e=k8MiH6>`_.
 * Extract the folder inside the .zip file and copy it in the **src** folder of your **catkin_ws**
 * In a terminal navigate to the **catkin_ws** and run *catkin_make*, *source devel/setup.bash* and *rospack profile*
 * Make the .py files in the src folder of the ROS package executable
