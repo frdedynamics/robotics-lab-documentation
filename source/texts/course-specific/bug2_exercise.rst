@@ -76,7 +76,7 @@ Similar to the wall follower, the go-to-point controller also uses the /cmd_vel 
 
 Hand-in 2:
 ==============================================
-For the second hand-in you are required to create a **bug2** controller using the previously created **wall-follower** and **go-to-point** controllers. The bug2 algorithm by default uses **go-to-point** to get to the target position as fast as possible. If the robot encounters a wall on the way, the algorithm switches to **wall following**. Once it encounters a position on the initially calculated straight line to the goal which is closer to the target then when it left the line, it reverts back into the **go-to-point** behavior. For switching between wall following and go-to-point behavior use the previously created ROS services.
+For the second hand-in you are required to create a **bug2** controller using the previously created **wall-follower** and **go-to-point** controllers. **You can also download the files which have a functioning logic already implemented** `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EjF_VTiPUe9AvySi7ufooSMBAUFYm3dgjlr3Yj2gYz7P6A?e=y9z6hY>`_. The bug2 algorithm by default uses **go-to-point** to get to the target position as fast as possible. If the robot encounters a wall on the way, the algorithm switches to **wall following**. Once it encounters a position on the initially calculated straight line to the goal which is closer to the target then when it left the line, it reverts back into the **go-to-point** behavior. For switching between wall following and go-to-point behavior use the previously created ROS services.
 
 .. figure:: ../../_static/images/ros/bug2_algorithm.jpg
           :align: center
@@ -87,6 +87,17 @@ The bug2 controller should also host an **action server** which allows other ROS
 
   geometry_msgs/Point target_position
   ---
-  geometry_msgs/Point current_position
-  ---
   geometry_msgs/Point base_position
+  ---
+  geometry_msgs/Point current_position
+
+The overall communication structure was discussed in the Lecture and is visualized in the following Figure. **Before you hand in your assignment make sure you have the following implemented:**
+
+* The publishers/subscribers to relevant topics for bug2, wall follower and go-to-point
+* A ROS Service Server for both wall follower and go-to-point. The wall follower Server uses *std_srvs/SetBool* message structure. The go-to-point Server uses a custom message structure given above.
+* Two ROS Service Clients in the bug2 program connencted to the servers from wall follower and go-to-point.
+* An Action Server in the bug2 program with a custom message structure given above.
+* A robot controller program that has an Action Client connected to the bug2 Action Server.
+
+.. figure:: ../../_static/images/ros/bug2_communication.PNG
+          :align: center
