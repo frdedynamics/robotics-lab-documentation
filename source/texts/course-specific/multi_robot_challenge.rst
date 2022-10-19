@@ -28,7 +28,7 @@ Setup Process
 
 Namespaces
 ==============================================
-In ROS, Namespaces are used to allow multiple topics with the same name to exists. It works similar to a folder structure in any operating system, where inside one folder no duplicate names are allowed but in a different folder a file can have the exact same name. We therefore use Namespaces to have multiple topics with the same name e. g. when launching multiple Turtlebots we need two different "cmd_vel" topics to control each of the robots.
+In ROS, Namespaces are used to allow multiple topics with the same name to exists. It works similar to a folder structure in any operating system, where inside one folder no duplicate names are allowed but in a different folder a file can have the exact same name. We therefore use Namespaces to have multiple topics with the same name e. g. when launching multiple Turtlebots we need two different "cmd_vel" topics to control each of the robots. **The solution to the two exercises can be downloaded** `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EhJvL7RKOetMhX3HW0-F2ckBcQMd6JYemugDKoNQe4M3rA?e=YF4bMm>`_.
 
 Inside a launch file you can use the following code to launch a node inside a namepsace. **Don't forget to replace the in uppercase written names**.
 
@@ -42,7 +42,7 @@ Inside a launch file you can use the following code to launch a node inside a na
 
 
 Exercise 1 - Namespaces
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Inside the given ROS package **multi_robot_challenge_22** do the following steps:
 
 * Create 2 launch files which start a teleoperation keyboard for each robot using the following example code:
@@ -62,10 +62,30 @@ Inside the given ROS package **multi_robot_challenge_22** do the following steps
 * The leader class should subscribe to both "namespace_com" Topics and print out whatever is received. Add an identifier to the print out so that you know which value comes from which robot class.
 
 Exercise 2 - AR-Tags
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Continue inside the ROS package **multi_robot_challenge_22** with the following steps:
 
-* In the robot class, create a subscriber to the topic "ar_pose_maker".
+* In the robot class, create a subscriber to the topic "ar_pose_marker".
 * If any AR Tags are registered publish the id in a topic "marker_id"
 * In the leader class, subscribe to both "marker_id" topics and print out what has been received.
 * To check your work use the teleop keyboard to move the Turtlebots in front of an AR Tag
+
+
+
+Occupancy Grid
+=====================
+In ROS, Occupancy Grid is a data type which represents a 2 dimensional grid map in which each cell gives the probability of an obstacle being at that position. Normally this type of map is produced with a robot moving through an environment and mapping it using a SLAM algorithm. The Occupancy grid data is given in a 1 dimensional array in row-major order starting at the bottom right corner of the map. The data values have the following meaning:
+
+* -1 = unkown
+* 0-100 = probability of occupancy. Which means 0 is definitely no obstacle and 100 is definitely an obstacle.
+
+The Occupancy Grids also carry other useful meta data:
+
+.. figure:: ../../_static/images/ros/occupancy_grid.PNG
+          :align: center
+
+The following code was produced during the lecture and is an example of how to work with Occupancy Grids:
+
+.. literalinclude:: ../../_static/scripts/ros_navigation/map_interpreter.py
+       :language: python
+       :caption: Example Python Code for handeling OccupancyGrid data
