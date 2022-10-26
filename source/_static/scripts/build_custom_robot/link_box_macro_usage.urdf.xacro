@@ -1,0 +1,8 @@
+<xacro:link_box link_name="LINK_NAME" length="0.1" width="0.1" height="0.1" density="1" mesh_name="nofile">
+  <!-- origin visual -->
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <!-- origin collision -->
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <!-- origin interia -->
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+</xacro:link_box>

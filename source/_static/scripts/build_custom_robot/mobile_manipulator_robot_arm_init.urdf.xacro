@@ -5,75 +5,37 @@
   <!-- ARM BASE -->
   <!-- ==================================== -->
   <joint type="revolute" name="arm_base_joint">
-    <origin xyz="0 0 ${mobile_body_height/2}" rpy="0 0 0"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
     <child link="arm_base_link"/>
     <parent link="mobile_body_link"/>
     <axis xyz="0 0 1" rpy="0 0 0"/>
     <limit effort="100" velocity="100" lower="-${pi}" upper="${pi}"/>
   </joint>
 
-  <xacro:property name="arm_base_radius" value="0.0675" />
-  <xacro:property name="arm_base_length" value="0.2" />
-  <xacro:property name="arm_base_density" value="1" />
-  <xacro:property name="arm_base_mass" value="${pi*arm_base_length*pow(arm_base_radius,2)*arm_base_density}" />
-  <link name="arm_base_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://custom_robot_tutorial/meshes/arm_base_mesh.stl" />
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 ${arm_base_length/2}" rpy="0 0 0"/>
-      <geometry>
-        <cylinder length="${arm_base_length}" radius="${arm_base_radius}"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <origin xyz="0 0 ${arm_base_length/2}" rpy="0 0 0"/>
-      <mass value="${arm_base_mass}"/>
-      <inertia
-        ixx="${arm_base_mass*(3*pow(arm_base_radius,2)+pow(arm_base_length,2))/12}" ixy="0.0" ixz="0.0"
-        iyy="${arm_base_mass*(3*pow(arm_base_radius,2)+pow(arm_base_length,2))/12}" iyz="0.0"
-        izz="${arm_base_mass*pow(arm_base_radius,2)/2}"/>
-    </inertial>
-  </link>
+  <xacro:link_cylinder link_name="arm_base_link" radius="${0.135/2}" length="0.2" density="1" mesh_name="package://custom_robot_tutorial/meshes/arm_base_mesh.stl" >
+    <!-- origin visual -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <!-- origin collision -->
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <!-- origin interia -->
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+  </xacro:link_cylinder>
 
   <!-- LINK 1 -->
   <!-- ==================================== -->
   <joint type="revolute" name="link_1_joint">
-    <origin xyz="0 0 ${arm_base_length}" rpy="-${pi/2} 0 0"/>
+    <origin xyz="0 0 0.2" rpy="-${pi/2} 0 0"/>
     <child link="link_1_link"/>
     <parent link="arm_base_link"/>
     <axis xyz="0 0 1" rpy="0 0 0"/>
     <limit effort="100" velocity="100" lower="-${pi/2}" upper="${pi/2}"/>
   </joint>
 
-  <xacro:property name="link_1_radius" value="0.0375" />
-  <xacro:property name="link_1_length" value="0.385" />
-  <xacro:property name="link_1_density" value="1" />
-  <xacro:property name="link_1_mass" value="${pi*link_1_length*pow(link_1_radius,2)*link_1_density}" />
-  <link name="link_1_link">
-    <visual>
-      <origin xyz="0 -${link_1_length/2} 0" rpy="${pi/2} 0 0"/>
-      <geometry>
-        <mesh filename="package://custom_robot_tutorial/meshes/link_1_mesh.stl" />
-        <!-- <cylinder length="${wheel_length}" radius="${wheel_radius}"/> -->
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 -${link_1_length/2} 0" rpy="${pi/2} 0 0"/>
-      <geometry>
-        <!-- <mesh filename="package://custom_robot_tutorial/meshes/arm_base_mesh.stl" /> -->
-        <cylinder length="${link_1_length}" radius="${link_1_radius}"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <origin xyz="0 -${link_1_length/2} 0" rpy="${pi/2} 0 0"/>
-      <mass value="${link_1_mass}"/>
-      <inertia
-        ixx="${link_1_mass*(3*pow(link_1_radius,2)+pow(link_1_length,2))/12}" ixy="0.0" ixz="0.0"
-        iyy="${link_1_mass*(3*pow(link_1_radius,2)+pow(link_1_length,2))/12}" iyz="0.0"
-        izz="${link_1_mass*pow(link_1_radius,2)/2}"/>
-    </inertial>
-  </link>
+  <xacro:link_cylinder link_name="link_1_link" radius="${0.075/2}" length="0.385" density="1" mesh_name="package://custom_robot_tutorial/meshes/link_1_mesh.stl" >
+    <!-- origin visual -->
+    <origin xyz="0 -${0.385/2} 0" rpy="${pi/2} 0 0"/>
+    <!-- origin collision -->
+    <origin xyz="0 -${0.385/2} 0" rpy="${pi/2} 0 0"/>
+    <!-- origin interia -->
+    <origin xyz="0 -${0.385/2} 0" rpy="${pi/2} 0 0"/>
+  </xacro:link_cylinder>
