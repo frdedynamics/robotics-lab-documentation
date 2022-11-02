@@ -200,7 +200,7 @@ Save the file and close it and all the terminals you have currently open. Once y
 
 Controlling the Gazebo Model
 =============================
-In the previous Exercise a simulation model for gazebo of a custom robot has been built. This section will continue from that point, by going through the process of adding a controller interface which makes the model movable through ROS. **The completed URDF model file (mobile_manipulator_robot.urdf.xacro) can be downloaded** `here <https://www.google.com>`_. All gazebo plugins will be defined in the **mobile_manipulator_robot.urdf.gazebo** file. Therefore, we must refence it in our xacro file by adding the following code as shown in the image below:
+In the previous Exercise a simulation model for gazebo of a custom robot has been built. This section will continue from that point, by going through the process of adding a controller interface which makes the model movable through ROS. **The completed URDF model file (mobile_manipulator_robot.urdf.xacro) can be downloaded** `here <https://hvl365.sharepoint.com/:f:/s/RobotikkUndervisningHVL/EhjH3AL5Mc9Ku8EbhTARo3cBDjSGxBsonNnv7JvhaTmL-A?e=hj65dd>`_. All gazebo plugins will be defined in the **mobile_manipulator_robot.urdf.gazebo** file. Therefore, we must refence it in our xacro file by adding the following code as shown in the image below:
 
 .. literalinclude:: ../../_static/scripts/build_custom_robot/add_gazebo_file.urdf.xacro
        :language: XML
